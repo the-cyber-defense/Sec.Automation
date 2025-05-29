@@ -1,0 +1,12 @@
+streamlit
+requests
+pandas
+matplotlib
+scapy
+abuseipdb
+virustotal-python
+pyzipper
+detect-secrets
+azure-identity
+azure-mgmt-security
+msal
