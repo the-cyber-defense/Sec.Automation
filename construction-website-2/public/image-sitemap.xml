@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Home Page Images -->
+  <url>
+    <loc>https://solvesall.org/</loc>
+    <image:image>
+      <image:loc>https://solvesall.org/images/modern-residence-after.jpg</image:loc>
+      <image:caption>Completed engineering project showcasing professional drainage and construction solutions</image:caption>
+      <image:title>Modern Residence After Engineering Solutions - Solves All Engineering</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://solvesall.org/images/hero-1.png</image:loc>
+      <image:caption>Professional construction and engineering services hero image</image:caption>
+      <image:title>Engineering Excellence - Solves All Engineering Hero</image:title>
+    </image:image>
+  </url>
+
+  <!-- About Page Images -->
+  <url>
+    <loc>https://solvesall.org/about</loc>
+    <image:image>
+      <image:loc>https://solvesall.org/images/IMG_20241230_120839.jpg</image:loc>
+      <image:caption>Solves All Engineering team in orange safety gear at construction site with excavator</image:caption>
+      <image:title>Solves All Engineering Team - Professional Construction Crew</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://solvesall.org/images/IMG_20250630_113635.jpg</image:loc>
+      <image:caption>Matt Mahoney, CEO and Founder of Solves All Engineering, environmental science expert</image:caption>
+      <image:title>Matt Mahoney - CEO Solves All Engineering</image:title>
+    </image:image>
+  </url>
+
+  <!-- Services Page Images -->
+  <url>
+    <loc>https://solvesall.org/services</loc>
+    <image:image>
+      <image:loc>https://solvesall.org/images/services-hero.png</image:loc>
+      <image:caption>Professional engineering services including drainage, earth retainment, and remediation</image:caption>
+      <image:title>Engineering Services - Drainage and Earth Retainment Solutions</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://solvesall.org/images/quality.png</image:loc>
+      <image:caption>High-quality engineering construction work showing attention to detail and craftsmanship</image:caption>
+      <image:title>Quality Engineering Construction - Professional Workmanship</image:title>
+    </image:image>
+  </url>
+
+  <!-- Projects Page Images -->
+  <url>
+    <loc>https://solvesall.org/projects</loc>
+    <image:image>
+      <image:loc>https://solvesall.org/images/modern-residence-before.jpg</image:loc>
+      <image:caption>Before drainage solution - property experiencing flooding and water damage issues</image:caption>
+      <image:title>Before Drainage Solution - Water Damage Issues</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://solvesall.org/images/modern-residence-staircase-1.jpg</image:loc>
+      <image:caption>Before retaining wall construction - unstable slope with erosion issues</image:caption>
+      <image:title>Before Retaining Wall - Slope Erosion Problems</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://solvesall.org/images/modern-residence-staircase-2.jpg</image:loc>
+      <image:caption>After retaining wall construction - engineered stone retaining wall providing slope stability</image:caption>
+      <image:title>After Retaining Wall - Professional Stone Construction</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://solvesall.org/images/modern-residence-interior-1.jpg</image:loc>
+      <image:caption>Before remediation - interior space with water damage and structural issues</image:caption>
+      <image:title>Before Water Damage Remediation - Interior Damage</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://solvesall.org/images/modern-residence-interior-2.jpg</image:loc>
+      <image:caption>After remediation - fully restored interior space with professional finishes</image:caption>
+      <image:title>After Water Damage Remediation - Restored Interior</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://solvesall.org/images/modern-residence-staircase-3.jpg</image:loc>
+      <image:caption>Before entrance improvement - unstable entrance area needing structural work</image:caption>
+      <image:title>Before Entrance Stabilization - Structural Issues</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://solvesall.org/images/modern-residence-entrance.jpg</image:loc>
+      <image:caption>After entrance improvement - professionally stabilized entrance with proper drainage</image:caption>
+      <image:title>After Entrance Stabilization - Professional Construction</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://solvesall.org/images/modern-residence-staircase-4.jpg</image:loc>
+      <image:caption>Slope stabilization project with engineered retaining systems</image:caption>
+      <image:title>Slope Stabilization - Engineered Retaining Systems</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://solvesall.org/images/modern-residence-dining.jpg</image:loc>
+      <image:caption>Stormwater management system for heavy rainfall protection</image:caption>
+      <image:title>Stormwater Management - Heavy Rainfall Protection</image:title>
+    </image:image>
+  </url>
+
+  <!-- Contact Page Images -->
+  <url>
+    <loc>https://solvesall.org/contact</loc>
+    <image:image>
+      <image:loc>https://solvesall.org/images/contact-hero.png</image:loc>
+      <image:caption>Contact Solves All Engineering for professional drainage, earth retainment, and remediation services</image:caption>
+      <image:title>Contact Solves All Engineering - Professional Services</image:title>
+    </image:image>
+  </url>
+
+  <!-- Project Detail Pages -->
+  <url>
+    <loc>https://solvesall.org/projects/hillside-drainage-system</loc>
+    <image:image>
+      <image:loc>https://solvesall.org/images/b8daf5eb-8208-4efd-9bb5-6e9cd826a8dd.jpg</image:loc>
+      <image:caption>Worker applying finish to concrete wall with stone cap - professional construction work</image:caption>
+      <image:title>Professional Wall Finishing - Construction Craftsmanship</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://solvesall.org/projects/structural-retaining-wall</loc>
+    <image:image>
+      <image:loc>https://solvesall.org/images/IMG_20250630_113635.jpg</image:loc>
+      <image:caption>Stone pillar construction project showing various sized stones with flat cap</image:caption>
+      <image:title>Stone Pillar Construction - Professional Masonry Work</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://solvesall.org/projects/foundation-drainage-repair</loc>
+    <image:image>
+      <image:loc>https://solvesall.org/images/IMG_20250107_161028.jpg</image:loc>
+      <image:caption>Newly paved outdoor area with interlocking stone pavers in gray and beige</image:caption>
+      <image:title>Interlocking Stone Paver Installation - Professional Paving</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://solvesall.org/projects/water-damage-remediation</loc>
+    <image:image>
+      <image:loc>https://solvesall.org/images/IMG_20241204_155813.jpg</image:loc>
+      <image:caption>Construction site with rebar grid preparation for concrete slab near swimming pool</image:caption>
+      <image:title>Concrete Slab Preparation - Professional Construction Site</image:title>
+    </image:image>
+  </url>
+
+  <!-- Service Category Images -->
+  <url>
+    <loc>https://solvesall.org/services/residential</loc>
+    <image:image>
+      <image:loc>https://solvesall.org/images/residential-1.png</image:loc>
+      <image:caption>Residential engineering and construction services for homes and properties</image:caption>
+      <image:title>Residential Engineering Services - Home Construction</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://solvesall.org/images/residential-2.png</image:loc>
+      <image:caption>Residential construction and engineering solutions for homeowners</image:caption>
+      <image:title>Residential Construction Solutions - Professional Services</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://solvesall.org/services/commercial</loc>
+    <image:image>
+      <image:loc>https://solvesall.org/images/commercial-1.png</image:loc>
+      <image:caption>Commercial engineering and construction services for business properties</image:caption>
+      <image:title>Commercial Engineering Services - Business Construction</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://solvesall.org/images/commercial-2.png</image:loc>
+      <image:caption>Commercial construction and development services for businesses</image:caption>
+      <image:title>Commercial Construction Development - Professional Services</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://solvesall.org/services/industrial</loc>
+    <image:image>
+      <image:loc>https://solvesall.org/images/industrial-1.png</image:loc>
+      <image:caption>Industrial engineering and construction services for facilities and infrastructure</image:caption>
+      <image:title>Industrial Engineering Services - Facility Construction</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://solvesall.org/images/industrial-2.png</image:loc>
+      <image:caption>Industrial construction and infrastructure development services</image:caption>
+      <image:title>Industrial Construction Infrastructure - Professional Services</image:title>
+    </image:image>
+  </url>
+
+</urlset>
