@@ -194,8 +194,8 @@ export default function AboutPageClient() {
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">
                   Where Others See <span className="text-blue-600">Problems</span>, We See <span className="text-blue-600">Solutions</span>
                 </h2>
-                <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-                  Solves All Engineering is a Class A General Engineering Contractor that specializes in hard-to-fix problems: 
+                <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+                  Solves All Engineering is a <strong className="text-gray-900">Class A General Engineering Contractor</strong> that specializes in hard-to-fix problems: 
                   drainage, earth retainment, and remediation. Our reputation is built on customer satisfaction where other 
                   contractors turn down work or fail to resolve the issues at hand.
                 </p>
@@ -230,8 +230,8 @@ export default function AboutPageClient() {
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold mb-2">Hard-to-Fix Drainage</h3>
-                      <p className="text-gray-700">
-                        When drainage problems persist and other contractors cant find a solution, we step in with 
+                      <p className="text-gray-700 leading-relaxed">
+                        When drainage problems persist and other contractors can't find a solution, we step in with 
                         innovative engineering approaches that address the root cause.
                       </p>
                     </div>
@@ -243,7 +243,7 @@ export default function AboutPageClient() {
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold mb-2">Earth Retainment Solutions</h3>
-                      <p className="text-gray-700">
+                      <p className="text-gray-700 leading-relaxed">
                         Complex soil stability and earth retainment challenges require specialized expertise. 
                         We design and build lasting solutions for even the most challenging terrain.
                       </p>
@@ -256,7 +256,7 @@ export default function AboutPageClient() {
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold mb-2">Environmental Remediation</h3>
-                      <p className="text-gray-700">
+                      <p className="text-gray-700 leading-relaxed">
                         From contaminated soil to erosion control, we tackle environmental challenges with 
                         sustainable engineering solutions that restore and protect your property.
                       </p>
@@ -275,7 +275,7 @@ export default function AboutPageClient() {
                     </div>
                     <h3 className="font-semibold text-lg mb-3">Customer Satisfaction</h3>
                     <p className="text-gray-600 text-sm leading-relaxed">
-                      Our reputation is built on delivering results when others cant, ensuring complete customer satisfaction on every project.
+                      Our reputation is built on delivering results when others can't, ensuring complete customer satisfaction on every project.
                     </p>
                   </CardContent>
                 </Card>

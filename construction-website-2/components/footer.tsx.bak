@@ -109,19 +109,19 @@ export function Footer() {
               <div className="space-y-3">
                 <div className="flex items-center space-x-3 text-neutral-400">
                   <MapPin className="h-5 w-5 text-blue-500 flex-shrink-0" />
-                  <span>552 S P St, Livermore, CA 94550</span>
+                  <span>Northern California, USA</span>
                 </div>
                 <div className="flex items-center space-x-3 text-neutral-400">
                   <Phone className="h-5 w-5 text-blue-500 flex-shrink-0" />
-                  <span>(925) 899-8123</span>
+                  <span>(555) 123-4567</span>
                 </div>
                 <div className="flex items-center space-x-3 text-neutral-400">
                   <Mail className="h-5 w-5 text-blue-500 flex-shrink-0" />
-                  <span>Matt@solvesall.org</span>
+                  <span>info@solvesall.org</span>
                 </div>
                 <div className="flex items-center space-x-3 text-neutral-400">
                   <Clock className="h-5 w-5 text-blue-500 flex-shrink-0" />
-                  <span>Mon - Fri: 8:00 AM - 5:00 PM, Sat: 9:00 AM - 2:00 PM</span>
+                  <span>Mon - Fri: 8:00 AM - 6:00 PM</span>
                 </div>
               </div>
             </motion.div>
