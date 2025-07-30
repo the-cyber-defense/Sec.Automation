@@ -3,7 +3,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { motion } from "framer-motion"
-import { ArrowRight, CheckCircle, Sparkles, Zap, Shield, Award, Users, Clock, Droplets, Wrench, Home, Gauge, Building, Layers, FileCheck, TreePine } from "lucide-react"
+import { ArrowRight, CheckCircle, Sparkles, Zap, Shield, Award, Users, Clock, Droplets, Wrench, Home, Gauge, Building, Layers, FileCheck, TreePine, Square, Grid3X3, Hammer, FlowerIcon } from "lucide-react"
 import { ModernButton } from "@/components/ui/modern-button"
 import { ModernCard } from "@/components/ui/modern-card"
 
@@ -61,7 +61,7 @@ export default function HomePage() {
               className="text-body-lg text-neutral-600 dark:text-neutral-400 max-w-3xl mx-auto mb-12"
             >
               Transform your vision into reality with our innovative engineering solutions. We deliver exceptional
-              quality, precision, and expertise for residential, commercial, and industrial projects.
+              quality, precision, and expertise for residential and industrial projects.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -71,14 +71,9 @@ export default function HomePage() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6"
             >
-              <Link href="/services">
-                <ModernButton size="xl" icon={<ArrowRight className="h-5 w-5" />}>
-                  Explore Services
-                </ModernButton>
-              </Link>
-              <Link href="/projects">
+              <Link href="/about">
                 <ModernButton variant="outline" size="xl" icon={<Sparkles className="h-5 w-5" />}>
-                  View Projects
+                  Learn More
                 </ModernButton>
               </Link>
             </motion.div>
@@ -251,14 +246,13 @@ export default function HomePage() {
               <h2 className="text-display font-display mb-6">Comprehensive Engineering Solutions</h2>
 
               <p className="text-body-lg text-neutral-600 dark:text-neutral-400 mb-8">
-                From residential projects to commercial complexes and industrial facilities, we provide end-to-end
+                From residential projects to industrial facilities, we provide end-to-end
                 engineering services tailored to your specific needs and vision.
               </p>
 
               <div className="space-y-4 mb-8">
                 {[
                   "Custom residential engineering and design",
-                  "Commercial building development and systems",
                   "Industrial facility engineering and upgrades",
                   "Structural design and project management",
                 ].map((service, index) => (
@@ -278,9 +272,6 @@ export default function HomePage() {
                 ))}
               </div>
 
-              <Link href="/services">
-                <ModernButton icon={<ArrowRight className="h-4 w-4" />}>Explore All Services</ModernButton>
-              </Link>
             </motion.div>
 
             <motion.div
@@ -317,6 +308,277 @@ export default function HomePage() {
               </motion.div>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Pavers, Hardscapes & Masonry Section */}
+      <section className="section-padding bg-white dark:bg-neutral-900">
+        <div className="container-modern">
+          <div className="text-center mb-20">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="inline-flex items-center space-x-2 bg-brand-50 dark:bg-brand-950/50 border border-brand-200 dark:border-brand-800 rounded-full px-6 py-3 mb-6"
+            >
+              <Square className="h-4 w-4 text-brand-500" />
+              <span className="text-sm font-medium text-brand-700 dark:text-brand-300">
+                Outdoor Living Solutions
+              </span>
+            </motion.div>
+
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-display font-display mb-6"
+            >
+              Pavers, Hardscapes & Masonry
+            </motion.h2>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="text-body-lg text-neutral-600 dark:text-neutral-400 max-w-4xl mx-auto"
+            >
+              Transform your outdoor spaces with our expert paver installation and masonry services. We specialize in bringing 
+              your yard vision to life through beautiful, durable hardscapes that enhance your property's functionality and aesthetic appeal.
+            </motion.p>
+          </div>
+
+          <div className="grid-cards">
+            {[
+              {
+                icon: Square,
+                title: "Paver Patios",
+                description:
+                  "Create stunning outdoor living spaces with expertly installed paver patios. From intimate gathering areas to expansive entertainment zones, we craft patios that perfectly complement your home and lifestyle.",
+                features: ["Natural stone and concrete pavers", "Custom patterns and designs", "Proper base preparation", "Long-lasting installation"],
+                color: "from-amber-500 to-orange-500",
+              },
+              {
+                icon: Home,
+                title: "Porch Installation",
+                description:
+                  "Enhance your home's curb appeal with beautiful paver porches that welcome guests in style. Our installations combine durability with aesthetic excellence for lasting first impressions.",
+                features: ["Weather-resistant materials", "Slip-resistant surfaces", "Complementary design integration", "Professional craftsmanship"],
+                color: "from-blue-500 to-cyan-500",
+              },
+              {
+                icon: Grid3X3,
+                title: "Walkways & Paths",
+                description:
+                  "Guide visitors through your landscape with elegantly designed paver walkways. From front entrance paths to garden trails, we create safe, beautiful routes throughout your property.",
+                features: ["Functional pathway design", "ADA compliant options", "Drainage considerations", "Landscape integration"],
+                color: "from-emerald-500 to-green-500",
+              },
+              {
+                icon: Hammer,
+                title: "Custom Masonry",
+                description:
+                  "Bring architectural character to your outdoor spaces with custom masonry work. From decorative walls to functional structures, we combine traditional craftsmanship with modern techniques.",
+                features: ["Natural stone and brick work", "Custom design consultation", "Structural integrity focus", "Timeless aesthetic appeal"],
+                color: "from-slate-500 to-gray-600",
+              },
+            ].map((service, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <ModernCard className="p-8 h-full hover:shadow-xl transition-all duration-500">
+                  <div className="flex flex-col h-full">
+                    <div className="mb-6">
+                      <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${service.color} shadow-lg`}>
+                        <service.icon className="h-6 w-6 text-white" />
+                      </div>
+                    </div>
+
+                    <h3 className="text-xl font-display font-bold mb-4 text-neutral-900 dark:text-white">
+                      {service.title}
+                    </h3>
+
+                    <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
+                      {service.description}
+                    </p>
+
+                    <div className="mt-auto">
+                      <div className="space-y-2">
+                        {service.features.map((feature, featureIndex) => (
+                          <motion.div
+                            key={featureIndex}
+                            initial={{ opacity: 0, x: -10 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.4, delay: (index * 0.1) + (featureIndex * 0.05) }}
+                            className="flex items-center space-x-2"
+                          >
+                            <div className="w-1.5 h-1.5 bg-brand-500 rounded-full" />
+                            <span className="text-sm text-neutral-600 dark:text-neutral-400">{feature}</span>
+                          </motion.div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </ModernCard>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Vision to Reality Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="mt-20 p-8 bg-gradient-to-br from-neutral-50 to-white dark:from-neutral-800 dark:to-neutral-900 rounded-3xl border border-neutral-200 dark:border-neutral-800"
+          >
+            <div className="grid-features items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+              >
+                <div className="inline-flex items-center space-x-2 bg-brand-50 dark:bg-brand-950/50 border border-brand-200 dark:border-brand-800 rounded-full px-6 py-3 mb-6">
+                  <FlowerIcon className="h-4 w-4 text-brand-500" />
+                  <span className="text-sm font-medium text-brand-700 dark:text-brand-300">Vision to Reality</span>
+                </div>
+
+                <h3 className="text-heading font-display mb-4">Bringing Your Yard Vision to Life</h3>
+
+                <p className="text-body text-neutral-600 dark:text-neutral-400 mb-6">
+                  At Solves All Engineering, we understand that every outdoor space has unique potential. Our experienced team 
+                  works closely with you to understand your vision, lifestyle needs, and aesthetic preferences, then transforms 
+                  that vision into a beautiful, functional reality.
+                </p>
+
+                <div className="space-y-4">
+                  {[
+                    "Comprehensive design consultation",
+                    "Material selection guidance",
+                    "3D visualization and planning",
+                    "Expert installation techniques",
+                    "Quality assurance and warranty"
+                  ].map((service, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      className="flex items-center space-x-3"
+                    >
+                      <div className="flex-shrink-0 w-6 h-6 bg-brand-500 rounded-full flex items-center justify-center">
+                        <CheckCircle className="h-4 w-4 text-white" />
+                      </div>
+                      <span className="text-neutral-700 dark:text-neutral-300">{service}</span>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="relative"
+              >
+                <div className="relative rounded-3xl overflow-hidden shadow-large bg-gradient-to-br from-neutral-100 to-neutral-200 dark:from-neutral-800 dark:to-neutral-900 p-8">
+                  <div className="text-center">
+                    <div className="inline-flex items-center justify-center w-20 h-20 bg-brand-500 rounded-2xl mb-6">
+                      <FlowerIcon className="h-10 w-10 text-white" />
+                    </div>
+                    <h4 className="text-lg font-display font-bold mb-3 text-neutral-900 dark:text-white">
+                      Design Excellence
+                    </h4>
+                    <p className="text-neutral-600 dark:text-neutral-400 mb-6">
+                      Every project begins with understanding your unique vision and transforming it into a detailed plan 
+                      that maximizes both beauty and functionality.
+                    </p>
+                    <div className="grid grid-cols-2 gap-4 text-sm">
+                      <div className="bg-white dark:bg-neutral-800 rounded-lg p-3">
+                        <div className="font-bold text-brand-500">Custom Design</div>
+                        <div className="text-neutral-600 dark:text-neutral-400">Tailored solutions</div>
+                      </div>
+                      <div className="bg-white dark:bg-neutral-800 rounded-lg p-3">
+                        <div className="font-bold text-brand-500">Quality Materials</div>
+                        <div className="text-neutral-600 dark:text-neutral-400">Premium selection</div>
+                      </div>
+                      <div className="bg-white dark:bg-neutral-800 rounded-lg p-3">
+                        <div className="font-bold text-brand-500">Expert Install</div>
+                        <div className="text-neutral-600 dark:text-neutral-400">Professional craft</div>
+                      </div>
+                      <div className="bg-white dark:bg-neutral-800 rounded-lg p-3">
+                        <div className="font-bold text-brand-500">Long-Term Value</div>
+                        <div className="text-neutral-600 dark:text-neutral-400">Lasting investment</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </motion.div>
+
+          {/* Applications Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="mt-16 text-center"
+          >
+            <h3 className="text-heading font-display mb-8">Perfect for Every Outdoor Space</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {[
+                {
+                  application: "Residential Yards",
+                  focus: "Family Living",
+                  description: "Transform your backyard into an outdoor oasis perfect for family gatherings, entertaining, and everyday relaxation.",
+                  examples: ["Backyard patios", "Front walkways", "Garden paths", "Pool decking"]
+                },
+                {
+                  application: "Entrance Ways",
+                  focus: "Curb Appeal", 
+                  description: "Create stunning first impressions with elegant entrance hardscapes that welcome guests and enhance property value.",
+                  examples: ["Front porches", "Entry walkways", "Driveway accents", "Welcome courtyards"]
+                },
+                {
+                  application: "Outdoor Kitchens",
+                  focus: "Entertainment Zones",
+                  description: "Extend your living space outdoors with durable, beautiful hardscapes designed for cooking and entertaining.",
+                  examples: ["Cooking areas", "Bar seating", "Dining spaces", "Fire pit areas"]
+                }
+              ].map((app, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.8 + (index * 0.1) }}
+                  className="bg-white dark:bg-neutral-900 rounded-2xl p-6 border border-neutral-200 dark:border-neutral-800"
+                >
+                  <div className="text-2xl font-bold text-brand-500 mb-2">{app.application}</div>
+                  <div className="text-lg font-semibold text-neutral-900 dark:text-white mb-3">{app.focus}</div>
+                  <p className="text-neutral-600 dark:text-neutral-400 mb-4 text-sm">{app.description}</p>
+                  <div className="space-y-1">
+                    {app.examples.map((example, exampleIndex) => (
+                      <div key={exampleIndex} className="text-xs text-neutral-500 dark:text-neutral-500">
+                        • {example}
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </section>
 
@@ -374,7 +636,7 @@ export default function HomePage() {
                 icon: Layers,
                 title: "Interlocking Block Systems",
                 description:
-                  "Modular interlocking block walls offering both strength and aesthetic appeal. These versatile systems provide excellent drainage and are ideal for both residential and commercial applications.",
+                  "Modular interlocking block walls offering both strength and aesthetic appeal. These versatile systems provide excellent drainage and are ideal for residential applications.",
                 features: ["Modular design flexibility", "Natural drainage properties", "Multiple color options", "Cost-effective installation"],
                 color: "from-stone-500 to-stone-600",
               },
@@ -554,12 +816,6 @@ export default function HomePage() {
                   examples: ["Garden retaining walls", "Property line barriers", "Landscape terracing", "Patio walls"]
                 },
                 {
-                  size: "Commercial",
-                  height: "8-15 feet", 
-                  description: "Medium-scale walls for commercial properties, parking lots, and business developments.",
-                  examples: ["Parking lot retention", "Commercial landscaping", "Building perimeters", "Access ramps"]
-                },
-                {
                   size: "Industrial",
                   height: "15+ feet",
                   description: "Large-scale structural walls for industrial sites, infrastructure, and major developments.",
@@ -605,26 +861,6 @@ export default function HomePage() {
               and resources to deliver a solution that meets your needs and exceeds your expectations.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-              <Link href="/contact">
-                <ModernButton
-                  variant="secondary"
-                  size="xl"
-                  icon={<ArrowRight className="h-5 w-5" />}
-                  className="bg-white text-slate-700 hover:bg-neutral-50"
-                >
-                  Get Your Free Consultation
-                </ModernButton>
-              </Link>
-              <Link href="/projects">
-                <ModernButton
-                  variant="outline"
-                  size="xl"
-                  icon={<Building className="h-5 w-5" />}
-                  className="border-white/30 text-white hover:bg-white/10"
-                >
-                  View Our Wall Projects
-                </ModernButton>
-              </Link>
             </div>
           </motion.div>
         </div>
@@ -675,26 +911,6 @@ export default function HomePage() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6"
             >
-              <Link href="/contact">
-                <ModernButton
-                  variant="secondary"
-                  size="xl"
-                  icon={<ArrowRight className="h-5 w-5" />}
-                  className="bg-white text-brand-600 hover:bg-neutral-50"
-                >
-                  Get Free Quote
-                </ModernButton>
-              </Link>
-              <Link href="/projects">
-                <ModernButton
-                  variant="outline"
-                  size="xl"
-                  icon={<Sparkles className="h-5 w-5" />}
-                  className="border-white/30 text-white hover:bg-white/10"
-                >
-                  View Portfolio
-                </ModernButton>
-              </Link>
             </motion.div>
           </div>
         </div>
@@ -708,7 +924,7 @@ const services = [
   {
     title: "Drainage Solutions",
     description:
-      "Comprehensive drainage systems to prevent flooding and water damage on residential and commercial properties.",
+      "Comprehensive drainage systems to prevent flooding and water damage on residential properties.",
     image: "/images/residential-1.png",
     link: "/services/drainage",
   },
