@@ -1,13 +1,13 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, CheckCircle, Home, Hammer, Ruler } from "lucide-react"
+import { ArrowRight, CheckCircle, Home, Hammer, Square, Grid3X3, Building, Layers, TreePine } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 
 export const metadata = {
-  title: "Residential Construction | BuildMaster Construction",
+  title: "Residential Engineering Services | Solves All Engineering | Northern California",
   description:
-    "Explore BuildMaster's residential construction services including custom homes, renovations, and additions.",
+    "Explore Solves All Engineering's residential services including pavers, hardscapes, masonry, and retaining walls for Northern California homes.",
 }
 
 export default function ResidentialServicePage() {
@@ -18,9 +18,9 @@ export default function ResidentialServicePage() {
         <div className="absolute inset-0 bg-black/60 z-10" />
         <Image src="/images/residential-1.png" alt="Residential construction" fill className="object-cover" priority />
         <div className="relative z-20 container mx-auto px-4 h-full flex flex-col justify-center items-center text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Residential Construction</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Residential Engineering Services</h1>
           <p className="text-xl text-white/90 max-w-2xl">
-            Building dream homes with quality craftsmanship and attention to detail.
+            Expert outdoor construction, hardscapes, and structural solutions for your home.
           </p>
         </div>
       </section>
@@ -33,16 +33,16 @@ export default function ResidentialServicePage() {
               <div className="inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-4">
                 Residential Services
               </div>
-              <h2 className="text-4xl font-bold mb-6">Creating Spaces You'll Love to Call Home</h2>
+              <h2 className="text-4xl font-bold mb-6">Transform Your Outdoor Living Spaces</h2>
               <p className="text-gray-700 mb-6 text-lg">
-                At BuildMaster, we understand that your home is more than just a building—it's where memories are made
-                and lives are lived. That's why we approach each residential project with care, precision, and a
-                commitment to excellence.
+                At Solves All Engineering, we specialize in creating beautiful, functional outdoor spaces that enhance
+                your home's value and your family's lifestyle. From elegant paver patios to sturdy retaining walls,
+                we bring your yard vision to life with expert craftsmanship.
               </p>
               <p className="text-gray-700 mb-8">
-                Whether you're building a new custom home, renovating an existing space, or adding an extension, our
-                team of skilled professionals will work closely with you to bring your vision to life while ensuring the
-                highest standards of quality and craftsmanship.
+                Whether you need a welcoming front porch, a stunning backyard patio, or structural retaining walls,
+                our experienced team combines traditional masonry techniques with modern engineering to deliver
+                lasting results that exceed your expectations.
               </p>
               <Link href="/contact">
                 <Button className="bg-blue-600 hover:bg-blue-700 text-white">
@@ -65,10 +65,10 @@ export default function ResidentialServicePage() {
             <div className="inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-4">
               What We Offer
             </div>
-            <h2 className="text-4xl font-bold mb-6">Our Residential Services</h2>
+            <h2 className="text-4xl font-bold mb-6">Our Residential Outdoor Services</h2>
             <p className="text-gray-700 text-lg">
-              We provide a comprehensive range of residential construction services to meet all your home building
-              needs.
+              We provide comprehensive outdoor construction services including pavers, hardscapes, masonry, and retaining walls
+              to transform your residential property.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
@@ -100,9 +100,9 @@ export default function ResidentialServicePage() {
             <div className="inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-4">
               Our Process
             </div>
-            <h2 className="text-4xl font-bold mb-6">How We Build Your Dream Home</h2>
+            <h2 className="text-4xl font-bold mb-6">How We Transform Your Outdoor Spaces</h2>
             <p className="text-gray-700 text-lg">
-              Our streamlined process ensures a smooth experience from initial consultation to project completion.
+              Our streamlined process ensures a smooth experience from design consultation to project completion.
             </p>
           </div>
           <div className="max-w-5xl mx-auto">
@@ -144,9 +144,9 @@ export default function ResidentialServicePage() {
             <div className="inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-4">
               Our Portfolio
             </div>
-            <h2 className="text-4xl font-bold mb-6">Featured Residential Projects</h2>
+            <h2 className="text-4xl font-bold mb-6">Featured Outdoor Projects</h2>
             <p className="text-gray-700 text-lg">
-              Explore some of our recent residential construction projects that showcase our expertise and quality.
+              Explore some of our recent residential outdoor projects that showcase our expertise in pavers, hardscapes, and masonry.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -186,7 +186,7 @@ export default function ResidentialServicePage() {
             </div>
             <h2 className="text-4xl font-bold mb-6">What Our Clients Say</h2>
             <p className="text-gray-700 text-lg">
-              Hear from homeowners who have trusted us with their residential construction projects.
+              Hear from homeowners who have trusted us with their outdoor construction and hardscape projects.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
@@ -229,9 +229,9 @@ export default function ResidentialServicePage() {
       {/* CTA Section */}
       <section className="py-20 bg-gray-900 text-white">
         <div className="container mx-auto px-4 text-center max-w-4xl">
-          <h2 className="text-4xl font-bold mb-6">Ready to Build Your Dream Home?</h2>
+          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Outdoor Space?</h2>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-10">
-            Contact us today for a free consultation and discover how BuildMaster can bring your residential vision to
+            Contact us today for a free consultation and discover how Solves All Engineering can bring your outdoor vision to
             life.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
@@ -251,90 +251,123 @@ export default function ResidentialServicePage() {
 // Sample data
 const residentialServices = [
   {
-    title: "Custom Home Building",
-    description: "Design and construction of custom homes tailored to your specific needs and preferences.",
+    title: "Paver Patios",
+    description: "Create stunning outdoor living spaces with expertly installed paver patios. From intimate gathering areas to expansive entertainment zones.",
+    icon: Square,
+    features: [
+      "Natural stone and concrete pavers",
+      "Custom patterns and designs",
+      "Proper base preparation",
+      "Long-lasting installation",
+    ],
+  },
+  {
+    title: "Porch Installation",
+    description: "Enhance your home's curb appeal with beautiful paver porches that welcome guests in style.",
     icon: Home,
     features: [
-      "Personalized design consultation",
-      "Quality materials and craftsmanship",
-      "Energy-efficient building practices",
-      "Comprehensive project management",
+      "Weather-resistant materials",
+      "Slip-resistant surfaces",
+      "Complementary design integration",
+      "Professional craftsmanship",
     ],
   },
   {
-    title: "Home Renovations",
-    description: "Transform your existing space with our comprehensive renovation services.",
+    title: "Walkways & Paths",
+    description: "Guide visitors through your landscape with elegantly designed paver walkways and garden trails.",
+    icon: Grid3X3,
+    features: [
+      "Functional pathway design",
+      "ADA compliant options",
+      "Drainage considerations",
+      "Landscape integration",
+    ],
+  },
+  {
+    title: "Custom Masonry",
+    description: "Bring architectural character to your outdoor spaces with custom masonry work and decorative walls.",
     icon: Hammer,
     features: [
-      "Kitchen and bathroom remodels",
-      "Basement finishing",
-      "Interior and exterior renovations",
-      "Structural modifications",
+      "Natural stone and brick work",
+      "Custom design consultation",
+      "Structural integrity focus",
+      "Timeless aesthetic appeal",
     ],
   },
   {
-    title: "Home Additions",
-    description: "Expand your living space with carefully planned and executed home additions.",
-    icon: Ruler,
+    title: "Concrete Retaining Walls",
+    description: "Engineered concrete retaining walls for maximum durability and load-bearing capacity.",
+    icon: Building,
     features: [
-      "Seamless integration with existing structure",
-      "Additional bedrooms or living spaces",
-      "Expanded kitchens and dining areas",
-      "Second-story additions",
+      "Reinforced concrete construction",
+      "Custom height and length",
+      "Drainage integration",
+      "Decorative finish options",
+    ],
+  },
+  {
+    title: "Interlocking Block Systems",
+    description: "Modular interlocking block walls offering both strength and aesthetic appeal for residential applications.",
+    icon: Layers,
+    features: [
+      "Modular design flexibility",
+      "Natural drainage properties",
+      "Multiple color options",
+      "Cost-effective installation",
     ],
   },
 ]
 
 const processSteps = [
   {
-    title: "Initial Consultation",
+    title: "Site Assessment",
     description:
-      "We begin with a thorough consultation to understand your vision, requirements, and budget constraints for your residential project.",
+      "We begin with a thorough assessment of your outdoor space, soil conditions, and drainage requirements for your project.",
   },
   {
     title: "Design & Planning",
     description:
-      "Our design team creates detailed plans and visualizations of your home, incorporating your feedback at every stage.",
+      "Our team creates detailed plans and visualizations of your outdoor space, incorporating your vision and practical considerations.",
   },
   {
     title: "Material Selection",
     description:
-      "We guide you through selecting the right materials that balance quality, aesthetics, and budget for your home.",
+      "We guide you through selecting the right pavers, stones, and materials that balance durability, aesthetics, and budget.",
   },
   {
-    title: "Construction",
+    title: "Preparation & Installation",
     description:
-      "Our skilled craftsmen bring your home to life with precision, quality materials, and attention to detail.",
+      "Our skilled craftsmen prepare the site properly and install your pavers, walls, or masonry with precision and attention to detail.",
   },
   {
     title: "Quality Assurance",
     description:
-      "Rigorous quality checks throughout the construction process ensure your home meets our high standards.",
+      "Rigorous quality checks ensure proper drainage, structural integrity, and that your project meets our high standards.",
   },
   {
-    title: "Final Walkthrough",
+    title: "Final Inspection",
     description:
-      "We conduct a comprehensive walkthrough with you to ensure every detail meets your expectations before handover.",
+      "We conduct a comprehensive walkthrough to ensure every detail meets your expectations and provide maintenance guidance.",
   },
 ]
 
 const residentialProjects = [
   {
-    id: "lakeside-villa",
-    title: "Lakeside Villa",
-    location: "Lake District",
-    image: "/images/project-2.png",
+    id: "hillside-patio",
+    title: "Hillside Paver Patio",
+    location: "Livermore Hills",
+    image: "/images/residential-1.png",
   },
   {
-    id: "modern-farmhouse",
-    title: "Modern Farmhouse",
-    location: "Countryside Estates",
-    image: "/images/project-6.png",
+    id: "retaining-wall",
+    title: "Terraced Retaining Walls",
+    location: "Bay Area Residence",
+    image: "/images/residential-2.png",
   },
   {
-    id: "urban-townhouse",
-    title: "Urban Townhouse",
-    location: "Downtown",
+    id: "front-walkway",
+    title: "Elegant Front Walkway",
+    location: "Northern California",
     image: "/images/residential-3.png",
   },
 ]
@@ -342,16 +375,16 @@ const residentialProjects = [
 const testimonials = [
   {
     name: "Emily & David Thompson",
-    project: "Custom Home Build",
+    project: "Paver Patio & Walkway",
     quote:
-      "BuildMaster turned our dream home into reality. Their attention to detail and commitment to quality exceeded our expectations. We couldn't be happier with our new home.",
+      "Solves All Engineering transformed our backyard into an amazing outdoor living space. The paver patio and walkways are beautiful and have held up perfectly through multiple seasons.",
     avatar: "/images/testimonial-1.png",
   },
   {
     name: "Michael Rodriguez",
-    project: "Home Renovation",
+    project: "Retaining Wall & Landscaping",
     quote:
-      "The renovation of our 1950s home was handled with expertise and care. The team respected the character of our home while modernizing it beautifully.",
+      "The retaining wall project was handled with expertise and care. They solved our drainage issues while creating a beautiful terraced landscape that we absolutely love.",
     avatar: "/images/testimonial-2.png",
   },
 ]
