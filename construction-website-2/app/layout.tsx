@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { Footer } from "@/components/footer"
 import { ModernNavbar } from "@/components/modern-navbar"
 import "@/app/globals.css"
+import "@/app/mobile-enhancements.css"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -29,6 +30,13 @@ export const metadata: Metadata = {
   title: "Solves All Engineering",
   description:
     "Specializing in stormwater management and construction solutions with unwavering commitment to our clients.",
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 5,
+    userScalable: true,
+    viewportFit: "cover",
+  },
   openGraph: {
     title: "Solves All Engineering",
     description:
@@ -73,7 +81,18 @@ export const metadata: Metadata = {
       url: "/apple-touch-icon-precomposed.png",
     },
   },
-    generator: 'v0.dev'
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Solves All Engineering",
+  },
+  formatDetection: {
+    telephone: true,
+    date: false,
+    address: true,
+  },
+  generator: 'v0.dev'
 }
 
 export default function RootLayout({

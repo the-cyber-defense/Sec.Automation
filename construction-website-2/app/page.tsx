@@ -1,11 +1,11 @@
 "use client"
 
 import Link from "next/link"
-import Image from "next/image"
 import { motion } from "framer-motion"
-import { ArrowRight, CheckCircle, Sparkles, Zap, Shield, Award, Users, Clock, Droplets, Wrench, Home, Gauge, Building, Layers, FileCheck, TreePine, Square, Grid3X3, Hammer, FlowerIcon } from "lucide-react"
+import { CheckCircle, Sparkles, Zap, Shield, Award, Users, Clock, Home, Building, Layers, FileCheck, TreePine, Square, Grid3X3, Hammer, FlowerIcon } from "lucide-react"
 import { ModernButton } from "@/components/ui/modern-button"
 import { ModernCard } from "@/components/ui/modern-card"
+import { MobileOptimizedImage } from "@/components/mobile-optimized-image"
 
 export default function HomePage() {
   return (
@@ -50,7 +50,7 @@ export default function HomePage() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-hero font-display mb-8"
             >
-              Engineering Tomorrow's <span className="gradient-text">Solutions</span> Today
+              Engineering Tomorrow&apos;s <span className="gradient-text">Solutions</span> Today
             </motion.h1>
 
             {/* Subtitle */}
@@ -282,15 +282,15 @@ export default function HomePage() {
               className="relative"
             >
               <div className="relative rounded-3xl overflow-hidden shadow-large">
-                <Image
+                <MobileOptimizedImage
                   src="/images/modern-residence-after.jpg"
                   alt="Engineering project showcase"
                   width={600}
                   height={400}
                   className="w-full h-auto object-cover"
                   priority
-                  quality={75}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  quality={85}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
               </div>

@@ -1,7 +1,7 @@
-import Image from "next/image"
 import { Mail, MapPin, Phone, Clock, ArrowRight } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
+import { MobileOptimizedImage } from "@/components/mobile-optimized-image"
 
 export const metadata = {
   title: "Contact Solves All Engineering | Free Consultation & Quotes | Northern California",
@@ -17,7 +17,7 @@ export default function ContactPage() {
       {/* Hero Section */}
       <section className="relative h-[400px] w-full overflow-hidden">
         <div className="absolute inset-0 bg-black/60 z-10" />
-        <Image
+        <MobileOptimizedImage
           src="/images/contact-hero.png"
           alt="Contact Solves All Engineering for professional drainage, earth retainment, and remediation services"
           fill
@@ -42,10 +42,10 @@ export default function ContactPage() {
               <div className="inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-4">
                 Get In Touch
               </div>
-              <h2 className="text-4xl font-bold mb-6">We'd Love to Hear From You</h2>
+              <h2 className="text-4xl font-bold mb-6">We&apos;d Love to Hear From You</h2>
               <p className="text-gray-700 mb-10 text-lg">
                 Whether you have a question about our services, want to request a quote, or are ready to start your
-                project, we're here to help.
+                project, we&apos;re here to help.
               </p>
               <div className="space-y-8">
                 <div className="flex items-start">

@@ -1,10 +1,10 @@
-import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { MobileOptimizedImage } from "@/components/mobile-optimized-image"
 
 export const metadata = {
   title: "Engineering Projects Portfolio | Drainage & Earth Retainment | Solves All Engineering",
@@ -20,7 +20,7 @@ export default function ProjectsPage() {
       {/* Hero Section */}
       <section className="relative h-[300px] sm:h-[400px] w-full overflow-hidden">
         <div className="absolute inset-0 bg-black/60 z-10" />
-        <Image
+        <MobileOptimizedImage
           src="/images/modern-residence-after.jpg"
           alt="Completed engineering projects showcasing drainage, earth retainment, and remediation solutions"
           fill
@@ -144,7 +144,7 @@ export default function ProjectsPage() {
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
               <div className="grid grid-cols-2">
                 <div className="relative h-48">
-                  <Image
+                  <MobileOptimizedImage
                     src="/images/modern-residence-before.jpg"
                     alt="Before drainage solution - property experiencing flooding and water damage issues"
                     fill
@@ -158,7 +158,7 @@ export default function ProjectsPage() {
                   </div>
                 </div>
                 <div className="relative h-48">
-                  <Image
+                  <MobileOptimizedImage
                     src="/images/modern-residence-after.jpg"
                     alt="After drainage solution - completed professional drainage system preventing flooding"
                     fill
@@ -188,7 +188,7 @@ export default function ProjectsPage() {
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
               <div className="grid grid-cols-2">
                 <div className="relative h-48">
-                  <Image
+                  <MobileOptimizedImage
                     src="/images/modern-residence-staircase-1.jpg"
                     alt="Before retaining wall construction - unstable slope with erosion issues"
                     fill
@@ -202,7 +202,7 @@ export default function ProjectsPage() {
                   </div>
                 </div>
                 <div className="relative h-48">
-                  <Image
+                  <MobileOptimizedImage
                     src="/images/modern-residence-staircase-2.jpg"
                     alt="After retaining wall construction - engineered stone retaining wall providing slope stability"
                     fill
@@ -231,7 +231,7 @@ export default function ProjectsPage() {
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
               <div className="grid grid-cols-2">
                 <div className="relative h-48">
-                  <Image
+                  <MobileOptimizedImage
                     src="/images/modern-residence-interior-1.jpg"
                     alt="Before remediation - interior space with water damage and structural issues"
                     fill
@@ -245,7 +245,7 @@ export default function ProjectsPage() {
                   </div>
                 </div>
                 <div className="relative h-48">
-                  <Image
+                  <MobileOptimizedImage
                     src="/images/modern-residence-interior-2.jpg"
                     alt="After remediation - fully restored interior space with professional finishes"
                     fill
@@ -274,7 +274,7 @@ export default function ProjectsPage() {
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
               <div className="grid grid-cols-2">
                 <div className="relative h-48">
-                  <Image
+                  <MobileOptimizedImage
                     src="/images/modern-residence-staircase-3.jpg"
                     alt="Before entrance improvement - unstable entrance area needing structural work"
                     fill
@@ -288,7 +288,7 @@ export default function ProjectsPage() {
                   </div>
                 </div>
                 <div className="relative h-48">
-                  <Image
+                  <MobileOptimizedImage
                     src="/images/modern-residence-entrance.jpg"
                     alt="After entrance improvement - professionally stabilized entrance with proper drainage"
                     fill
@@ -381,7 +381,7 @@ export default function ProjectsPage() {
               </div>
             </div>
             <div className="relative h-[300px] sm:h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-xl mt-8 md:mt-0">
-              <Image
+              <MobileOptimizedImage
                 src="/images/modern-residence-after.jpg"
                 alt="Engineering process showing professional construction and project management"
                 fill
@@ -425,7 +425,7 @@ function ProjectCard({ project }: { project: any }) {
   return (
     <Card className="overflow-hidden group h-full hover:shadow-xl transition-all duration-300">
       <div className="relative h-48 sm:h-56 md:h-64 w-full">
-        <Image
+        <MobileOptimizedImage
           src={project.image || "/project-placeholder.svg"}
           alt={project.alt || `${project.title} - ${project.category} project by Solves All Engineering`}
           fill
