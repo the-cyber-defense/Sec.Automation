@@ -1,210 +1,218 @@
 "use client"
+
 import Link from "next/link"
-import { motion } from "framer-motion"
-import {
-  MapPin,
-  Phone,
-  Mail,
-  Clock,
-  Facebook,
-  Twitter,
-  Instagram,
-  Linkedin,
-  ArrowRight,
-  CheckCircle,
-} from "lucide-react"
-import { ModernButton } from "@/components/ui/modern-button"
+import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
 
 export function Footer() {
-  const currentYear = new Date().getFullYear()
-
-  const services = [
-    { name: "Residential Engineering", href: "/services/residential" },
-  ]
-
-  const company = [
-    { name: "About Us", href: "/about" },
-    { name: "Contact", href: "/contact" },
-    { name: "Accessibility", href: "/accessibility" },
-  ]
-
-  const socialLinks = [
-    { name: "Facebook", icon: Facebook, href: "#" },
-    { name: "Twitter", icon: Twitter, href: "#" },
-    { name: "Instagram", icon: Instagram, href: "#" },
-    { name: "LinkedIn", icon: Linkedin, href: "#" },
-  ]
-
   return (
-    <footer className="bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 text-white relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 bg-grid opacity-5" />
-      <motion.div
-        className="absolute top-20 right-20 w-40 h-40 bg-blue-500/10 rounded-full blur-3xl"
-        animate={{ scale: [1, 1.2, 1], rotate: [0, 180, 360] }}
-        transition={{ duration: 20, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
-      />
-
-      <div className="container mx-auto px-4 relative z-10">
-        {/* Newsletter Section */}
-        <div className="py-16 border-b border-neutral-700/50">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <h3 className="text-3xl font-bold mb-4">Stay Updated</h3>
-              <p className="text-neutral-400 mb-8 max-w-2xl mx-auto">
-                Get the latest updates on our projects, engineering insights, and industry news delivered to your inbox.
-              </p>
-
-              <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4 max-w-md mx-auto">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="w-full px-4 py-3 rounded-xl bg-neutral-800/50 border border-neutral-700/50 text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                />
-                <ModernButton className="w-full sm:w-auto">Subscribe</ModernButton>
+    <footer className="bg-gray-900 text-white">
+      <div className="container mx-auto px-4 py-12 md:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          {/* Company Info */}
+          <div className="space-y-4">
+            <div className="flex items-center space-x-2">
+              <div className="w-8 h-8">
+                <svg viewBox="0 0 32 32" className="w-full h-full">
+                  <defs>
+                    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#3b82f6" />
+                      <stop offset="100%" stopColor="#1d4ed8" />
+                    </linearGradient>
+                  </defs>
+                  <path d="M16 2L4 8v10c0 8 12 12 12 12s12-4 12-12V8L16 2z" fill="url(#logoGradient)" stroke="none" />
+                  <path
+                    d="M12 16l3 3 6-6"
+                    stroke="white"
+                    strokeWidth="2"
+                    fill="none"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
               </div>
-            </motion.div>
+              <span className="text-xl font-bold text-white">Solves All Engineering</span>
+            </div>
+            <p className="text-gray-300 text-base leading-relaxed">
+              Specializing in drainage solutions, earth retainment, and environmental remediation across Northern
+              California.
+            </p>
+            <div className="flex space-x-4">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-white transition-colors p-2 rounded-lg hover:bg-gray-800"
+                aria-label="Facebook"
+              >
+                <Facebook className="h-5 w-5" />
+              </a>
+              <a
+                href="#"
+                className="text-gray-400 hover:text-white transition-colors p-2 rounded-lg hover:bg-gray-800"
+                aria-label="Twitter"
+              >
+                <Twitter className="h-5 w-5" />
+              </a>
+              <a
+                href="#"
+                className="text-gray-400 hover:text-white transition-colors p-2 rounded-lg hover:bg-gray-800"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="h-5 w-5" />
+              </a>
+              <a
+                href="#"
+                className="text-gray-400 hover:text-white transition-colors p-2 rounded-lg hover:bg-gray-800"
+                aria-label="Instagram"
+              >
+                <Instagram className="h-5 w-5" />
+              </a>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-white">Quick Links</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/" className="text-gray-300 hover:text-white transition-colors text-base block py-1">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link href="/about" className="text-gray-300 hover:text-white transition-colors text-base block py-1">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services"
+                  className="text-gray-300 hover:text-white transition-colors text-base block py-1"
+                >
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/projects"
+                  className="text-gray-300 hover:text-white transition-colors text-base block py-1"
+                >
+                  Projects
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="text-gray-300 hover:text-white transition-colors text-base block py-1">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-white">Services</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  href="/services"
+                  className="text-gray-300 hover:text-white transition-colors text-base block py-1"
+                >
+                  Drainage Solutions
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services"
+                  className="text-gray-300 hover:text-white transition-colors text-base block py-1"
+                >
+                  Earth Retainment
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services"
+                  className="text-gray-300 hover:text-white transition-colors text-base block py-1"
+                >
+                  Remediation Services
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services"
+                  className="text-gray-300 hover:text-white transition-colors text-base block py-1"
+                >
+                  Stormwater Management
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services"
+                  className="text-gray-300 hover:text-white transition-colors text-base block py-1"
+                >
+                  Emergency Services
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-white">Contact Info</h3>
+            <div className="space-y-3">
+              <div className="flex items-start space-x-3">
+                <MapPin className="h-5 w-5 text-blue-400 mt-1 flex-shrink-0" />
+                <span className="text-gray-300 text-base">552 S P St, Livermore, CA 94550</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Phone className="h-5 w-5 text-blue-400 flex-shrink-0" />
+                <a href="tel:+19258998123" className="text-gray-300 hover:text-white transition-colors text-base">
+                  (925) 899-8123
+                </a>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Mail className="h-5 w-5 text-blue-400 flex-shrink-0" />
+                <a
+                  href="mailto:Matt@solvesall.org"
+                  className="text-gray-300 hover:text-white transition-colors text-base"
+                >
+                  Matt@solvesall.org
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Main Footer Content */}
-        <div className="py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-            {/* Company Info */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="lg:col-span-2"
-            >
-              <Link href="/" className="flex items-center space-x-3 mb-6">
-                <div className="relative bg-gradient-to-br from-blue-500 to-blue-600 p-3 rounded-2xl shadow-lg">
-                  <svg viewBox="0 0 24 24" className="w-6 h-6 text-white" fill="currentColor">
-                    <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z" />
-                    <path d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" fill="none" />
-                  </svg>
-                </div>
-                <div>
-                  <div className="text-xl font-bold">Solves All Engineering</div>
-                  <div className="text-sm text-neutral-400">Engineering Excellence</div>
-                </div>
-              </Link>
-
-              <p className="text-neutral-400 mb-6 max-w-md">
-                Specializing in stormwater management and construction solutions with unwavering commitment to our
-                clients. We deliver innovative engineering solutions that exceed expectations.
-              </p>
-
-              {/* Contact Info */}
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3 text-neutral-400">
-                  <MapPin className="h-5 w-5 text-blue-500 flex-shrink-0" />
-                  <span>552 S P St, Livermore, CA 94550</span>
-                </div>
-                <div className="flex items-center space-x-3 text-neutral-400">
-                  <Phone className="h-5 w-5 text-blue-500 flex-shrink-0" />
-                  <span>(925) 899-8123</span>
-                </div>
-                <div className="flex items-center space-x-3 text-neutral-400">
-                  <Mail className="h-5 w-5 text-blue-500 flex-shrink-0" />
-                  <span>Matt@solvesall.org</span>
-                </div>
-                <div className="flex items-center space-x-3 text-neutral-400">
-                  <Clock className="h-5 w-5 text-blue-500 flex-shrink-0" />
-                  <span>Mon - Fri: 8:00 AM - 5:00 PM, Sat: 9:00 AM - 2:00 PM</span>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Services */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-            >
-              <h4 className="text-lg font-bold mb-6">Services</h4>
-              <ul className="space-y-3">
-                {services.map((service, index) => (
-                  <li key={index}>
-                    <Link
-                      href={service.href}
-                      className="text-neutral-400 hover:text-white transition-colors duration-200 flex items-center space-x-2 group"
-                    >
-                      <ArrowRight className="h-4 w-4 text-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
-                      <span>{service.name}</span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-
-            {/* Company */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <h4 className="text-lg font-bold mb-6">Company</h4>
-              <ul className="space-y-3">
-                {company.map((item, index) => (
-                  <li key={index}>
-                    <Link
-                      href={item.href}
-                      className="text-neutral-400 hover:text-white transition-colors duration-200 flex items-center space-x-2 group"
-                    >
-                      <ArrowRight className="h-4 w-4 text-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
-                      <span>{item.name}</span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-
-              {/* Social Links */}
-              <div className="mt-8">
-                <h5 className="text-sm font-semibold mb-4 text-neutral-300">Follow Us</h5>
-                <div className="flex space-x-3">
-                  {socialLinks.map((social, index) => (
-                    <motion.a
-                      key={index}
-                      href={social.href}
-                      className="p-2 rounded-lg bg-neutral-800/50 hover:bg-blue-500 transition-colors duration-200 group"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <social.icon className="h-5 w-5 text-neutral-400 group-hover:text-white transition-colors duration-200" />
-                    </motion.a>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
+        {/* Newsletter Signup */}
+        <div className="border-t border-gray-800 pt-8 mb-8">
+          <div className="max-w-md mx-auto text-center">
+            <h3 className="text-lg font-semibold mb-2 text-white">Stay Updated</h3>
+            <p className="text-gray-300 text-base mb-4">
+              Subscribe to our newsletter for project updates and engineering insights.
+            </p>
+            <div className="flex space-x-2">
+              <Input
+                type="email"
+                placeholder="Enter your email"
+                className="bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-blue-400"
+              />
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white">Subscribe</Button>
+            </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="py-8 border-t border-neutral-700/50">
-          <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-            <div className="text-neutral-400 text-sm">© {currentYear} Solves All Engineering. All rights reserved.</div>
-
-            <div className="flex items-center space-x-6 text-sm">
-              <Link href="/privacy" className="text-neutral-400 hover:text-white transition-colors duration-200">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className="text-neutral-400 hover:text-white transition-colors duration-200">
-                Terms of Service
-              </Link>
-              <div className="flex items-center space-x-2 text-neutral-400">
-                <CheckCircle className="h-4 w-4 text-green-500" />
-                <span>WCAG 2.1 AA Compliant</span>
-              </div>
-            </div>
+        <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-gray-400 text-base mb-4 md:mb-0">© 2024 Solves All Engineering. All rights reserved.</p>
+          <div className="flex space-x-6">
+            <Link href="/privacy" className="text-gray-400 hover:text-white text-base transition-colors">
+              Privacy Policy
+            </Link>
+            <Link href="/terms" className="text-gray-400 hover:text-white text-base transition-colors">
+              Terms of Service
+            </Link>
+            <Link href="/accessibility" className="text-gray-400 hover:text-white text-base transition-colors">
+              Accessibility
+            </Link>
           </div>
         </div>
       </div>

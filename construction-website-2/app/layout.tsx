@@ -5,42 +5,61 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { Footer } from "@/components/footer"
 import { ModernNavbar } from "@/components/modern-navbar"
 import "@/app/globals.css"
-import "@/app/mobile-enhancements.css"
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
+  preload: true,
 })
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   variable: "--font-space-grotesk",
   display: "swap",
+  preload: false,
 })
 
 const jetBrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-jetbrains-mono",
   display: "swap",
+  preload: false,
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://solvesall.org"),
-  title: "Solves All Engineering",
+  title: {
+    default: "Solves All Engineering | Drainage, Earth Retainment & Remediation | Northern California",
+    template: "%s | Solves All Engineering",
+  },
   description:
-    "Specializing in stormwater management and construction solutions with unwavering commitment to our clients.",
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 5,
-    userScalable: true,
-    viewportFit: "cover",
+    "Northern California's premier Class A General Engineering Contractor specializing in drainage solutions, earth retainment, and environmental remediation. Expert engineering services with warranty protection.",
+  keywords: [
+    "engineering contractor",
+    "drainage solutions",
+    "earth retainment",
+    "environmental remediation",
+    "Northern California",
+    "Livermore",
+    "stormwater management",
+    "construction services",
+  ],
+  authors: [{ name: "Solves All Engineering" }],
+  creator: "Solves All Engineering",
+  publisher: "Solves All Engineering",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://solvesall.org"),
+  alternates: {
+    canonical: "/",
   },
   openGraph: {
-    title: "Solves All Engineering",
+    title: "Solves All Engineering | Expert Drainage & Earth Retainment Solutions",
     description:
-      "Specializing in stormwater management and construction solutions with unwavering commitment to our clients.",
+      "Northern California's premier engineering contractor specializing in drainage, earth retainment, and remediation solutions. Expert services with warranty protection.",
     url: "https://solvesall.org",
     siteName: "Solves All Engineering",
     images: [
@@ -48,7 +67,7 @@ export const metadata: Metadata = {
         url: "/images/modern-residence-after.jpg",
         width: 1200,
         height: 630,
-        alt: "Solves All Engineering - Modern Residence After Project",
+        alt: "Solves All Engineering - Professional drainage and earth retainment solutions",
       },
     ],
     locale: "en_US",
@@ -57,9 +76,11 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    nocache: false,
     googleBot: {
       index: true,
       follow: true,
+      noimageindex: false,
       "max-video-preview": -1,
       "max-image-preview": "large",
       "max-snippet": -1,
@@ -67,32 +88,24 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Solves All Engineering",
+    title: "Solves All Engineering | Expert Engineering Solutions",
     description:
-      "Specializing in stormwater management and construction solutions with unwavering commitment to our clients.",
+      "Northern California's premier engineering contractor specializing in drainage, earth retainment, and remediation solutions.",
     images: ["/images/modern-residence-after.jpg"],
   },
+  verification: {
+    google: "your-google-verification-code",
+  },
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/shortcut-icon.png",
-    apple: "/apple-icon.png",
-    other: {
-      rel: "apple-touch-icon-precomposed",
-      url: "/apple-touch-icon-precomposed.png",
-    },
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
-  manifest: "/manifest.json",
-  appleWebApp: {
-    capable: true,
-    statusBarStyle: "default",
-    title: "Solves All Engineering",
-  },
-  formatDetection: {
-    telephone: true,
-    date: false,
-    address: true,
-  },
-  generator: 'v0.dev'
+  manifest: "/site.webmanifest",
+    generator: 'v0.dev'
 }
 
 export default function RootLayout({
@@ -106,10 +119,18 @@ export default function RootLayout({
       className={`${inter.variable} ${spaceGrotesk.variable} ${jetBrainsMono.variable}`}
       suppressHydrationWarning
     >
-      <body className="bg-white dark:bg-neutral-900">
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <meta name="theme-colorinitial-scale=1,viewport-fit=cover" />
+        <meta name="theme-color" content="#3b82f6" />
+      </head>
+      <body className="bg-white dark:bg-neutral-900 antialiased">
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange={false}>
           <ModernNavbar />
-          {children}
+          <main className="min-h-screen">{children}</main>
           <Footer />
         </ThemeProvider>
       </body>

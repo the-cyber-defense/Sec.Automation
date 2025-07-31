@@ -4,7 +4,7 @@ import { useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { motion, AnimatePresence } from "framer-motion"
-import { X, Home, Info, Wrench, Phone } from "lucide-react"
+import { X, Home, Info, Wrench, FolderOpen, Phone } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
@@ -18,6 +18,7 @@ const navigation = [
   { name: "Home", href: "/", icon: Home },
   { name: "About", href: "/about", icon: Info },
   { name: "Services", href: "/services", icon: Wrench },
+  { name: "Projects", href: "/projects", icon: FolderOpen },
   { name: "Contact", href: "/contact", icon: Phone },
 ]
 

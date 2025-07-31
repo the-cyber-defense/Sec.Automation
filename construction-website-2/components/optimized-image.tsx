@@ -61,7 +61,7 @@ export function OptimizedImage({
     >
       {(isVisible || props.priority) && (
         <Image
-          src={src || "/construction-professional.svg"}
+          src={src || "/placeholder.svg"}
           alt={alt}
           className={cn(fadeIn && "transition-opacity duration-500", isLoaded ? "opacity-100" : "opacity-0")}
           onLoad={() => setIsLoaded(true)}

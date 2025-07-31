@@ -2,8 +2,8 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://solvesall.org/sitemap.xml
-Sitemap: https://solvesall.org/image-sitemap.xml
+Sitemap: https://solvesallengineering.com/sitemap.xml
+Sitemap: https://solvesallengineering.com/image-sitemap.xml
 
 # Disallow admin and private areas
 Disallow: /admin/

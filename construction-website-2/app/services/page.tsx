@@ -37,7 +37,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Overview */}
-      <section className="py-12 md:py-20 bg-white dark:bg-neutral-900">
+      <section className="py-12 md:py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-10 md:mb-16 max-w-3xl mx-auto">
             <div className="inline-block px-4 py-2 bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300 rounded-full text-sm font-medium mb-3 md:mb-4">
@@ -46,7 +46,7 @@ export default function ServicesPage() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-6">
               Comprehensive Engineering Solutions
             </h2>
-            <p className="text-base md:text-lg text-gray-700 dark:text-gray-300">
+            <p className="text-base md:text-lg text-gray-700">
               From concept to completion, we provide end-to-end services to bring your vision to life with precision and
               excellence.
             </p>
@@ -55,11 +55,11 @@ export default function ServicesPage() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-gray-50 dark:bg-neutral-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group"
+                className="bg-gray-50 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group"
               >
                 <div className="relative h-48 md:h-56 overflow-hidden">
                   <Image
-                    src={service.image || "/service-icon.svg"}
+                    src={service.image || "/placeholder.svg"}
                     alt={service.alt}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -69,8 +69,8 @@ export default function ServicesPage() {
                   />
                 </div>
                 <div className="p-6 md:p-8">
-                  <h3 className="text-xl md:text-2xl font-bold text-neutral-900 dark:text-white mb-3 md:mb-4">{service.title}</h3>
-                  <p className="text-gray-700 dark:text-gray-300 mb-5 md:mb-6 text-sm sm:text-base">{service.description}</p>
+                  <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">{service.title}</h3>
+                  <p className="text-gray-700 mb-5 md:mb-6 text-sm sm:text-base">{service.description}</p>
                   <Link href={service.link}>
                     <Button className="bg-blue-600 hover:bg-blue-700 text-white w-full">
                       Learn More
@@ -85,14 +85,14 @@ export default function ServicesPage() {
       </section>
 
       {/* Process Section */}
-      <section className="py-12 md:py-20 bg-gray-50 dark:bg-neutral-800">
+      <section className="py-12 md:py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-10 md:mb-16 max-w-3xl mx-auto">
             <div className="inline-block px-4 py-2 bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300 rounded-full text-sm font-medium mb-3 md:mb-4">
               Our Process
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white mb-3 md:mb-6">How We Work</h2>
-            <p className="text-base md:text-lg text-gray-700 dark:text-gray-300">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-6">How We Work</h2>
+            <p className="text-base md:text-lg text-gray-700">
               Our streamlined process ensures a smooth experience from initial consultation to project completion.
             </p>
           </div>
@@ -114,7 +114,7 @@ export default function ServicesPage() {
                           <span className="text-blue-700 font-bold text-lg md:text-xl">{index + 1}</span>
                         </div>
                         <h3 className="text-lg md:text-2xl font-bold mb-2 md:mb-4">{step.title}</h3>
-                        <p className="text-gray-700 dark:text-gray-300 text-sm sm:text-base">{step.description}</p>
+                        <p className="text-gray-700 text-sm sm:text-base">{step.description}</p>
                       </div>
                       {/* Circle on the timeline - hidden on mobile */}
                       <div className="absolute top-1/2 left-0 md:left-auto md:right-0 transform translate-y-[-50%] translate-x-[-50%] md:translate-x-[50%] w-6 h-6 bg-blue-500 rounded-full border-4 border-white z-20 hidden md:block"></div>
@@ -129,7 +129,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-12 md:py-20 bg-white dark:bg-neutral-900">
+      <section className="py-12 md:py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center max-w-6xl mx-auto">
             <div className="relative h-[300px] sm:h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-xl order-2 md:order-1">
@@ -150,7 +150,7 @@ export default function ServicesPage() {
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-6">
                 The Solves All Engineering Difference
               </h2>
-              <p className="text-base md:text-lg text-gray-700 dark:text-gray-300 mb-5 md:mb-8">
+              <p className="text-base md:text-lg text-gray-700 mb-5 md:mb-8">
                 When you choose Solves All Engineering, you're choosing a partner committed to excellence, innovation,
                 and your complete satisfaction.
               </p>
@@ -160,7 +160,7 @@ export default function ServicesPage() {
                     <CheckCircle className="h-5 w-5 md:h-6 md:w-6 text-blue-500 mr-2 md:mr-3 mt-0.5 flex-shrink-0" />
                     <div>
                       <h3 className="font-semibold text-base md:text-lg">{benefit.title}</h3>
-                      <p className="text-gray-700 dark:text-gray-300 text-sm sm:text-base">{benefit.description}</p>
+                      <p className="text-gray-700 text-sm sm:text-base">{benefit.description}</p>
                     </div>
                   </div>
                 ))}
@@ -171,7 +171,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 md:py-20 bg-gray-900 dark:bg-neutral-950 text-white">
+      <section className="py-12 md:py-20 bg-gray-900 text-white">
         <div className="container mx-auto px-4 text-center max-w-4xl">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6">Ready to Start Your Project?</h2>
           <p className="text-gray-300 text-sm sm:text-base md:text-lg max-w-xl md:max-w-2xl mx-auto mb-6 md:mb-10">
@@ -203,7 +203,7 @@ const services = [
       "Comprehensive drainage systems to prevent flooding and water damage on residential and commercial properties.",
     image: "/images/residential-1.png",
     alt: "Professional drainage system installation preventing flooding and water damage",
-    link: "/services/residential",
+    link: "/services/drainage",
   },
   {
     title: "Earth Retainment",
@@ -211,36 +211,36 @@ const services = [
       "Professional retaining wall construction and slope stabilization for challenging terrain and erosion control.",
     image: "/images/commercial-1.png",
     alt: "Engineered retaining wall construction for slope stabilization and erosion control",
-    link: "/services/residential",
+    link: "/services/retainment",
   },
   {
     title: "Remediation Services",
     description: "Environmental remediation and site cleanup services for contaminated soil and water issues.",
-    image: "/images/remediation-1.png",
+    image: "/images/industrial-1.png",
     alt: "Environmental remediation and contaminated soil cleanup services",
-    link: "/services/residential",
+    link: "/services/remediation",
   },
   {
     title: "Stormwater Management",
     description:
       "Advanced stormwater management systems designed to handle Northern California's unique weather patterns.",
-    image: "/images/stormwater-1.png",
+    image: "/images/project-3.png",
     alt: "Advanced stormwater management system designed for Northern California weather",
-    link: "/services/residential",
+    link: "/services/stormwater",
   },
   {
     title: "Residential Flooding Solutions",
     description: "Specialized solutions for homes experiencing flooding, water intrusion, and drainage problems.",
     image: "/images/process.png",
     alt: "Residential flooding solutions and water intrusion prevention systems",
-    link: "/services/residential",
+    link: "/services/flooding",
   },
   {
     title: "Emergency Water Damage",
     description: "Rapid response emergency services for water damage assessment and immediate remediation.",
     image: "/images/residential-2.png",
     alt: "Emergency water damage response and immediate remediation services",
-    link: "/services/residential",
+    link: "/services/emergency",
   },
 ]
 

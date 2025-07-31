@@ -305,7 +305,7 @@ export function ImageSlider({
                 aria-current={index === currentIndex ? "true" : "false"}
               >
                 <Image
-                  src={image.src || "/project-placeholder.svg"}
+                  src={image.src || "/placeholder.svg"}
                   alt=""
                   fill
                   className="object-cover"
@@ -383,7 +383,7 @@ export function ImageSlider({
               aria-hidden={index !== currentIndex}
             >
               <Image
-                src={image.src || "/project-placeholder.svg"}
+                src={image.src || "/placeholder.svg"}
                 alt={image.alt}
                 fill
                 className="object-cover"

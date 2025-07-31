@@ -87,7 +87,7 @@ export function BeforeAfterSlider({
         {/* After Image (Background) */}
         <div className="absolute inset-0">
           <Image
-            src={afterImage || "/project-placeholder.svg"}
+            src={afterImage || "/placeholder.svg"}
             alt={afterAlt}
             fill
             className="object-cover"
@@ -102,7 +102,7 @@ export function BeforeAfterSlider({
         {/* Before Image (Clipped) */}
         <div className="absolute inset-0 overflow-hidden" style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}>
           <Image
-            src={beforeImage || "/project-placeholder.svg"}
+            src={beforeImage || "/placeholder.svg"}
             alt={beforeAlt}
             fill
             className="object-cover"
