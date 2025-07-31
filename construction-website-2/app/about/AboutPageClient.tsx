@@ -19,7 +19,7 @@ const teamMembers = [
     role: "Founder & Lead Engineer",
     experience: "15+ years",
     specialization: "Structural Engineering",
-    image: "/placeholder.svg?height=300&width=300&text=Michael+Rodriguez",
+    image: "/team-engineer.svg",
     bio: "Licensed Professional Engineer with expertise in complex structural solutions and project management.",
   },
   {
@@ -27,7 +27,7 @@ const teamMembers = [
     role: "Senior Project Manager",
     experience: "12+ years",
     specialization: "Project Management",
-    image: "/placeholder.svg?height=300&width=300&text=Sarah+Chen",
+    image: "/team-manager.svg",
     bio: "Certified Project Management Professional specializing in large-scale construction projects.",
   },
   {
@@ -35,7 +35,7 @@ const teamMembers = [
     role: "Field Operations Manager",
     experience: "10+ years",
     specialization: "Field Operations",
-    image: "/placeholder.svg?height=300&width=300&text=David+Thompson",
+    image: "/team-supervisor.svg",
     bio: "Expert in field operations and quality control with extensive hands-on construction experience.",
   },
 ]
@@ -70,7 +70,7 @@ const testimonials = [
     content:
       "Solves All Engineering transformed our problematic hillside drainage. Their professional approach and quality work exceeded our expectations.",
     rating: 5,
-    image: "/placeholder.svg?height=80&width=80&text=JM",
+    image: "/client-avatar-1.svg",
   },
   {
     name: "Robert Kim",
@@ -78,7 +78,7 @@ const testimonials = [
     content:
       "Outstanding engineering solutions and project management. They delivered our commercial project on time and within budget.",
     rating: 5,
-    image: "/placeholder.svg?height=80&width=80&text=RK",
+    image: "/client-avatar-2.svg",
   },
   {
     name: "Lisa Johnson",
@@ -86,7 +86,7 @@ const testimonials = [
     content:
       "Professional, reliable, and knowledgeable. Their stormwater management system has completely solved our flooding issues.",
     rating: 5,
-    image: "/placeholder.svg?height=80&width=80&text=LJ",
+    image: "/client-avatar-3.svg",
   },
 ]
 
@@ -128,7 +128,7 @@ export default function AboutPageClient() {
               <div className="relative">
                 <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                   <Image
-                    src="/placeholder.svg?height=500&width=600&text=Solves+All+Engineering+Team"
+                    src="/team-group.svg"
                     alt="Solves All Engineering team at work"
                     fill
                     className="object-cover"
@@ -206,7 +206,7 @@ export default function AboutPageClient() {
               <ScaleIn>
                 <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl">
                   <Image
-                    src="/placeholder.svg?height=400&width=600&text=Complex+Problem+Solving"
+                    src="/problem-solving.svg"
                     alt="Complex engineering problem solving"
                     fill
                     className="object-cover"
@@ -327,7 +327,7 @@ export default function AboutPageClient() {
               <FadeIn>
                 <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl">
                   <Image
-                    src="/placeholder.svg?height=400&width=600&text=Company+History+and+Growth"
+                    src="/company-history.svg"
                     alt="Company history and growth"
                     fill
                     className="object-cover"
@@ -407,7 +407,7 @@ export default function AboutPageClient() {
                     <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300">
                       <div className="relative h-64 overflow-hidden">
                         <Image
-                          src={member.image || "/placeholder.svg"}
+                          src={member.image || "/construction-professional.svg"}
                           alt={member.name}
                           fill
                           className="object-cover transition-transform duration-300 group-hover:scale-110"
@@ -502,7 +502,7 @@ export default function AboutPageClient() {
                       <div className="flex items-center">
                         <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
                           <Image
-                            src={testimonial.image || "/placeholder.svg"}
+                            src={testimonial.image || "/client-avatar-1.svg"}
                             alt={testimonial.name}
                             fill
                             className="object-cover"

@@ -25,6 +25,7 @@ const jetBrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://solvesall.org"),
   title: "Solves All Engineering",
   description:
     "Specializing in stormwater management and construction solutions with unwavering commitment to our clients.",

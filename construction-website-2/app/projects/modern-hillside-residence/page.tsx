@@ -20,7 +20,7 @@ export default function ModernHillsideResidencePage() {
       <section className="relative h-[400px] sm:h-[500px] w-full overflow-hidden">
         <div className="absolute inset-0 bg-black/40 z-10" />
         <Image
-          src="/placeholder.svg?height=500&width=1200&text=Modern+Hillside+Residence"
+          src="/modern-house-hero.svg"
           alt="Modern Hillside Residence"
           fill
           className="object-cover"
@@ -131,7 +131,7 @@ export default function ModernHillsideResidencePage() {
 
             <div className="relative h-[400px] sm:h-[500px] rounded-2xl overflow-hidden shadow-xl">
               <Image
-                src="/placeholder.svg?height=500&width=600&text=Modern+Interior+Design"
+                src="/construction-site.svg"
                 alt="Modern interior design"
                 fill
                 className="object-cover"
@@ -154,8 +154,8 @@ export default function ModernHillsideResidencePage() {
 
           <div className="max-w-4xl mx-auto">
             <BeforeAfterSlider
-              beforeImage="/placeholder.svg?height=600&width=800&text=Site+Before+Construction"
-              afterImage="/placeholder.svg?height=600&width=800&text=Completed+Modern+Residence"
+              beforeImage="/images/modern-residence-before.jpg"
+              afterImage="/images/modern-residence-after.jpg"
               beforeAlt="Site before construction"
               afterAlt="Completed modern residence"
             />
@@ -176,7 +176,7 @@ export default function ModernHillsideResidencePage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             <div className="relative h-64 sm:h-80 rounded-xl overflow-hidden shadow-lg group">
               <Image
-                src="/placeholder.svg?height=320&width=400&text=Living+Area+with+Wood+Accents"
+                src="/images/modern-residence-interior-1.jpg"
                 alt="Living area with wood accents"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -186,7 +186,7 @@ export default function ModernHillsideResidencePage() {
 
             <div className="relative h-64 sm:h-80 rounded-xl overflow-hidden shadow-lg group">
               <Image
-                src="/placeholder.svg?height=320&width=400&text=Modern+Staircase+Design"
+                src="/images/modern-residence-staircase-1.jpg"
                 alt="Modern staircase design"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -196,7 +196,7 @@ export default function ModernHillsideResidencePage() {
 
             <div className="relative h-64 sm:h-80 rounded-xl overflow-hidden shadow-lg group">
               <Image
-                src="/placeholder.svg?height=320&width=400&text=Staircase+with+Glass+Railings"
+                src="/images/modern-residence-staircase-2.jpg"
                 alt="Staircase with glass railings"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -206,7 +206,7 @@ export default function ModernHillsideResidencePage() {
 
             <div className="relative h-64 sm:h-80 rounded-xl overflow-hidden shadow-lg group">
               <Image
-                src="/placeholder.svg?height=320&width=400&text=Architectural+Staircase+Details"
+                src="/images/modern-residence-staircase-3.jpg"
                 alt="Architectural staircase details"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -216,7 +216,7 @@ export default function ModernHillsideResidencePage() {
 
             <div className="relative h-64 sm:h-80 rounded-xl overflow-hidden shadow-lg group">
               <Image
-                src="/placeholder.svg?height=320&width=400&text=Dining+Area+with+Modern+Furniture"
+                src="/images/modern-residence-dining.jpg"
                 alt="Dining area with modern furniture"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -226,7 +226,7 @@ export default function ModernHillsideResidencePage() {
 
             <div className="relative h-64 sm:h-80 rounded-xl overflow-hidden shadow-lg group">
               <Image
-                src="/placeholder.svg?height=320&width=400&text=Modern+Entrance+Design"
+                src="/images/modern-residence-entrance.jpg"
                 alt="Modern entrance design"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-110"

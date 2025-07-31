@@ -426,7 +426,7 @@ function ProjectCard({ project }: { project: any }) {
     <Card className="overflow-hidden group h-full hover:shadow-xl transition-all duration-300">
       <div className="relative h-48 sm:h-56 md:h-64 w-full">
         <Image
-          src={project.image || "/placeholder.svg"}
+          src={project.image || "/project-placeholder.svg"}
           alt={project.alt || `${project.title} - ${project.category} project by Solves All Engineering`}
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-110"

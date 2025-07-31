@@ -1,0 +1,91 @@
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="600" height="400" fill="#f0f9ff"/>
+  
+  <!-- Engineer at work -->
+  <circle cx="150" cy="150" r="30" fill="#fbbf24"/>
+  <rect x="130" y="180" width="40" height="50" fill="#2563eb" rx="8"/>
+  <rect x="110" y="200" width="20" height="30" fill="#fbbf24" rx="10"/>
+  <rect x="170" y="200" width="20" height="30" fill="#fbbf24" rx="10"/>
+  
+  <!-- Computer/tablet -->
+  <rect x="200" y="200" width="60" height="40" fill="#374151" rx="4"/>
+  <rect x="205" y="205" width="50" height="30" fill="#3b82f6"/>
+  
+  <!-- Complex diagrams on screen -->
+  <g stroke="white" stroke-width="1" fill="none">
+    <circle cx="220" cy="215" r="6"/>
+    <rect x="230" y="210" width="15" height="10"/>
+    <line x1="210" y1="225" x2="250" y2="225"/>
+    <polygon points="215,230 225,230 220,225"/>
+  </g>
+  
+  <!-- Problem visualization -->
+  <g transform="translate(350, 100)">
+    <!-- Before state -->
+    <rect x="0" y="0" width="80" height="60" fill="#fecaca" stroke="#dc2626" stroke-width="2" rx="8"/>
+    <text x="40" y="20" text-anchor="middle" fill="#dc2626" font-family="Arial, sans-serif" font-size="10" font-weight="bold">PROBLEM</text>
+    <text x="40" y="35" text-anchor="middle" fill="#dc2626" font-family="Arial, sans-serif" font-size="8">Drainage</text>
+    <text x="40" y="45" text-anchor="middle" fill="#dc2626" font-family="Arial, sans-serif" font-size="8">Issues</text>
+    
+    <!-- Arrow -->
+    <path d="M 90 30 L 120 30" stroke="#374151" stroke-width="3" marker-end="url(#arrowhead)"/>
+    
+    <!-- After state -->
+    <rect x="130" y="0" width="80" height="60" fill="#dcfce7" stroke="#16a34a" stroke-width="2" rx="8"/>
+    <text x="170" y="20" text-anchor="middle" fill="#16a34a" font-family="Arial, sans-serif" font-size="10" font-weight="bold">SOLUTION</text>
+    <text x="170" y="35" text-anchor="middle" fill="#16a34a" font-family="Arial, sans-serif" font-size="8">Effective</text>
+    <text x="170" y="45" text-anchor="middle" fill="#16a34a" font-family="Arial, sans-serif" font-size="8">System</text>
+  </g>
+  
+  <!-- Engineering tools -->
+  <g transform="translate(100, 280)">
+    <!-- Calculator -->
+    <rect x="0" y="0" width="30" height="40" fill="#1f2937" rx="4"/>
+    <rect x="5" y="5" width="20" height="10" fill="#374151"/>
+    <g fill="#9ca3af">
+      <circle cx="10" cy="20" r="2"/>
+      <circle cx="15" cy="20" r="2"/>
+      <circle cx="20" cy="20" r="2"/>
+      <circle cx="10" cy="25" r="2"/>
+      <circle cx="15" cy="25" r="2"/>
+      <circle cx="20" cy="25" r="2"/>
+    </g>
+    
+    <!-- Measuring tools -->
+    <rect x="40" y="10" width="50" height="4" fill="#fbbf24" rx="2"/>
+    <rect x="42" y="8" width="4" height="8" fill="#f59e0b"/>
+    <rect x="86" y="8" width="4" height="8" fill="#f59e0b"/>
+    
+    <!-- Technical drawings -->
+    <rect x="100" y="0" width="60" height="40" fill="white" stroke="#9ca3af" stroke-width="1"/>
+    <g stroke="#3b82f6" stroke-width="1" fill="none">
+      <line x1="110" y1="10" x2="150" y2="10"/>
+      <line x1="110" y1="15" x2="140" y2="15"/>
+      <line x1="110" y1="20" x2="145" y2="20"/>
+      <rect x="110" y="25" width="20" height="10"/>
+      <circle cx="145" cy="30" r="5"/>
+    </g>
+  </g>
+  
+  <!-- Solution arrows and flow -->
+  <g stroke="#16a34a" stroke-width="2" fill="none" marker-end="url(#arrowhead-green)">
+    <path d="M 300 220 Q 350 200 400 220"/>
+    <path d="M 180 180 Q 220 160 260 180"/>
+    <path d="M 150 250 Q 200 240 250 250"/>
+  </g>
+  
+  <!-- Define arrow markers -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#374151"/>
+    </marker>
+    <marker id="arrowhead-green" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#16a34a"/>
+    </marker>
+  </defs>
+  
+  <!-- Title -->
+  <text x="300" y="40" text-anchor="middle" fill="#1f2937" font-family="Arial, sans-serif" font-size="20" font-weight="bold">Complex Problem Solving</text>
+  <text x="300" y="65" text-anchor="middle" fill="#6b7280" font-family="Arial, sans-serif" font-size="14">Engineering Solutions That Work</text>
+</svg>

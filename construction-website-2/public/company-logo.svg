@@ -1,0 +1,43 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="60" cy="60" r="58" fill="#2563eb" stroke="#1d4ed8" stroke-width="4"/>
+  
+  <!-- Building/Structure icon -->
+  <rect x="25" y="45" width="15" height="35" fill="white" opacity="0.9"/>
+  <rect x="45" y="35" width="15" height="45" fill="white" opacity="0.9"/>
+  <rect x="65" y="25" width="15" height="55" fill="white" opacity="0.9"/>
+  <rect x="85" y="40" width="15" height="40" fill="white" opacity="0.9"/>
+  
+  <!-- Foundation line -->
+  <rect x="20" y="80" width="80" height="4" fill="white"/>
+  
+  <!-- Windows -->
+  <rect x="28" y="50" width="3" height="4" fill="#2563eb"/>
+  <rect x="34" y="50" width="3" height="4" fill="#2563eb"/>
+  <rect x="28" y="58" width="3" height="4" fill="#2563eb"/>
+  <rect x="34" y="58" width="3" height="4" fill="#2563eb"/>
+  
+  <rect x="48" y="40" width="3" height="4" fill="#2563eb"/>
+  <rect x="54" y="40" width="3" height="4" fill="#2563eb"/>
+  <rect x="48" y="48" width="3" height="4" fill="#2563eb"/>
+  <rect x="54" y="48" width="3" height="4" fill="#2563eb"/>
+  <rect x="48" y="56" width="3" height="4" fill="#2563eb"/>
+  <rect x="54" y="56" width="3" height="4" fill="#2563eb"/>
+  
+  <rect x="68" y="30" width="3" height="4" fill="#2563eb"/>
+  <rect x="74" y="30" width="3" height="4" fill="#2563eb"/>
+  <rect x="68" y="38" width="3" height="4" fill="#2563eb"/>
+  <rect x="74" y="38" width="3" height="4" fill="#2563eb"/>
+  <rect x="68" y="46" width="3" height="4" fill="#2563eb"/>
+  <rect x="74" y="46" width="3" height="4" fill="#2563eb"/>
+  <rect x="68" y="54" width="3" height="4" fill="#2563eb"/>
+  <rect x="74" y="54" width="3" height="4" fill="#2563eb"/>
+  
+  <rect x="88" y="45" width="3" height="4" fill="#2563eb"/>
+  <rect x="94" y="45" width="3" height="4" fill="#2563eb"/>
+  <rect x="88" y="53" width="3" height="4" fill="#2563eb"/>
+  <rect x="94" y="53" width="3" height="4" fill="#2563eb"/>
+  
+  <!-- Company initials -->
+  <text x="60" y="100" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">SAE</text>
+</svg>

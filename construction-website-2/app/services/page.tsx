@@ -59,7 +59,7 @@ export default function ServicesPage() {
               >
                 <div className="relative h-48 md:h-56 overflow-hidden">
                   <Image
-                    src={service.image || "/placeholder.svg"}
+                    src={service.image || "/service-icon.svg"}
                     alt={service.alt}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-110"

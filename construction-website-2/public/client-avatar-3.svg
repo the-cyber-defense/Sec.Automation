@@ -1,0 +1,27 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="40" cy="40" r="40" fill="#fef3c7"/>
+  
+  <!-- Head -->
+  <circle cx="40" cy="30" r="12" fill="#fde68a"/>
+  
+  <!-- Hair -->
+  <path d="M 28 26 Q 40 20 52 26 Q 52 23 40 21 Q 28 23 28 26" fill="#b45309"/>
+  
+  <!-- Eyes -->
+  <circle cx="36" cy="28" r="1.5" fill="#374151"/>
+  <circle cx="44" cy="28" r="1.5" fill="#374151"/>
+  
+  <!-- Smile -->
+  <path d="M 36 33 Q 40 36 44 33" stroke="#374151" stroke-width="1" fill="none"/>
+  
+  <!-- Body -->
+  <rect x="32" y="42" width="16" height="25" fill="#dc2626" rx="8"/>
+  
+  <!-- Arms -->
+  <circle cx="26" cy="50" r="6" fill="#fde68a"/>
+  <circle cx="54" cy="50" r="6" fill="#fde68a"/>
+  
+  <!-- Initial -->
+  <text x="40" y="62" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">LJ</text>
+</svg>

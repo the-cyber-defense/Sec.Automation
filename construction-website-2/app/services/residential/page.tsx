@@ -154,7 +154,7 @@ export default function ResidentialServicePage() {
               <div key={index} className="group relative overflow-hidden rounded-2xl shadow-md">
                 <div className="relative h-80 w-full">
                   <Image
-                    src={project.image || "/placeholder.svg"}
+                    src={project.image || "/project-placeholder.svg"}
                     alt={project.title}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -206,7 +206,7 @@ export default function ResidentialServicePage() {
                 <div className="flex items-center mb-6">
                   <div className="relative h-16 w-16 rounded-full overflow-hidden mr-4 border-2 border-blue-300">
                     <Image
-                      src={testimonial.avatar || "/placeholder.svg"}
+                      src={testimonial.avatar || "/project-placeholder.svg"}
                       alt={testimonial.name}
                       fill
                       className="object-cover"
