@@ -950,39 +950,39 @@ const services = [
     description:
       "Comprehensive drainage systems to prevent flooding and water damage on residential properties.",
     image: "/images/residential-1.png",
-    link: "/services/drainage",
+    link: "/services/residential",
   },
   {
     title: "Earth Retainment",
     description:
       "Professional retaining wall construction and slope stabilization for challenging terrain and erosion control.",
     image: "/images/commercial-1.png",
-    link: "/services/retainment",
+    link: "/services/residential",
   },
   {
     title: "Remediation Services",
     description: "Environmental remediation and site cleanup services for contaminated soil and water issues.",
     image: "/images/remediation-1.png",
-    link: "/services/remediation",
+    link: "/services/residential",
   },
   {
     title: "Stormwater Management",
     description:
       "Advanced stormwater management systems designed to handle Northern California's unique weather patterns.",
     image: "/images/stormwater-1.png",
-    link: "/services/stormwater",
+    link: "/services/residential",
   },
   {
     title: "Residential Flooding Solutions",
     description: "Specialized solutions for homes experiencing flooding, water intrusion, and drainage problems.",
     image: "/images/process.png",
-    link: "/services/flooding",
+    link: "/services/residential",
   },
   {
     title: "Emergency Water Damage",
     description: "Rapid response emergency services for water damage assessment and immediate remediation.",
     image: "/images/residential-2.png",
-    link: "/services/emergency",
+    link: "/services/residential",
   },
 ]
 

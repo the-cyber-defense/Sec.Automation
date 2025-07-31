@@ -203,7 +203,7 @@ const services = [
       "Comprehensive drainage systems to prevent flooding and water damage on residential and commercial properties.",
     image: "/images/residential-1.png",
     alt: "Professional drainage system installation preventing flooding and water damage",
-    link: "/services/drainage",
+    link: "/services/residential",
   },
   {
     title: "Earth Retainment",
@@ -211,14 +211,14 @@ const services = [
       "Professional retaining wall construction and slope stabilization for challenging terrain and erosion control.",
     image: "/images/commercial-1.png",
     alt: "Engineered retaining wall construction for slope stabilization and erosion control",
-    link: "/services/retainment",
+    link: "/services/residential",
   },
   {
     title: "Remediation Services",
     description: "Environmental remediation and site cleanup services for contaminated soil and water issues.",
     image: "/images/remediation-1.png",
     alt: "Environmental remediation and contaminated soil cleanup services",
-    link: "/services/remediation",
+    link: "/services/residential",
   },
   {
     title: "Stormwater Management",
@@ -226,21 +226,21 @@ const services = [
       "Advanced stormwater management systems designed to handle Northern California's unique weather patterns.",
     image: "/images/stormwater-1.png",
     alt: "Advanced stormwater management system designed for Northern California weather",
-    link: "/services/stormwater",
+    link: "/services/residential",
   },
   {
     title: "Residential Flooding Solutions",
     description: "Specialized solutions for homes experiencing flooding, water intrusion, and drainage problems.",
     image: "/images/process.png",
     alt: "Residential flooding solutions and water intrusion prevention systems",
-    link: "/services/flooding",
+    link: "/services/residential",
   },
   {
     title: "Emergency Water Damage",
     description: "Rapid response emergency services for water damage assessment and immediate remediation.",
     image: "/images/residential-2.png",
     alt: "Emergency water damage response and immediate remediation services",
-    link: "/services/emergency",
+    link: "/services/residential",
   },
 ]
 

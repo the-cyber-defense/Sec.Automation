@@ -103,7 +103,7 @@ export default function AboutPageClient() {
               <div>
                 <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-200 mb-6">About Solves All Engineering</Badge>
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
-                  Engineering Excellence Since <span className="text-blue-600">2010</span>
+                  Engineering Excellence Since <span className="text-blue-600">1980</span>
                 </h1>
                 <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
                   We are a team of dedicated engineering professionals committed to solving complex construction
@@ -111,14 +111,14 @@ export default function AboutPageClient() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-                    View Our Projects
+                    Contact Our Team
                   </Button>
                   <Button
                     size="lg"
                     variant="outline"
                     className="border-blue-600 text-blue-600 hover:bg-blue-50 bg-transparent"
                   >
-                    Contact Our Team
+                    Get Free Quote
                   </Button>
                 </div>
               </div>
@@ -139,7 +139,7 @@ export default function AboutPageClient() {
                 <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-lg">
                   <div className="text-center">
                     <div className="text-2xl font-bold text-blue-600">
-                      <CountUp end={500} duration={2} />+
+                      <CountUp end={150} duration={2} />+
                     </div>
                     <div className="text-sm text-gray-600">Projects Completed</div>
                   </div>
@@ -157,13 +157,13 @@ export default function AboutPageClient() {
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
-                  <CountUp end={15} duration={2} />+
+                  <CountUp end={45} duration={2} />+
                 </div>
                 <div className="text-gray-600">Years Experience</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
-                  <CountUp end={500} duration={2} />+
+                  <CountUp end={150} duration={2} />+
                 </div>
                 <div className="text-gray-600">Projects Completed</div>
               </div>
@@ -175,9 +175,9 @@ export default function AboutPageClient() {
               </div>
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
-                  <CountUp end={25} duration={2} />+
+                  <CountUp end={1} duration={2} />
                 </div>
-                <div className="text-gray-600">Team Members</div>
+                <div className="text-gray-600">Expert Team</div>
               </div>
             </div>
           </StaggerIn>
@@ -317,8 +317,8 @@ export default function AboutPageClient() {
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Story</h2>
                 <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-                  Founded in 2010 with a vision to provide exceptional engineering solutions, Solves All Engineering has
-                  grown from a small team to a trusted partner for complex construction challenges.
+                  Founded in 1980 with a vision to provide exceptional engineering solutions, Solves All Engineering has
+                  grown to become a trusted partner for complex outdoor construction challenges.
                 </p>
               </div>
             </FadeIn>
@@ -536,13 +536,6 @@ export default function AboutPageClient() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
                   Get Free Consultation
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-white text-white hover:bg-white/10 bg-transparent"
-                >
-                  View Our Projects
                 </Button>
               </div>
             </div>

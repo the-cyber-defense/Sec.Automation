@@ -20,8 +20,6 @@ export function Footer() {
 
   const services = [
     { name: "Residential Engineering", href: "/services/residential" },
-    { name: "Commercial Projects", href: "/services/commercial" },
-    { name: "Stormwater Management", href: "/services/stormwater" },
   ]
 
   const company = [

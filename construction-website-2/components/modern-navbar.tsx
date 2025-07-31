@@ -33,7 +33,6 @@ export function ModernNavbar() {
       label: "Services",
       items: [
         { href: "/services/residential", label: "Residential" },
-        { href: "/services/commercial", label: "Commercial" },
       ],
     },
     { href: "/about", label: "About" },
