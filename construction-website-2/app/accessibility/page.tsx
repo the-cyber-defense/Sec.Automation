@@ -132,16 +132,16 @@ export default function AccessibilityPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="mailto:accessibility@solvesall.org"
+                href="mailto:Matt@solvesall.org"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-colors"
               >
-                Email: accessibility@solvesall.org
+                Email: Matt@solvesall.org
               </a>
               <a
-                href="tel:+15551234567"
+                href="tel:+19258998123"
                 className="bg-gray-700 hover:bg-gray-600 text-white px-8 py-3 rounded-lg font-medium transition-colors"
               >
-                Phone: (555) 123-4567
+                Phone: (925) 899-8123
               </a>
             </div>
           </div>
