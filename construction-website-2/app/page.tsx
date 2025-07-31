@@ -61,7 +61,7 @@ export default function HomePage() {
               className="text-body-lg text-neutral-600 dark:text-neutral-400 max-w-3xl mx-auto mb-12"
             >
               Transform your vision into reality with our innovative engineering solutions. We deliver exceptional
-              quality, precision, and expertise for residential and industrial projects.
+              quality, precision, and expertise for residential and commercial projects.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -266,14 +266,14 @@ export default function HomePage() {
               <h2 className="text-display font-display mb-6">Comprehensive Engineering Solutions</h2>
 
               <p className="text-body-lg text-neutral-600 dark:text-neutral-400 mb-8">
-                From residential projects to industrial facilities, we provide end-to-end
+                From residential projects to commercial facilities, we provide end-to-end
                 engineering services tailored to your specific needs and vision.
               </p>
 
               <div className="space-y-4 mb-8">
                 {[
                   "Custom residential engineering and design",
-                  "Industrial facility engineering and upgrades",
+                  "Commercial facility engineering and upgrades",
                   "Structural design and project management",
                 ].map((service, index) => (
                   <motion.div
@@ -840,10 +840,10 @@ export default function HomePage() {
                   examples: ["Garden retaining walls", "Property line barriers", "Landscape terracing", "Patio walls"]
                 },
                 {
-                  size: "Industrial",
-                  height: "15+ feet",
-                  description: "Large-scale structural walls for industrial sites, infrastructure, and major developments.",
-                  examples: ["Highway retaining walls", "Industrial site work", "Infrastructure projects", "Major developments"]
+                  size: "Commercial",
+                  height: "10-15 feet",
+                  description: "Large-scale structural walls for commercial sites, infrastructure, and major developments.",
+                  examples: ["Highway retaining walls", "Commercial site work", "Infrastructure projects", "Major developments"]
                 }
               ].map((scale, index) => (
                 <motion.div
@@ -962,14 +962,14 @@ const services = [
   {
     title: "Remediation Services",
     description: "Environmental remediation and site cleanup services for contaminated soil and water issues.",
-    image: "/images/industrial-1.png",
+    image: "/images/remediation-1.png",
     link: "/services/remediation",
   },
   {
     title: "Stormwater Management",
     description:
       "Advanced stormwater management systems designed to handle Northern California's unique weather patterns.",
-    image: "/images/project-3.png",
+    image: "/images/stormwater-1.png",
     link: "/services/stormwater",
   },
   {

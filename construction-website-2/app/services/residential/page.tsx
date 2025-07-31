@@ -163,27 +163,16 @@ export default function ResidentialServicePage() {
                     <div className="p-6 w-full">
                       <h3 className="font-bold text-xl text-white">{project.title}</h3>
                       <p className="text-blue-300 mb-4">{project.location}</p>
-                      <Link href={`/projects/${project.id}`}>
+                      <div>
                         <Button variant="outline" className="text-white border-white hover:bg-white/20 bg-transparent">
                           View Details
                         </Button>
-                      </Link>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             ))}
-          </div>
-          <div className="text-center mt-12">
-            <Link href="/projects">
-              <Button
-                variant="outline"
-                className="border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white font-medium px-8 bg-transparent"
-              >
-                View All Projects
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
           </div>
         </div>
       </section>
@@ -346,7 +335,7 @@ const residentialProjects = [
     id: "urban-townhouse",
     title: "Urban Townhouse",
     location: "Downtown",
-    image: "/images/project-3.png",
+    image: "/images/residential-3.png",
   },
 ]
 

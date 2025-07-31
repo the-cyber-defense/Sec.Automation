@@ -34,10 +34,8 @@ export function ModernNavbar() {
       items: [
         { href: "/services/residential", label: "Residential" },
         { href: "/services/commercial", label: "Commercial" },
-        { href: "/services/industrial", label: "Industrial" },
       ],
     },
-    { href: "/projects", label: "Projects" },
     { href: "/about", label: "About" },
     { href: "/contact", label: "Contact" },
   ]

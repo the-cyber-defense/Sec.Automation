@@ -4,7 +4,6 @@ import { lazy, Suspense } from "react"
 
 // Lazy load heavy sections that aren't immediately visible
 const TestimonialsSection = lazy(() => import("./sections/testimonials-section"))
-const ProjectsSection = lazy(() => import("./sections/projects-section"))
 const ProcessSection = lazy(() => import("./sections/process-section"))
 
 interface LazySectionProps {
@@ -40,4 +39,4 @@ export function LazySection({ children, fallback = <SectionSkeleton /> }: LazySe
   )
 }
 
-export { TestimonialsSection, ProjectsSection, ProcessSection }
+export { TestimonialsSection, ProcessSection }

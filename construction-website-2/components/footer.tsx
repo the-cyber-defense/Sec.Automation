@@ -21,13 +21,11 @@ export function Footer() {
   const services = [
     { name: "Residential Engineering", href: "/services/residential" },
     { name: "Commercial Projects", href: "/services/commercial" },
-    { name: "Industrial Solutions", href: "/services/industrial" },
     { name: "Stormwater Management", href: "/services/stormwater" },
   ]
 
   const company = [
     { name: "About Us", href: "/about" },
-    { name: "Our Projects", href: "/projects" },
     { name: "Contact", href: "/contact" },
     { name: "Accessibility", href: "/accessibility" },
   ]

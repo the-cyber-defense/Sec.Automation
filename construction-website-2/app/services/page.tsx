@@ -216,7 +216,7 @@ const services = [
   {
     title: "Remediation Services",
     description: "Environmental remediation and site cleanup services for contaminated soil and water issues.",
-    image: "/images/industrial-1.png",
+    image: "/images/remediation-1.png",
     alt: "Environmental remediation and contaminated soil cleanup services",
     link: "/services/remediation",
   },
@@ -224,7 +224,7 @@ const services = [
     title: "Stormwater Management",
     description:
       "Advanced stormwater management systems designed to handle Northern California's unique weather patterns.",
-    image: "/images/project-3.png",
+    image: "/images/stormwater-1.png",
     alt: "Advanced stormwater management system designed for Northern California weather",
     link: "/services/stormwater",
   },

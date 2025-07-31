@@ -26,8 +26,8 @@ export async function GET() {
     },
     {
       loc: `${baseUrl}/images/hero-4.png`,
-      caption: "Industrial facility construction project",
-      title: "Industrial Engineering Solutions",
+      caption: "Commercial facility construction project",
+      title: "Commercial Engineering Solutions",
       license: "https://solvesallengineering.com/license",
     },
 
@@ -70,94 +70,7 @@ export async function GET() {
       title: "Commercial Construction Excellence",
       license: "https://solvesallengineering.com/license",
     },
-    {
-      loc: `${baseUrl}/images/industrial-1.png`,
-      caption: "Industrial facility engineering solutions",
-      title: "Industrial Engineering Projects",
-      license: "https://solvesallengineering.com/license",
-    },
-    {
-      loc: `${baseUrl}/images/industrial-2.png`,
-      caption: "Manufacturing facility construction",
-      title: "Industrial Construction Services",
-      license: "https://solvesallengineering.com/license",
-    },
 
-    // Project Portfolio Images
-    {
-      loc: `${baseUrl}/images/project-1.png`,
-      caption: "Completed residential engineering project",
-      title: "Hillside Drainage System Project",
-      license: "https://solvesallengineering.com/license",
-    },
-    {
-      loc: `${baseUrl}/images/project-2.png`,
-      caption: "Structural retaining wall construction",
-      title: "Structural Retaining Wall Project",
-      license: "https://solvesallengineering.com/license",
-    },
-    {
-      loc: `${baseUrl}/images/project-3.png`,
-      caption: "Water damage remediation project",
-      title: "Water Damage Remediation Services",
-      license: "https://solvesallengineering.com/license",
-    },
-    {
-      loc: `${baseUrl}/images/project-4.png`,
-      caption: "Foundation drainage repair project",
-      title: "Foundation Drainage Solutions",
-      license: "https://solvesallengineering.com/license",
-    },
-    {
-      loc: `${baseUrl}/images/project-5.png`,
-      caption: "Slope stabilization engineering project",
-      title: "Slope Stabilization Services",
-      license: "https://solvesallengineering.com/license",
-    },
-    {
-      loc: `${baseUrl}/images/project-6.png`,
-      caption: "Stormwater management system installation",
-      title: "Stormwater Management Solutions",
-      license: "https://solvesallengineering.com/license",
-    },
-
-    // Before/After Project Images
-    {
-      loc: `${baseUrl}/images/project-1-before.png`,
-      caption: "Before: Hillside drainage issues",
-      title: "Drainage Problem Before Repair",
-      license: "https://solvesallengineering.com/license",
-    },
-    {
-      loc: `${baseUrl}/images/project-2-before.png`,
-      caption: "Before: Unstable slope conditions",
-      title: "Slope Issues Before Stabilization",
-      license: "https://solvesallengineering.com/license",
-    },
-    {
-      loc: `${baseUrl}/images/project-3-before.png`,
-      caption: "Before: Water damage in residential property",
-      title: "Water Damage Before Remediation",
-      license: "https://solvesallengineering.com/license",
-    },
-    {
-      loc: `${baseUrl}/images/project-4-before.png`,
-      caption: "Before: Foundation drainage problems",
-      title: "Foundation Issues Before Repair",
-      license: "https://solvesallengineering.com/license",
-    },
-    {
-      loc: `${baseUrl}/images/project-5-before.png`,
-      caption: "Before: Slope instability concerns",
-      title: "Unstable Slope Before Engineering",
-      license: "https://solvesallengineering.com/license",
-    },
-    {
-      loc: `${baseUrl}/images/project-6-before.png`,
-      caption: "Before: Stormwater flooding issues",
-      title: "Flooding Problems Before Solution",
-      license: "https://solvesallengineering.com/license",
-    },
 
     // Team and Quality Images
     {
@@ -180,8 +93,8 @@ export async function GET() {
     },
     {
       loc: `${baseUrl}/images/team-2.png`,
-      caption: "Project management team member",
-      title: "Project Management Expert",
+      caption: "Team management expert",
+      title: "Team Management Expert",
       license: "https://solvesallengineering.com/license",
     },
     {
