@@ -36,7 +36,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Information */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-neutral-900">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-16 max-w-6xl mx-auto">
             <div>
@@ -44,7 +44,7 @@ export default function ContactPage() {
                 Get In Touch
               </div>
               <h2 className="text-4xl font-bold mb-6">We&apos;d Love to Hear From You</h2>
-              <p className="text-gray-700 mb-10 text-lg">
+              <p className="text-gray-700 dark:text-gray-300 mb-10 text-lg">
                 Whether you have a question about our services, want to request a quote, or are ready to start your
                 project, we&apos;re here to help.
               </p>
@@ -55,7 +55,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg">Our Location</h3>
-                    <p className="text-gray-700">552 S P St, Livermore, CA 94550</p>
+                    <p className="text-gray-700 dark:text-gray-300">552 S P St, Livermore, CA 94550</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -64,7 +64,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg">Phone Number</h3>
-                    <p className="text-gray-700">(925) 899-8123</p>
+                    <p className="text-gray-700 dark:text-gray-300">(925) 899-8123</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -73,7 +73,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg">Email Address</h3>
-                    <p className="text-gray-700">Matt@solvesall.org</p>
+                    <p className="text-gray-700 dark:text-gray-300">Matt@solvesall.org</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -82,16 +82,16 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg">Working Hours</h3>
-                    <p className="text-gray-700">Monday - Friday: 8:00 AM - 5:00 PM</p>
-                    <p className="text-gray-700">Saturday: 9:00 AM - 2:00 PM</p>
+                    <p className="text-gray-700 dark:text-gray-300">Monday - Friday: 8:00 AM - 5:00 PM</p>
+                    <p className="text-gray-700 dark:text-gray-300">Saturday: 9:00 AM - 2:00 PM</p>
                   </div>
                 </div>
               </div>
             </div>
             <div>
               <div id="quote-form" className="scroll-mt-24">
-                <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Request a Free Quote</h3>
-                <p className="text-gray-700 dark:text-gray-300 mb-6">
+                <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white dark:text-white">Request a Free Quote</h3>
+                <p className="text-gray-700 dark:text-gray-300 dark:text-gray-300 mb-6">
                   Fill out this form to get a detailed, no-obligation quote for your construction project. Our team will
                   analyze your requirements and provide a comprehensive estimate.
                 </p>
@@ -152,36 +152,23 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Map Section */}
-      <section className="py-10 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="bg-gray-300 h-[400px] rounded-2xl overflow-hidden relative">
-              {/* This would be replaced with an actual map component in production */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <p className="text-gray-600 text-lg font-medium">Interactive Map Would Be Displayed Here</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-neutral-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 max-w-3xl mx-auto">
             <div className="inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-4">
               FAQ
             </div>
             <h2 className="text-4xl font-bold mb-6">Frequently Asked Questions</h2>
-            <p className="text-gray-700 text-lg">Find answers to common questions about our services and process.</p>
+            <p className="text-gray-700 dark:text-gray-300 text-lg">Find answers to common questions about our services and process.</p>
           </div>
           <div className="max-w-4xl mx-auto">
             <div className="space-y-6">
               {faqs.map((faq, index) => (
                 <div key={index} className="bg-gray-50 p-6 rounded-xl">
                   <h3 className="text-xl font-bold mb-3">{faq.question}</h3>
-                  <p className="text-gray-700">{faq.answer}</p>
+                  <p className="text-gray-700 dark:text-gray-300">{faq.answer}</p>
                 </div>
               ))}
             </div>
