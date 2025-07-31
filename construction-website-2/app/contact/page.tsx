@@ -1,7 +1,8 @@
 import { Mail, MapPin, Phone, Clock, ArrowRight } from "lucide-react"
-
-import { Button } from "@/components/ui/button"
 import { MobileOptimizedImage } from "@/components/mobile-optimized-image"
+import { EnhancedCard } from "@/components/ui/enhanced-card"
+import { EnhancedInput, EnhancedTextarea } from "@/components/ui/enhanced-form"
+import { EnhancedButton } from "@/components/ui/enhanced-button"
 
 export const metadata = {
   title: "Contact Solves All Engineering | Free Consultation & Quotes | Northern California",
@@ -94,70 +95,57 @@ export default function ContactPage() {
                   Fill out this form to get a detailed, no-obligation quote for your construction project. Our team will
                   analyze your requirements and provide a comprehensive estimate.
                 </p>
-                <form className="bg-gray-50 dark:bg-gray-800 p-10 rounded-2xl shadow-sm">
-                  <h3 className="text-2xl font-bold mb-6">Send Us a Message</h3>
-                  <div className="grid md:grid-cols-2 gap-6 mb-6">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                        Your Name
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                <EnhancedCard variant="glass" className="p-10 shadow-large">
+                  <h3 className="text-2xl font-bold mb-8 text-gradient">Send Us a Message</h3>
+                  <form className="space-y-6">
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <EnhancedInput
+                        label="Your Name"
                         placeholder="John Doe"
+                        variant="floating"
+                        leftIcon={<Mail className="h-4 w-4" />}
                       />
-                    </div>
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                        Email Address
-                      </label>
-                      <input
+                      <EnhancedInput
+                        label="Email Address"
                         type="email"
-                        id="email"
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                         placeholder="your.email@example.com"
+                        variant="floating"
+                        leftIcon={<Mail className="h-4 w-4" />}
                       />
                     </div>
-                  </div>
-                  <div className="mb-6">
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                      Phone Number
-                    </label>
-                    <input
+                    
+                    <EnhancedInput
+                      label="Phone Number"
                       type="tel"
-                      id="phone"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                       placeholder="(123) 456-7890"
+                      variant="floating"
+                      leftIcon={<Phone className="h-4 w-4" />}
                     />
-                  </div>
-                  <div className="mb-6">
-                    <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                      Subject
-                    </label>
-                    <input
-                      type="text"
-                      id="subject"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    
+                    <EnhancedInput
+                      label="Subject"
                       placeholder="Project Inquiry"
+                      variant="floating"
                     />
-                  </div>
-                  <div className="mb-6">
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                      Your Message
-                    </label>
-                    <textarea
-                      id="message"
-                      rows={4}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    
+                    <EnhancedTextarea
+                      label="Your Message"
                       placeholder="Tell us about your project..."
-                    ></textarea>
-                  </div>
-                  <Button className="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-3">
-                    Send Message
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </form>
+                      variant="floating"
+                      rows={4}
+                    />
+                    
+                    <EnhancedButton 
+                      variant="primary" 
+                      size="lg" 
+                      className="w-full" 
+                      rightIcon={<ArrowRight className="h-4 w-4" />}
+                      magnetic
+                    >
+                      Send Message
+                    </EnhancedButton>
+                  </form>
+                </EnhancedCard>
               </div>
             </div>
           </div>

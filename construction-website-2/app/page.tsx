@@ -3,8 +3,8 @@
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { CheckCircle, Sparkles, Zap, Shield, Award, Users, Clock, Home, Building, Layers, FileCheck, TreePine, Square, Grid3X3, Hammer, FlowerIcon } from "lucide-react"
-import { ModernButton } from "@/components/ui/modern-button"
-import { ModernCard } from "@/components/ui/modern-card"
+import { EnhancedButton } from "@/components/ui/enhanced-button"
+import { EnhancedCard } from "@/components/ui/enhanced-card"
 import { MobileOptimizedImage } from "@/components/mobile-optimized-image"
 
 export default function HomePage() {
@@ -71,10 +71,26 @@ export default function HomePage() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6"
             >
+              <Link href="/contact">
+                <EnhancedButton 
+                  variant="primary" 
+                  size="xl" 
+                  icon={<Sparkles className="h-5 w-5" />}
+                  magnetic
+                  expandOnHover
+                >
+                  Get Free Quote
+                </EnhancedButton>
+              </Link>
               <Link href="/about">
-                <ModernButton variant="outline" size="xl" icon={<Sparkles className="h-5 w-5" />}>
+                <EnhancedButton 
+                  variant="outline" 
+                  size="xl" 
+                  icon={<Sparkles className="h-5 w-5" />}
+                  expandOnHover
+                >
                   Learn More
-                </ModernButton>
+                </EnhancedButton>
               </Link>
             </motion.div>
 
@@ -205,15 +221,19 @@ export default function HomePage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <ModernCard className="p-8 h-full">
+                <EnhancedCard variant="glass" hover="lift" className="p-8 h-full hover-glow">
                   <div className="flex flex-col h-full">
                     <div className="mb-6">
-                      <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${feature.color} shadow-lg`}>
+                      <motion.div 
+                        className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${feature.color} shadow-lg`}
+                        whileHover={{ scale: 1.1, rotate: 5 }}
+                        transition={{ duration: 0.2 }}
+                      >
                         <feature.icon className="h-6 w-6 text-white" />
-                      </div>
+                      </motion.div>
                     </div>
 
-                    <h3 className="text-xl font-display font-bold mb-4 text-neutral-900 dark:text-white">
+                    <h3 className="text-xl font-display font-bold mb-4 text-gradient">
                       {feature.title}
                     </h3>
 
@@ -221,7 +241,7 @@ export default function HomePage() {
                       {feature.description}
                     </p>
                   </div>
-                </ModernCard>
+                </EnhancedCard>
               </motion.div>
             ))}
           </div>
@@ -392,15 +412,19 @@ export default function HomePage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <ModernCard className="p-8 h-full hover:shadow-xl transition-all duration-500">
+                <EnhancedCard variant="floating" hover="scale" className="p-8 h-full shadow-glow-blue">
                   <div className="flex flex-col h-full">
                     <div className="mb-6">
-                      <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${service.color} shadow-lg`}>
+                      <motion.div 
+                        className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${service.color} shadow-lg`}
+                        whileHover={{ scale: 1.15, y: -2 }}
+                        transition={{ duration: 0.3 }}
+                      >
                         <service.icon className="h-6 w-6 text-white" />
-                      </div>
+                      </motion.div>
                     </div>
 
-                    <h3 className="text-xl font-display font-bold mb-4 text-neutral-900 dark:text-white">
+                    <h3 className="text-xl font-display font-bold mb-4 text-gradient">
                       {service.title}
                     </h3>
 
@@ -426,7 +450,7 @@ export default function HomePage() {
                       </div>
                     </div>
                   </div>
-                </ModernCard>
+                </EnhancedCard>
               </motion.div>
             ))}
           </div>
@@ -664,7 +688,7 @@ export default function HomePage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <ModernCard className="p-8 h-full hover:shadow-xl transition-all duration-500">
+                <EnhancedCard variant="glow" hover="lift" className="p-8 h-full shadow-glow-purple">
                   <div className="flex flex-col h-full">
                     <div className="mb-6">
                       <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${wallType.color} shadow-lg`}>
@@ -698,7 +722,7 @@ export default function HomePage() {
                       </div>
                     </div>
                   </div>
-                </ModernCard>
+                </EnhancedCard>
               </motion.div>
             ))}
           </div>
