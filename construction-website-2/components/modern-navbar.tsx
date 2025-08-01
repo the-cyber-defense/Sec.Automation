@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation"
 import { Menu, X, Phone, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -37,7 +38,9 @@ export function ModernNavbar() {
       <nav
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-          isScrolled ? "bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200/50" : "bg-transparent",
+          isScrolled 
+            ? "bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg border-b border-gray-200/50 dark:border-gray-700/50" 
+            : "bg-transparent",
         )}
       >
         <div className="container mx-auto px-4">
@@ -63,7 +66,7 @@ export function ModernNavbar() {
                   />
                 </svg>
               </div>
-              <span className="text-lg md:text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
+              <span className="text-lg md:text-xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                 Solves All Engineering
               </span>
             </Link>
@@ -75,8 +78,10 @@ export function ModernNavbar() {
                   key={item.name}
                   href={item.href}
                   className={cn(
-                    "px-4 py-2 rounded-lg text-base font-medium transition-all duration-200 hover:bg-blue-50 hover:text-blue-600 min-h-[44px] flex items-center",
-                    pathname === item.href ? "text-blue-600 bg-blue-50" : "text-gray-700 hover:text-blue-600",
+                    "px-4 py-2 rounded-lg text-base font-medium transition-all duration-200 hover:bg-blue-50 dark:hover:bg-blue-900/30 hover:text-blue-600 dark:hover:text-blue-400 min-h-[44px] flex items-center",
+                    pathname === item.href 
+                      ? "text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30" 
+                      : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400",
                   )}
                 >
                   {item.name}
@@ -84,36 +89,40 @@ export function ModernNavbar() {
               ))}
             </div>
 
-            {/* Contact Info & CTA */}
+            {/* Theme Toggle, Contact Info & CTA */}
             <div className="hidden lg:flex items-center space-x-4">
-              <div className="flex items-center space-x-4 text-sm text-gray-600">
+              <ThemeToggle />
+              <div className="flex items-center space-x-4 text-sm text-gray-600 dark:text-gray-400">
                 <div className="flex items-center space-x-1">
                   <Phone className="h-4 w-4" />
-                  <a href="tel:+19258998123" className="hover:text-blue-600 transition-colors">
+                  <a href="tel:+19258998123" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                     (925) 899-8123
                   </a>
                 </div>
                 <div className="flex items-center space-x-1">
                   <Mail className="h-4 w-4" />
-                  <a href="mailto:Matt@solvesall.org" className="hover:text-blue-600 transition-colors">
+                  <a href="mailto:Matt@solvesall.org" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                     Matt@solvesall.org
                   </a>
                 </div>
               </div>
               <Link href="/contact">
-                <Button className="bg-blue-600 hover:bg-blue-700 text-white">Get Quote</Button>
+                <Button className="bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white shadow-lg hover:shadow-xl transition-all duration-300">Get Quote</Button>
               </Link>
             </div>
 
             {/* Mobile menu button */}
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
-              aria-label="Toggle menu"
-              aria-expanded={isOpen}
-            >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>
+            <div className="lg:hidden flex items-center space-x-2">
+              <ThemeToggle />
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="p-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
+                aria-label="Toggle menu"
+                aria-expanded={isOpen}
+              >
+                {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              </button>
+            </div>
           </div>
         </div>
 
@@ -124,7 +133,7 @@ export function ModernNavbar() {
             isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0",
           )}
         >
-          <div className="bg-white border-t border-gray-200 shadow-lg">
+          <div className="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 shadow-lg">
             <div className="container mx-auto px-4 py-4">
               <div className="flex flex-col space-y-2">
                 {navigation.map((item) => (
@@ -134,30 +143,30 @@ export function ModernNavbar() {
                     className={cn(
                       "px-4 py-3 rounded-lg text-base font-medium transition-colors min-h-[44px] flex items-center",
                       pathname === item.href
-                        ? "text-blue-600 bg-blue-50"
-                        : "text-gray-700 hover:text-blue-600 hover:bg-gray-50",
+                        ? "text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30"
+                        : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800",
                     )}
                   >
                     {item.name}
                   </Link>
                 ))}
-                <div className="pt-4 border-t border-gray-200">
-                  <div className="space-y-2 text-sm text-gray-600 mb-4">
+                <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
+                  <div className="space-y-2 text-sm text-gray-600 dark:text-gray-400 mb-4">
                     <div className="flex items-center space-x-2 px-4">
                       <Phone className="h-4 w-4" />
-                      <a href="tel:+19258998123" className="hover:text-blue-600 transition-colors">
+                      <a href="tel:+19258998123" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                         (925) 899-8123
                       </a>
                     </div>
                     <div className="flex items-center space-x-2 px-4">
                       <Mail className="h-4 w-4" />
-                      <a href="mailto:Matt@solvesall.org" className="hover:text-blue-600 transition-colors">
+                      <a href="mailto:Matt@solvesall.org" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                         Matt@solvesall.org
                       </a>
                     </div>
                   </div>
                   <Link href="/contact" className="block px-4">
-                    <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">Get Quote</Button>
+                    <Button className="w-full bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white shadow-lg hover:shadow-xl transition-all duration-300">Get Quote</Button>
                   </Link>
                 </div>
               </div>
