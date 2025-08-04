@@ -1,19 +1,31 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Footer } from "@/components/footer"
 import { ModernNavbar } from "@/components/modern-navbar"
 import { PerformanceMonitor } from "@/components/performance-monitor"
 import "@/app/globals.css"
 
-// Optimize font loading - only load Inter for better performance
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
   preload: true,
-  fallback: ["system-ui", "arial"]
+})
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-space-grotesk",
+  display: "swap",
+  preload: false,
+})
+
+const jetBrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jetbrains-mono",
+  display: "swap",
+  preload: false,
 })
 
 export const metadata: Metadata = {
@@ -25,7 +37,7 @@ export const metadata: Metadata = {
     "Northern California's premier Class A General Engineering Contractor specializing in drainage solutions, earth retainment, and environmental remediation. Expert engineering services with warranty protection.",
   keywords: [
     "engineering contractor",
-    "drainage solutions", 
+    "drainage solutions",
     "earth retainment",
     "environmental remediation",
     "Northern California",
@@ -77,7 +89,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Solves All Engineering | Expert Engineering Solutions", 
+    title: "Solves All Engineering | Expert Engineering Solutions",
     description:
       "Northern California's premier engineering contractor specializing in drainage, earth retainment, and remediation solutions.",
     images: ["/images/modern-residence-after.jpg"],
@@ -94,6 +106,7 @@ export const metadata: Metadata = {
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
   manifest: "/site.webmanifest",
+    generator: 'v0.dev'
 }
 
 export default function RootLayout({
@@ -104,23 +117,18 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={inter.variable}
+      className={`${inter.variable} ${spaceGrotesk.variable} ${jetBrainsMono.variable}`}
       suppressHydrationWarning
     >
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <meta name="theme-color" content="#3b82f6" />
       </head>
-      <body className="bg-white dark:bg-neutral-900 antialiased font-sans">
-        <ThemeProvider 
-          attribute="class" 
-          defaultTheme="system" 
-          enableSystem={true} 
-          disableTransitionOnChange={false}
-          storageKey="solves-all-theme"
-        >
+      <body className="bg-white dark:bg-neutral-900 antialiased">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem={true} storageKey="solves-all-theme" disableTransitionOnChange={false}>
           <ModernNavbar />
           <main className="min-h-screen">{children}</main>
           <Footer />

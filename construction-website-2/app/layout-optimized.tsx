@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Footer } from "@/components/footer"
-import { ModernNavbar } from "@/components/modern-navbar"
+import { PerformanceNavbar } from "@/components/performance-navbar"
 import { PerformanceMonitor } from "@/components/performance-monitor"
 import "@/app/globals.css"
 
@@ -121,7 +121,7 @@ export default function RootLayout({
           disableTransitionOnChange={false}
           storageKey="solves-all-theme"
         >
-          <ModernNavbar />
+          <PerformanceNavbar />
           <main className="min-h-screen">{children}</main>
           <Footer />
           <PerformanceMonitor />
