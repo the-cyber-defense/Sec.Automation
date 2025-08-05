@@ -1,0 +1,12 @@
+# Ignore build cache
+.next/
+node_modules/
+
+# Ignore development files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Ignore source maps
+*.map
