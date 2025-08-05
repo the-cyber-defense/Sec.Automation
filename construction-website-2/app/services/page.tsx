@@ -200,10 +200,10 @@ const services = [
   {
     title: "Drainage Solutions",
     description:
-      "Comprehensive drainage systems to prevent flooding and water damage on residential and commercial properties.",
+      "Comprehensive drainage systems including French drains, foundation drains, sump pumps, and grading for surface water management.",
     image: "/images/residential-1.png",
     alt: "Professional drainage system installation preventing flooding and water damage",
-    link: "/services/drainage",
+    link: "/services/drainage-solutions",
   },
   {
     title: "Earth Retainment",
