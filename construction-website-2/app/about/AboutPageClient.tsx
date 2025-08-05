@@ -139,7 +139,7 @@ export default function AboutPageClient() {
                 <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-lg">
                   <div className="text-center">
                     <div className="text-2xl font-bold text-blue-600">
-                      <CountUp end={500} duration={2} />+
+                      <CountUp end={150} duration={2} />
                     </div>
                     <div className="text-sm text-gray-600">Projects Completed</div>
                   </div>
@@ -157,27 +157,27 @@ export default function AboutPageClient() {
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
-                  <CountUp end={15} duration={2} />+
+                  <CountUp end={150} duration={2} />
+                </div>
+                <div className="text-gray-600">Projects Completed</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
+                  <CountUp end={45} duration={2} />+
                 </div>
                 <div className="text-gray-600">Years Experience</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
-                  <CountUp end={500} duration={2} />+
+                  <CountUp end={1} duration={2} />
                 </div>
-                <div className="text-gray-600">Projects Completed</div>
+                <div className="text-gray-600">Expert Team</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
                   <CountUp end={98} duration={2} />%
                 </div>
                 <div className="text-gray-600">Client Satisfaction</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
-                  <CountUp end={25} duration={2} />+
-                </div>
-                <div className="text-gray-600">Team Members</div>
               </div>
             </div>
           </StaggerIn>
