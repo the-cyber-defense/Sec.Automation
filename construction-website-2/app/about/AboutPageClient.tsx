@@ -1,6 +1,5 @@
 "use client"
 
-import { useState } from "react"
 import Image from "next/image"
 import { motion } from "framer-motion"
 import { Award, Users, Clock, CheckCircle, Star, Quote } from "lucide-react"
@@ -13,32 +12,6 @@ import { StaggerIn } from "@/components/animations/stagger-in"
 import { ScaleIn } from "@/components/animations/scale-in"
 import { CountUp } from "@/components/animations/count-up"
 
-const teamMembers = [
-  {
-    name: "Michael Rodriguez",
-    role: "Founder & Lead Engineer",
-    experience: "15+ years",
-    specialization: "Structural Engineering",
-    image: "/placeholder.svg?height=300&width=300&text=Michael+Rodriguez",
-    bio: "Licensed Professional Engineer with expertise in complex structural solutions and project management.",
-  },
-  {
-    name: "Sarah Chen",
-    role: "Senior Project Manager",
-    experience: "12+ years",
-    specialization: "Project Management",
-    image: "/placeholder.svg?height=300&width=300&text=Sarah+Chen",
-    bio: "Certified Project Management Professional specializing in large-scale construction projects.",
-  },
-  {
-    name: "David Thompson",
-    role: "Field Operations Manager",
-    experience: "10+ years",
-    specialization: "Field Operations",
-    image: "/placeholder.svg?height=300&width=300&text=David+Thompson",
-    bio: "Expert in field operations and quality control with extensive hands-on construction experience.",
-  },
-]
 
 const achievements = [
   {
@@ -91,7 +64,6 @@ const testimonials = [
 ]
 
 export default function AboutPageClient() {
-  const [selectedMember, setSelectedMember] = useState<number | null>(null)
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -255,59 +227,76 @@ export default function AboutPageClient() {
         </div>
       </section>
 
-      {/* Team Section */}
+      {/* Founder Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <FadeIn>
               <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">Meet Our Team</h2>
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">Meet Our Founder</h2>
                 <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-                  Our experienced team of engineers and project managers brings decades of combined expertise to every
-                  project, ensuring exceptional results and client satisfaction.
+                  Learn about the expertise and vision behind Solves All Engineering's commitment to excellence.
                 </p>
               </div>
             </FadeIn>
 
-            <StaggerIn>
-              <div className="grid md:grid-cols-3 gap-8">
-                {teamMembers.map((member, index) => (
-                  <motion.div
-                    key={index}
-                    className="group cursor-pointer"
-                    onClick={() => setSelectedMember(selectedMember === index ? null : index)}
-                    whileHover={{ y: -5 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300">
-                      <div className="relative h-64 overflow-hidden">
-                        <Image
-                          src={member.image || "/placeholder.svg"}
-                          alt={member.name}
-                          fill
-                          className="object-cover transition-transform duration-300 group-hover:scale-110"
-                          sizes="(max-width: 768px) 100vw, 33vw"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                        <div className="absolute bottom-4 left-4 text-white">
-                          <h3 className="font-semibold text-lg">{member.name}</h3>
-                          <p className="text-sm opacity-90">{member.role}</p>
-                        </div>
-                      </div>
-                      <CardContent className="p-6">
-                        <div className="flex justify-between items-center mb-3">
-                          <Badge variant="secondary" className="bg-blue-100 text-blue-700">
-                            {member.experience}
-                          </Badge>
-                          <span className="text-sm text-gray-600">{member.specialization}</span>
-                        </div>
-                        <p className="text-gray-700 text-sm leading-relaxed">{member.bio}</p>
-                      </CardContent>
-                    </Card>
-                  </motion.div>
-                ))}
-              </div>
-            </StaggerIn>
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <ScaleIn>
+                <div className="relative">
+                  <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-xl">
+                    <Image
+                      src="/images/founder.png"
+                      alt="Matt Mahoney - Founder of Solves All Engineering"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                    />
+                  </div>
+                </div>
+              </ScaleIn>
+
+              <FadeIn>
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="text-2xl font-bold mb-2">Matt Mahoney</h3>
+                    <p className="text-lg text-blue-600 font-medium mb-4">Founder & Lead Engineer</p>
+                    <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-200 mb-6">Environmental Science Degree</Badge>
+                  </div>
+                  
+                  <div className="space-y-4 text-gray-700 leading-relaxed">
+                    <p>
+                      Matt Mahoney got his degree in Environmental Science and has been in the construction and stormwater 
+                      industry since 2013. He has worked on projects across Northern California for both environmental and 
+                      heavy civil construction companies.
+                    </p>
+                    <p>
+                      Solves All Engineering was started to meet industry's need for a contractor who understands managing 
+                      both stormwater and dirt. In the process of doing so, we found there is a large demand for residential 
+                      projects that require help with flooding and water intrusion.
+                    </p>
+                  </div>
+
+                  <div className="space-y-3 pt-4">
+                    <div className="flex items-center">
+                      <CheckCircle className="h-5 w-5 text-blue-600 mr-3" />
+                      <span className="text-gray-700">Environmental Science expertise</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="h-5 w-5 text-blue-600 mr-3" />
+                      <span className="text-gray-700">10+ years in construction & stormwater</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="h-5 w-5 text-blue-600 mr-3" />
+                      <span className="text-gray-700">Northern California project experience</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="h-5 w-5 text-blue-600 mr-3" />
+                      <span className="text-gray-700">Specialized in drainage & water management</span>
+                    </div>
+                  </div>
+                </div>
+              </FadeIn>
+            </div>
           </div>
         </div>
       </section>
