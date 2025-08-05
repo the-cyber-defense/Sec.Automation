@@ -79,8 +79,8 @@ const projectShowcases = [
     problem: "Severe water pooling causing foundation issues",
     solution: "300-foot French drain with gravel filtration",
     result: "Complete elimination of standing water",
-    beforeImage: "/images/modern-residence-before.jpg",
-    afterImage: "/images/modern-residence-after.jpg"
+    beforeImage: "/images/project8.png",
+    afterImage: "/images/project9.png"
   },
   {
     title: "Residential Foundation Drainage",
@@ -88,8 +88,8 @@ const projectShowcases = [
     problem: "Basement flooding during winter storms",
     solution: "Perimeter drainage with sump pump system",
     result: "Basement stays completely dry year-round",
-    beforeImage: "/images/modern-residence-before.jpg",
-    afterImage: "/images/modern-residence-after.jpg"
+    beforeImage: "/images/project10.png",
+    afterImage: "/images/project11.png"
   }
 ]
 
