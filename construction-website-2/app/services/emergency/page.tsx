@@ -25,11 +25,6 @@ import { FadeIn } from "@/components/animations/fade-in"
 import { StaggerIn } from "@/components/animations/stagger-in"
 import { ScaleIn } from "@/components/animations/scale-in"
 
-export const metadata = {
-  title: "Emergency Water Damage Response | 24/7 Water Damage Services | Solves All Engineering",
-  description: "Rapid response emergency services for water damage assessment and immediate remediation. 24/7 emergency water damage response in Northern California.",
-  keywords: ["emergency water damage", "24/7 water damage", "emergency response", "water damage assessment", "immediate remediation"]
-}
 
 const emergencyServices = [
   {

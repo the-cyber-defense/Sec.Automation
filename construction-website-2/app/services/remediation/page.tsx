@@ -25,11 +25,6 @@ import { FadeIn } from "@/components/animations/fade-in"
 import { StaggerIn } from "@/components/animations/stagger-in"
 import { ScaleIn } from "@/components/animations/scale-in"
 
-export const metadata = {
-  title: "Environmental Remediation Services | Soil & Water Cleanup | Solves All Engineering",
-  description: "Professional environmental remediation and site cleanup services in Northern California. Expert contaminated soil and water remediation with environmental science expertise.",
-  keywords: ["environmental remediation", "soil cleanup", "water remediation", "contaminated soil", "Northern California", "environmental services"]
-}
 
 const remediationServices = [
   {

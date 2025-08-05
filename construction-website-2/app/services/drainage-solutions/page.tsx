@@ -24,11 +24,6 @@ import { FadeIn } from "@/components/animations/fade-in"
 import { StaggerIn } from "@/components/animations/stagger-in"
 import { ScaleIn } from "@/components/animations/scale-in"
 
-export const metadata = {
-  title: "Drainage Solutions | French Drains & Foundation Waterproofing | Solves All Engineering",
-  description: "Expert drainage solutions in Northern California. French drains, foundation drains, sump pumps, and grading for surface water management. Free consultations available.",
-  keywords: ["drainage solutions", "French drains", "foundation drains", "sump pumps", "grading", "Northern California", "water management", "flooding solutions"]
-}
 
 const drainageServices = [
   {

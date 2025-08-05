@@ -24,11 +24,6 @@ import { FadeIn } from "@/components/animations/fade-in"
 import { StaggerIn } from "@/components/animations/stagger-in"
 import { ScaleIn } from "@/components/animations/scale-in"
 
-export const metadata = {
-  title: "Stormwater Management Systems | Northern California Weather Solutions | Solves All Engineering",
-  description: "Advanced stormwater management systems designed for Northern California's unique weather patterns. Professional stormwater drainage and flood control solutions.",
-  keywords: ["stormwater management", "flood control", "stormwater drainage", "Northern California weather", "stormwater systems"]
-}
 
 const stormwaterServices = [
   {

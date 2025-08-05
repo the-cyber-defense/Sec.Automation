@@ -24,11 +24,6 @@ import { FadeIn } from "@/components/animations/fade-in"
 import { StaggerIn } from "@/components/animations/stagger-in"
 import { ScaleIn } from "@/components/animations/scale-in"
 
-export const metadata = {
-  title: "Earth Retainment & Retaining Walls | Slope Stabilization | Solves All Engineering",
-  description: "Professional retaining wall construction and slope stabilization in Northern California. Expert earth retainment solutions for challenging terrain and erosion control.",
-  keywords: ["retaining walls", "earth retainment", "slope stabilization", "erosion control", "Northern California", "retaining wall construction"]
-}
 
 const retainmentServices = [
   {

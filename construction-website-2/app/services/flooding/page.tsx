@@ -25,11 +25,6 @@ import { FadeIn } from "@/components/animations/fade-in"
 import { StaggerIn } from "@/components/animations/stagger-in"
 import { ScaleIn } from "@/components/animations/scale-in"
 
-export const metadata = {
-  title: "Residential Flooding Solutions | Home Water Intrusion Prevention | Solves All Engineering",
-  description: "Specialized solutions for homes experiencing flooding, water intrusion, and drainage problems. Expert residential water management and flood prevention.",
-  keywords: ["residential flooding", "water intrusion", "home flooding solutions", "basement flooding", "residential drainage"]
-}
 
 const floodingSolutions = [
   {
