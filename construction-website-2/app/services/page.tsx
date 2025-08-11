@@ -5,11 +5,11 @@ import { ArrowRight, CheckCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export const metadata = {
-  title: "Engineering Services | Drainage, Earth Retainment & Remediation | Solves All Engineering",
+  title: "Services | Drainage, Retaining Walls, Concrete & Landscaping | Solves All Engineering",
   description:
-    "Professional drainage solutions, earth retainment systems, and environmental remediation services across Northern California. Expert engineering contractors with warranty-backed work.",
+    "Professional drainage, retaining walls, concrete and masonry, excavation, landscaping, fencing, and deck services across Northern California. Expert contractors with warranty-backed work.",
   keywords:
-    "drainage solutions, earth retainment, remediation services, stormwater management, Northern California engineering, construction services",
+    "drainage solutions, retaining walls, concrete masonry, excavation grading, landscaping, fencing, decks, Northern California construction",
 }
 
 export default function ServicesPage() {
@@ -30,8 +30,8 @@ export default function ServicesPage() {
         <div className="relative z-20 container mx-auto px-4 h-full flex flex-col justify-center items-center text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 md:mb-4">Engineering Solutions</h1>
           <p className="text-base sm:text-lg md:text-xl text-white/90 max-w-xl sm:max-w-2xl">
-            Specialized drainage, earth retainment, and remediation services for Northern California's toughest
-            challenges.
+            Complete "outside" services for homeowners including drainage, retaining walls, concrete, landscaping, 
+            fencing, and deck construction.
           </p>
         </div>
       </section>
@@ -44,11 +44,11 @@ export default function ServicesPage() {
               What We Offer
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-6">
-              Comprehensive Engineering Solutions
+              Complete Outside Services for Homeowners
             </h2>
             <p className="text-base md:text-lg text-gray-700">
-              From concept to completion, we provide end-to-end services to bring your vision to life with precision and
-              excellence.
+              From drainage solutions to landscaping and deck builds, we provide all the "outside" services homeowners 
+              need with professional quality and reliability.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 max-w-6xl mx-auto">
@@ -198,49 +198,56 @@ export default function ServicesPage() {
 // Sample data
 const services = [
   {
-    title: "Drainage Solutions",
+    title: "Drainage",
     description:
-      "Comprehensive drainage systems including French drains, foundation drains, sump pumps, and grading for surface water management.",
+      "Comprehensive drainage systems including French drains, foundation drains, sump pumps, and grading for surface water management and hillside drainage solutions.",
     image: "/images/residential-1.png",
     alt: "Professional drainage system installation preventing flooding and water damage",
     link: "/services/drainage-solutions",
   },
   {
-    title: "Earth Retainment",
+    title: "Retaining Walls",
     description:
-      "Professional retaining wall construction and slope stabilization for challenging terrain and erosion control.",
+      "Professional retaining wall construction and slope stabilization for challenging terrain, erosion control, and hillside property management.",
     image: "/images/commercial-1.png",
     alt: "Engineered retaining wall construction for slope stabilization and erosion control",
     link: "/services/retainment",
   },
   {
-    title: "Remediation Services",
-    description: "Environmental remediation and site cleanup services for contaminated soil and water issues.",
-    image: "/images/industrial-1.png",
-    alt: "Environmental remediation and contaminated soil cleanup services",
-    link: "/services/remediation",
+    title: "Concrete and Masonry",
+    description: "Expert concrete work including foundations, driveways, patios, walkways, and masonry construction for durable and attractive outdoor spaces.",
+    image: "/images/project8.png",
+    alt: "Professional concrete and masonry construction services",
+    link: "/services/concrete-masonry",
   },
   {
-    title: "Stormwater Management",
+    title: "Excavation and Grading",
     description:
-      "Advanced stormwater management systems designed to handle Northern California's unique weather patterns.",
-    image: "/images/project-3.png",
-    alt: "Advanced stormwater management system designed for Northern California weather",
-    link: "/services/stormwater",
+      "Site preparation, excavation, and grading services for proper drainage, foundation preparation, and landscape installation.",
+    image: "/images/project10.png",
+    alt: "Professional excavation and grading services for site preparation",
+    link: "/services/excavation-grading",
   },
   {
-    title: "Residential Flooding Solutions",
-    description: "Specialized solutions for homes experiencing flooding, water intrusion, and drainage problems.",
-    image: "/images/process.png",
-    alt: "Residential flooding solutions and water intrusion prevention systems",
-    link: "/services/flooding",
+    title: "Landscaping",
+    description: "Complete landscaping services including design, installation, irrigation, and maintenance for beautiful and functional outdoor spaces.",
+    image: "/images/project12.png",
+    alt: "Professional landscaping design and installation services",
+    link: "/services/landscaping",
   },
   {
-    title: "Emergency Water Damage",
-    description: "Rapid response emergency services for water damage assessment and immediate remediation.",
-    image: "/images/residential-2.png",
-    alt: "Emergency water damage response and immediate remediation services",
-    link: "/services/emergency",
+    title: "Fencing",
+    description: "Custom fence installation including wood, vinyl, chain link, and decorative fencing for privacy, security, and property definition.",
+    image: "/images/project14.png",
+    alt: "Professional fence installation and custom fencing services",
+    link: "/services/fencing",
+  },
+  {
+    title: "Decks",
+    description: "Custom deck construction and repair using quality materials for outdoor entertaining, relaxation, and adding value to your home.",
+    image: "/images/project16.png",
+    alt: "Professional deck construction and outdoor living space creation",
+    link: "/services/decks",
   },
 ]
 
