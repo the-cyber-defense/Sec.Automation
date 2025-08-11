@@ -139,7 +139,7 @@ export default function AboutPageClient() {
                 <div className="relative">
                   <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-xl">
                     <Image
-                      src="/images/upscaledMatt.png"
+                      src="/images/UpScaledCenterMatt.png"
                       alt="Matt Mahoney - Founder of Solves All Engineering"
                       fill
                       className="object-cover object-center"
