@@ -122,7 +122,7 @@ export default function ProjectsPage() {
               <div className="grid grid-cols-2">
                 <div className="relative h-48">
                   <Image
-                    src="/images/project12.png"
+                    src="/images/beforeAlamo.png"
                     alt="Before complete backyard makeover in Alamo with pool deck demolition"
                     fill
                     className="object-cover"
@@ -136,7 +136,7 @@ export default function ProjectsPage() {
                 </div>
                 <div className="relative h-48">
                   <Image
-                    src="/images/project13.png"
+                    src="/images/afterAlamo.png"
                     alt="After complete backyard makeover in Alamo with new pool deck, patios, and landscaping"
                     fill
                     className="object-cover"
@@ -372,7 +372,7 @@ const projects = [
     category: "Complete Landscaping",
     description:
       "A homeowner in Alamo, CA contacted Solves All Engineering to give their backyard a makeover. The client provided us with designed plans for how the yard would look, and we went to work. The project started with the demolition of their existing concrete pool deck and grading of yard. We put down a layer of base rock and rebar then poured the pool deck and sidewalks. Once the concrete was cured, we built 3 paver patios, installed a hot tub, and then installed a new lawn and sprinkler system, outdoor pavilion, and outdoor kitchen. The project required 7 concrete trucks, 2000 square feet of pavers, and 3000 square feet of sod.",
-    image: "/images/project12.png",
+    image: "/images/afterAlamo.png",
     alt: "Alamo complete backyard makeover with pool deck, patios, and landscaping",
   },
   {
