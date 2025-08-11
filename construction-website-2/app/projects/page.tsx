@@ -60,152 +60,6 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      {/* Before/After Showcase */}
-      <section className="py-12 md:py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-10 md:mb-16 max-w-3xl mx-auto">
-            <div className="inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-3 md:mb-4">
-              Transformations
-            </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-6">Before & After Results</h2>
-            <p className="text-base md:text-lg text-gray-700">
-              See the dramatic transformations we achieve through our specialized engineering solutions.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {/* Pittsburg Retaining Wall Project */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
-              <div className="grid grid-cols-2">
-                <div className="relative h-48">
-                  <Image
-                    src="/images/beforeRetainingwall.png"
-                    alt="Before retaining wall, deck, and fence reconstruction in Pittsburg"
-                    fill
-                    className="object-cover"
-                    quality={75}
-                    sizes="(max-width: 768px) 50vw, 33vw"
-                    loading="lazy"
-                  />
-                  <div className="absolute top-2 left-2 bg-red-600 text-white px-2 py-1 rounded text-xs font-medium">
-                    Before
-                  </div>
-                </div>
-                <div className="relative h-48">
-                  <Image
-                    src="/images/afterRetainingwall.png"
-                    alt="After retaining wall, deck, and fence reconstruction in Pittsburg"
-                    fill
-                    className="object-cover"
-                    quality={75}
-                    sizes="(max-width: 768px) 50vw, 33vw"
-                    loading="lazy"
-                  />
-                  <div className="absolute top-2 right-2 bg-green-600 text-white px-2 py-1 rounded text-xs font-medium">
-                    After
-                  </div>
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">Pittsburg Wall & Deck</h3>
-                <p className="text-gray-600 text-sm mb-3">
-                  Complete reconstruction of failing retaining wall, deck, and fence with concrete block construction.
-                </p>
-                <div className="flex items-center text-blue-600 text-sm font-medium">
-                  <span>Retaining Walls & Decks</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Alamo Yard Refresh Project */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
-              <div className="grid grid-cols-2">
-                <div className="relative h-48">
-                  <Image
-                    src="/images/beforeAlamo.png"
-                    alt="Before complete backyard makeover in Alamo with pool deck demolition"
-                    fill
-                    className="object-cover"
-                    quality={75}
-                    sizes="(max-width: 768px) 50vw, 33vw"
-                    loading="lazy"
-                  />
-                  <div className="absolute top-2 left-2 bg-red-600 text-white px-2 py-1 rounded text-xs font-medium">
-                    Before
-                  </div>
-                </div>
-                <div className="relative h-48">
-                  <Image
-                    src="/images/Alamo2.png"
-                    alt="After complete backyard makeover in Alamo with new pool deck, patios, and landscaping"
-                    fill
-                    className="object-cover"
-                    quality={75}
-                    sizes="(max-width: 768px) 50vw, 33vw"
-                    loading="lazy"
-                  />
-                  <div className="absolute top-2 right-2 bg-green-600 text-white px-2 py-1 rounded text-xs font-medium">
-                    After
-                  </div>
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">Alamo Yard Refresh</h3>
-                <p className="text-gray-600 text-sm mb-3">
-                  Complete backyard transformation with pool deck, paver patios, landscaping, and outdoor amenities.
-                </p>
-                <div className="flex items-center text-blue-600 text-sm font-medium">
-                  <span>Complete Landscaping</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Morgan Territory Walls Project */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
-              <div className="grid grid-cols-2">
-                <div className="relative h-48">
-                  <Image
-                    src="/images/beforeMorgan.png"
-                    alt="Before retaining wall construction on Morgan Territory Road with failing block wall"
-                    fill
-                    className="object-cover"
-                    quality={75}
-                    sizes="(max-width: 768px) 50vw, 33vw"
-                    loading="lazy"
-                  />
-                  <div className="absolute top-2 left-2 bg-red-600 text-white px-2 py-1 rounded text-xs font-medium">
-                    Before
-                  </div>
-                </div>
-                <div className="relative h-48">
-                  <Image
-                    src="/images/afterMorgan.png"
-                    alt="After retaining wall construction on Morgan Territory Road with stucco and stone veneer finish"
-                    fill
-                    className="object-cover"
-                    quality={75}
-                    sizes="(max-width: 768px) 50vw, 33vw"
-                    loading="lazy"
-                  />
-                  <div className="absolute top-2 right-2 bg-green-600 text-white px-2 py-1 rounded text-xs font-medium">
-                    After
-                  </div>
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">Morgan Territory Walls</h3>
-                <p className="text-gray-600 text-sm mb-3">
-                  Professional masonry work including retaining wall construction and stucco stone veneer finish.
-                </p>
-                <div className="flex items-center text-blue-600 text-sm font-medium">
-                  <span>Masonry & Stone Work</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Process Section */}
       <section className="py-12 md:py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -362,7 +216,7 @@ const projects = [
     title: "Pittsburg Retaining Wall and Deck",
     category: "Retaining Walls & Decks",
     description:
-      "Solves All Engineering was contacted to address a failing retaining wall, deck, and fence in the client's backyard. We procured an easement permit to allow us to work from the canal service road behind the residence then set to work. We demolished the client's old wall, deck, and fence and then built a concrete block retaining wall to last. Once the wall was backfilled and compacted, we built a new fence and deck for the client, then restored our work area on the canal road to finish the project.",
+      "Complete reconstruction of failing retaining wall, deck, and fence using concrete block construction. Project required easement permit for canal service road access.",
     image: "/images/afterRetainingwall.png",
     alt: "Pittsburg retaining wall, deck, and fence reconstruction project",
   },
@@ -371,7 +225,7 @@ const projects = [
     title: "Alamo Yard Refresh",
     category: "Complete Landscaping",
     description:
-      "A homeowner in Alamo, CA contacted Solves All Engineering to give their backyard a makeover. The client provided us with designed plans for how the yard would look, and we went to work. The project started with the demolition of their existing concrete pool deck and grading of yard. We put down a layer of base rock and rebar then poured the pool deck and sidewalks. Once the concrete was cured, we built 3 paver patios, installed a hot tub, and then installed a new lawn and sprinkler system, outdoor pavilion, and outdoor kitchen. The project required 7 concrete trucks, 2000 square feet of pavers, and 3000 square feet of sod.",
+      "Complete backyard transformation including pool deck replacement, paver patios, landscaping, and outdoor amenities. Project involved 7 concrete trucks, 2000 sq ft of pavers, and 3000 sq ft of sod.",
     image: "/images/Alamo2.png",
     alt: "Alamo complete backyard makeover with pool deck, patios, and landscaping",
   },
@@ -380,7 +234,7 @@ const projects = [
     title: "Morgan Territory Walls",
     category: "Masonry & Stone Work",
     description:
-      "A homeowner up on Morgan Territory Road contacted Solves All Engineering to address a section of block wall that was falling over. The project grew in scope when they asked us to build them a retaining wall below their block wall, and then put a stucco and stone veneer finish on the existing wall. All of the work was self-performed by Solves All Engineering's stone masons.",
+      "Professional masonry work addressing failing block wall with retaining wall construction and stucco stone veneer finish. All work self-performed by certified stone masons.",
     image: "/images/afterMorgan.png",
     alt: "Morgan Territory retaining wall construction with stucco and stone veneer finish",
   },
