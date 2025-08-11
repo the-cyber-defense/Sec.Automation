@@ -165,7 +165,7 @@ export default function ProjectsPage() {
               <div className="grid grid-cols-2">
                 <div className="relative h-48">
                   <Image
-                    src="/images/project16.png"
+                    src="/images/beforeMorgan.png"
                     alt="Before retaining wall construction on Morgan Territory Road with failing block wall"
                     fill
                     className="object-cover"
@@ -179,7 +179,7 @@ export default function ProjectsPage() {
                 </div>
                 <div className="relative h-48">
                   <Image
-                    src="/images/project17.png"
+                    src="/images/afterMorgan.png"
                     alt="After retaining wall construction on Morgan Territory Road with stucco and stone veneer finish"
                     fill
                     className="object-cover"
@@ -381,7 +381,7 @@ const projects = [
     category: "Masonry & Stone Work",
     description:
       "A homeowner up on Morgan Territory Road contacted Solves All Engineering to address a section of block wall that was falling over. The project grew in scope when they asked us to build them a retaining wall below their block wall, and then put a stucco and stone veneer finish on the existing wall. All of the work was self-performed by Solves All Engineering's stone masons.",
-    image: "/images/project17.png",
+    image: "/images/afterMorgan.png",
     alt: "Morgan Territory retaining wall construction with stucco and stone veneer finish",
   },
 ]

@@ -12,9 +12,9 @@ const project = {
   category: "Masonry & Stone Work",
   description:
     "Professional masonry work including retaining wall construction and stucco stone veneer finish. All work was self-performed by Solves All Engineering's stone masons.",
-  image: "/images/project17.png",
-  beforeImage: "/images/project16.png",
-  afterImage: "/images/project17.png",
+  image: "/images/afterMorgan.png",
+  beforeImage: "/images/beforeMorgan.png",
+  afterImage: "/images/afterMorgan.png",
   location: "Morgan Territory Road, CA",
   duration: "8 weeks",
   teamSize: "4 stone masons",
