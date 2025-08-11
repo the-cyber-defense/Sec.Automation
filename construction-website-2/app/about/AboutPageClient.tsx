@@ -139,10 +139,10 @@ export default function AboutPageClient() {
                 <div className="relative">
                   <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-xl">
                     <Image
-                      src="/images/founder.png"
+                      src="/images/upscaledMatt.png"
                       alt="Matt Mahoney - Founder of Solves All Engineering"
                       fill
-                      className="object-cover"
+                      className="object-cover object-center"
                       sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   </div>
