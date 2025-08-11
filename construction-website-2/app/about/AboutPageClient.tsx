@@ -75,11 +75,10 @@ export default function AboutPageClient() {
               <div>
                 <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-200 mb-6">About Solves All Engineering</Badge>
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
-                  Engineering Excellence Since <span className="text-blue-600">2010</span>
+                  Engineering Excellence Since <span className="text-blue-600">2023</span>
                 </h1>
                 <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
-                  We are a team of dedicated engineering professionals committed to solving complex construction
-                  challenges with innovative solutions, quality craftsmanship, and exceptional service.
+                  Solves All Engineering was started in 2023 by Matt Mahoney. We bring a heavy civil approach to dealing with residential issues to build robust solutions to the problems homeowners often face.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
@@ -135,7 +134,7 @@ export default function AboutPageClient() {
               </div>
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
-                  <CountUp end={45} duration={2} />+
+                  <CountUp end={10} duration={2} />+
                 </div>
                 <div className="text-gray-600">Years Experience</div>
               </div>
@@ -164,8 +163,7 @@ export default function AboutPageClient() {
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Story</h2>
                 <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-                  Founded in 2010 with a vision to provide exceptional engineering solutions, Solves All Engineering has
-                  grown from a small team to a trusted partner for complex construction challenges.
+                  Solves All Engineering was started in 2023 by Matt Mahoney. Matt had 10 years of experience working for environmental restoration contractors, managing stormwater and groundwater projects on large construction projects throughout Northern California.
                 </p>
               </div>
             </FadeIn>
@@ -188,15 +186,13 @@ export default function AboutPageClient() {
                   <div>
                     <h3 className="text-xl font-semibold mb-3">Our Mission</h3>
                     <p className="text-gray-700">
-                      To provide innovative engineering solutions that solve complex construction challenges while
-                      maintaining the highest standards of quality, safety, and client satisfaction.
+                      We realized that many homeowners in the Bay Area face issues from living on steep hillsides, and the associated problems of poor drainage and earth movement that come with steep terrain. We bring a heavy civil approach to dealing with residential issues to build robust solutions.
                     </p>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-3">Our Vision</h3>
+                    <h3 className="text-xl font-semibold mb-3">Our Expanded Services</h3>
                     <p className="text-gray-700">
-                      To be the leading engineering firm in the Bay Area, known for our expertise, reliability, and
-                      commitment to excellence in every project we undertake.
+                      As our staff has grown, we've expanded our expertise to include all "outside" services for homeowners, including fencing, concrete and masonry, deck builds, landscaping etc.
                     </p>
                   </div>
                   <div>
@@ -265,14 +261,19 @@ export default function AboutPageClient() {
                   
                   <div className="space-y-4 text-gray-700 leading-relaxed">
                     <p>
-                      Matt Mahoney got his degree in Environmental Science and has been in the construction and stormwater 
-                      industry since 2013. He has worked on projects across Northern California for both environmental and 
-                      heavy civil construction companies.
+                      Matt had 10 years of experience working for environmental restoration contractors, managing stormwater 
+                      and groundwater projects on large construction projects throughout Northern California.
                     </p>
                     <p>
-                      Solves All Engineering was started to meet industry's need for a contractor who understands managing 
-                      both stormwater and dirt. In the process of doing so, we found there is a large demand for residential 
-                      projects that require help with flooding and water intrusion.
+                      We realized that many homeowners in the Bay Area face issues from living on steep hillsides, and the 
+                      associated problems of poor drainage and earth movement that come with steep terrain. We bring a heavy 
+                      civil approach to dealing with residential issues to build robust solutions to the problems homeowners 
+                      often face.
+                    </p>
+                    <p>
+                      As our staff has grown, we've expanded our expertise to include all "outside" services for homeowners, 
+                      including fencing, concrete and masonry, deck builds, landscaping etc. Contact us today to discuss your 
+                      project needs.
                     </p>
                   </div>
 
@@ -394,19 +395,19 @@ export default function AboutPageClient() {
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Start Your Project?</h2>
               <p className="text-lg md:text-xl mb-8 opacity-90">
-                Contact us today to discuss your engineering needs and discover how we can help solve your construction
-                challenges with innovative solutions.
+                Contact us today to discuss your project needs. We bring proven expertise in stormwater management, 
+                drainage solutions, and all "outside" services for homeowners.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
-                  Get Free Consultation
+                  Contact Us Today
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
                   className="border-white text-white hover:bg-white/10 bg-transparent"
                 >
-                  View Our Projects
+                  Discuss Your Project
                 </Button>
               </div>
             </div>
