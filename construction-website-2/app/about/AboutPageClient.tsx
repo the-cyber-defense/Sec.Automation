@@ -121,109 +121,7 @@ export default function AboutPageClient() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <StaggerIn>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
-                  <CountUp end={150} duration={2} />
-                </div>
-                <div className="text-gray-600">Projects Completed</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
-                  <CountUp end={10} duration={2} />+
-                </div>
-                <div className="text-gray-600">Years Experience</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
-                  <CountUp end={1} duration={2} />
-                </div>
-                <div className="text-gray-600">Expert Team</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
-                  <CountUp end={98} duration={2} />%
-                </div>
-                <div className="text-gray-600">Client Satisfaction</div>
-              </div>
-            </div>
-          </StaggerIn>
-        </div>
-      </section>
-
-      {/* Our Story Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <FadeIn>
-              <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Story</h2>
-                <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-                  Solves All Engineering was started in 2023 by Matt Mahoney. Matt had 10 years of experience working for environmental restoration contractors, managing stormwater and groundwater projects on large construction projects throughout Northern California.
-                </p>
-              </div>
-            </FadeIn>
-
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <FadeIn>
-                <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl">
-                  <Image
-                    src="/placeholder.svg?height=400&width=600&text=Company+History+and+Growth"
-                    alt="Company history and growth"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                  />
-                </div>
-              </FadeIn>
-
-              <FadeIn>
-                <div className="space-y-6">
-                  <div>
-                    <h3 className="text-xl font-semibold mb-3">Our Mission</h3>
-                    <p className="text-gray-700">
-                      We realized that many homeowners in the Bay Area face issues from living on steep hillsides, and the associated problems of poor drainage and earth movement that come with steep terrain. We bring a heavy civil approach to dealing with residential issues to build robust solutions.
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold mb-3">Our Expanded Services</h3>
-                    <p className="text-gray-700">
-                      As our staff has grown, we've expanded our expertise to include all "outside" services for homeowners, including fencing, concrete and masonry, deck builds, landscaping etc.
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold mb-3">Our Values</h3>
-                    <ul className="space-y-2 text-gray-700">
-                      <li className="flex items-center">
-                        <CheckCircle className="h-5 w-5 text-blue-600 mr-2" />
-                        Quality and craftsmanship in every project
-                      </li>
-                      <li className="flex items-center">
-                        <CheckCircle className="h-5 w-5 text-blue-600 mr-2" />
-                        Transparent communication and honest pricing
-                      </li>
-                      <li className="flex items-center">
-                        <CheckCircle className="h-5 w-5 text-blue-600 mr-2" />
-                        Safety first in all our operations
-                      </li>
-                      <li className="flex items-center">
-                        <CheckCircle className="h-5 w-5 text-blue-600 mr-2" />
-                        Continuous innovation and improvement
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </FadeIn>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Founder Section */}
+      {/* Founder Section - Moved to Top */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -294,6 +192,108 @@ export default function AboutPageClient() {
                       <CheckCircle className="h-5 w-5 text-blue-600 mr-3" />
                       <span className="text-gray-700">Specialized in drainage & water management</span>
                     </div>
+                  </div>
+                </div>
+              </FadeIn>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <StaggerIn>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
+                  <CountUp end={150} duration={2} />
+                </div>
+                <div className="text-gray-600">Projects Completed</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
+                  <CountUp end={10} duration={2} />+
+                </div>
+                <div className="text-gray-600">Years Experience</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
+                  <CountUp end={1} duration={2} />
+                </div>
+                <div className="text-gray-600">Expert Team</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
+                  <CountUp end={98} duration={2} />%
+                </div>
+                <div className="text-gray-600">Client Satisfaction</div>
+              </div>
+            </div>
+          </StaggerIn>
+        </div>
+      </section>
+
+      {/* Our Story Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <FadeIn>
+              <div className="text-center mb-16">
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Story</h2>
+                <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+                  Solves All Engineering was started in 2023 by Matt Mahoney. Matt had 10 years of experience working for environmental restoration contractors, managing stormwater and groundwater projects on large construction projects throughout Northern California.
+                </p>
+              </div>
+            </FadeIn>
+
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <FadeIn>
+                <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl">
+                  <Image
+                    src="/placeholder.svg?height=400&width=600&text=Company+History+and+Growth"
+                    alt="Company history and growth"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
+                </div>
+              </FadeIn>
+
+              <FadeIn>
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="text-xl font-semibold mb-3">Our Mission</h3>
+                    <p className="text-gray-700">
+                      We realized that many homeowners in the Bay Area face issues from living on steep hillsides, and the associated problems of poor drainage and earth movement that come with steep terrain. We bring a heavy civil approach to dealing with residential issues to build robust solutions.
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-3">Our Expanded Services</h3>
+                    <p className="text-gray-700">
+                      As our staff has grown, we've expanded our expertise to include all "outside" services for homeowners, including fencing, concrete and masonry, deck builds, landscaping etc.
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-3">Our Values</h3>
+                    <ul className="space-y-2 text-gray-700">
+                      <li className="flex items-center">
+                        <CheckCircle className="h-5 w-5 text-blue-600 mr-2" />
+                        Quality and craftsmanship in every project
+                      </li>
+                      <li className="flex items-center">
+                        <CheckCircle className="h-5 w-5 text-blue-600 mr-2" />
+                        Transparent communication and honest pricing
+                      </li>
+                      <li className="flex items-center">
+                        <CheckCircle className="h-5 w-5 text-blue-600 mr-2" />
+                        Safety first in all our operations
+                      </li>
+                      <li className="flex items-center">
+                        <CheckCircle className="h-5 w-5 text-blue-600 mr-2" />
+                        Continuous innovation and improvement
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </FadeIn>
