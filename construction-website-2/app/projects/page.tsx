@@ -79,7 +79,7 @@ export default function ProjectsPage() {
               <div className="grid grid-cols-2">
                 <div className="relative h-48">
                   <Image
-                    src="/images/project8.png"
+                    src="/images/beforeRetainingwall.png"
                     alt="Before retaining wall, deck, and fence reconstruction in Pittsburg"
                     fill
                     className="object-cover"
@@ -93,7 +93,7 @@ export default function ProjectsPage() {
                 </div>
                 <div className="relative h-48">
                   <Image
-                    src="/images/project9.png"
+                    src="/images/afterRetainingwall.png"
                     alt="After retaining wall, deck, and fence reconstruction in Pittsburg"
                     fill
                     className="object-cover"
@@ -363,7 +363,7 @@ const projects = [
     category: "Retaining Walls & Decks",
     description:
       "Solves All Engineering was contacted to address a failing retaining wall, deck, and fence in the client's backyard. We procured an easement permit to allow us to work from the canal service road behind the residence then set to work. We demolished the client's old wall, deck, and fence and then built a concrete block retaining wall to last. Once the wall was backfilled and compacted, we built a new fence and deck for the client, then restored our work area on the canal road to finish the project.",
-    image: "/images/project8.png",
+    image: "/images/afterRetainingwall.png",
     alt: "Pittsburg retaining wall, deck, and fence reconstruction project",
   },
   {

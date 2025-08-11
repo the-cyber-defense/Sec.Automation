@@ -12,9 +12,9 @@ const project = {
   category: "Retaining Walls & Decks",
   description:
     "Complete reconstruction of failing retaining wall, deck, and fence with concrete block construction. Worked with easement permit from canal service road.",
-  image: "/images/project9.png",
-  beforeImage: "/images/project8.png",
-  afterImage: "/images/project9.png",
+  image: "/images/afterRetainingwall.png",
+  beforeImage: "/images/beforeRetainingwall.png",
+  afterImage: "/images/afterRetainingwall.png",
   location: "Pittsburg, CA",
   duration: "6 weeks",
   teamSize: "5 crew members",
