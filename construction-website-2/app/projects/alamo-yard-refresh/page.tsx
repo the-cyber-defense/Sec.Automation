@@ -12,9 +12,9 @@ const project = {
   category: "Complete Landscaping",
   description:
     "Complete backyard transformation with pool deck, paver patios, landscaping, and outdoor amenities. Project required 7 concrete trucks, 2000 square feet of pavers, and 3000 square feet of sod.",
-  image: "/images/afterAlamo.png",
+  image: "/images/Alamo2.png",
   beforeImage: "/images/beforeAlamo.png",
-  afterImage: "/images/afterAlamo.png",
+  afterImage: "/images/Alamo2.png",
   location: "Alamo, CA",
   duration: "10 weeks",
   teamSize: "8 crew members",

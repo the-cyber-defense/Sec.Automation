@@ -136,7 +136,7 @@ export default function ProjectsPage() {
                 </div>
                 <div className="relative h-48">
                   <Image
-                    src="/images/afterAlamo.png"
+                    src="/images/Alamo2.png"
                     alt="After complete backyard makeover in Alamo with new pool deck, patios, and landscaping"
                     fill
                     className="object-cover"
@@ -372,7 +372,7 @@ const projects = [
     category: "Complete Landscaping",
     description:
       "A homeowner in Alamo, CA contacted Solves All Engineering to give their backyard a makeover. The client provided us with designed plans for how the yard would look, and we went to work. The project started with the demolition of their existing concrete pool deck and grading of yard. We put down a layer of base rock and rebar then poured the pool deck and sidewalks. Once the concrete was cured, we built 3 paver patios, installed a hot tub, and then installed a new lawn and sprinkler system, outdoor pavilion, and outdoor kitchen. The project required 7 concrete trucks, 2000 square feet of pavers, and 3000 square feet of sod.",
-    image: "/images/afterAlamo.png",
+    image: "/images/Alamo2.png",
     alt: "Alamo complete backyard makeover with pool deck, patios, and landscaping",
   },
   {
@@ -381,7 +381,7 @@ const projects = [
     category: "Masonry & Stone Work",
     description:
       "A homeowner up on Morgan Territory Road contacted Solves All Engineering to address a section of block wall that was falling over. The project grew in scope when they asked us to build them a retaining wall below their block wall, and then put a stucco and stone veneer finish on the existing wall. All of the work was self-performed by Solves All Engineering's stone masons.",
-    image: "/images/project16.png",
+    image: "/images/project17.png",
     alt: "Morgan Territory retaining wall construction with stucco and stone veneer finish",
   },
 ]
