@@ -7,11 +7,11 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 export const metadata = {
-  title: "Engineering Projects Portfolio | Drainage & Earth Retainment | Solves All Engineering",
+  title: "Recent Projects | Pittsburg, Alamo & Morgan Territory | Solves All Engineering",
   description:
-    "Explore Solves All Engineering's portfolio of completed projects specializing in drainage, earth retainment, and remediation solutions across Northern California.",
+    "View Solves All Engineering's recent completed projects including retaining walls, decks, landscaping, and masonry work across Northern California.",
   keywords:
-    "engineering projects, drainage solutions, earth retainment, remediation, Northern California, construction portfolio",
+    "retaining wall projects, deck construction, landscaping, masonry work, Northern California construction projects",
 }
 
 export default function ProjectsPage() {
@@ -32,8 +32,7 @@ export default function ProjectsPage() {
         <div className="relative z-20 container mx-auto px-4 h-full flex flex-col justify-center items-center text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 md:mb-4">Our Projects</h1>
           <p className="text-base sm:text-lg md:text-xl text-white/90 max-w-xl sm:max-w-2xl">
-            Explore our portfolio of successful drainage, earth retainment, and remediation projects that showcase our
-            engineering expertise.
+            See our recent completed projects showcasing retaining walls, decks, landscaping, and comprehensive "outside" services for homeowners.
           </p>
         </div>
       </section>
@@ -45,83 +44,18 @@ export default function ProjectsPage() {
             <div className="inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-3 md:mb-4">
               Our Portfolio
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-6">Featured Projects</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-6">Recent Projects</h2>
             <p className="text-base md:text-lg text-gray-700">
-              Browse through our diverse portfolio of completed engineering projects specializing in hard-to-fix
-              problems.
+              View our recent completed projects showcasing the quality and craftsmanship we bring to every homeowner project.
             </p>
           </div>
 
           <div className="max-w-6xl mx-auto">
-            <Tabs defaultValue="all" className="mb-8 md:mb-12">
-              <div className="flex justify-center overflow-x-auto pb-2 -mx-4 px-4">
-                <TabsList className="flex space-x-2 p-1 rounded-lg bg-gray-100 dark:bg-gray-800">
-                  <TabsTrigger value="all" className="px-4 py-2 text-sm rounded-md">
-                    All
-                  </TabsTrigger>
-                  <TabsTrigger value="drainage" className="px-4 py-2 text-sm rounded-md">
-                    Drainage
-                  </TabsTrigger>
-                  <TabsTrigger value="retainment" className="px-4 py-2 text-sm rounded-md">
-                    Earth Retainment
-                  </TabsTrigger>
-                  <TabsTrigger value="remediation" className="px-4 py-2 text-sm rounded-md">
-                    Remediation
-                  </TabsTrigger>
-                  <TabsTrigger value="residential" className="px-4 py-2 text-sm rounded-md">
-                    Residential
-                  </TabsTrigger>
-                </TabsList>
-              </div>
-
-              <TabsContent value="all" className="mt-6 md:mt-8">
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                  {projects.map((project, index) => (
-                    <ProjectCard key={index} project={project} />
-                  ))}
-                </div>
-              </TabsContent>
-
-              <TabsContent value="drainage" className="mt-6 md:mt-8">
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                  {projects
-                    .filter((project) => project.category === "Drainage")
-                    .map((project, index) => (
-                      <ProjectCard key={index} project={project} />
-                    ))}
-                </div>
-              </TabsContent>
-
-              <TabsContent value="retainment" className="mt-6 md:mt-8">
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                  {projects
-                    .filter((project) => project.category === "Earth Retainment")
-                    .map((project, index) => (
-                      <ProjectCard key={index} project={project} />
-                    ))}
-                </div>
-              </TabsContent>
-
-              <TabsContent value="remediation" className="mt-6 md:mt-8">
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                  {projects
-                    .filter((project) => project.category === "Remediation")
-                    .map((project, index) => (
-                      <ProjectCard key={index} project={project} />
-                    ))}
-                </div>
-              </TabsContent>
-
-              <TabsContent value="residential" className="mt-6 md:mt-8">
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                  {projects
-                    .filter((project) => project.category === "Residential")
-                    .map((project, index) => (
-                      <ProjectCard key={index} project={project} />
-                    ))}
-                </div>
-              </TabsContent>
-            </Tabs>
+            <div className="grid md:grid-cols-3 gap-8">
+              {projects.map((project, index) => (
+                <ProjectCard key={index} project={project} />
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -139,18 +73,18 @@ export default function ProjectsPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 max-w-6xl mx-auto">
-            {/* Hillside Drainage Project */}
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Pittsburg Retaining Wall Project */}
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
               <div className="grid grid-cols-2">
                 <div className="relative h-48">
                   <Image
-                    src="/images/modern-residence-before.jpg"
-                    alt="Before drainage solution - property experiencing flooding and water damage issues"
+                    src="/images/project8.png"
+                    alt="Before retaining wall, deck, and fence reconstruction in Pittsburg"
                     fill
                     className="object-cover"
                     quality={75}
-                    sizes="(max-width: 768px) 50vw, 25vw"
+                    sizes="(max-width: 768px) 50vw, 33vw"
                     loading="lazy"
                   />
                   <div className="absolute top-2 left-2 bg-red-600 text-white px-2 py-1 rounded text-xs font-medium">
@@ -159,12 +93,12 @@ export default function ProjectsPage() {
                 </div>
                 <div className="relative h-48">
                   <Image
-                    src="/images/modern-residence-after.jpg"
-                    alt="After drainage solution - completed professional drainage system preventing flooding"
+                    src="/images/project9.png"
+                    alt="After retaining wall, deck, and fence reconstruction in Pittsburg"
                     fill
                     className="object-cover"
                     quality={75}
-                    sizes="(max-width: 768px) 50vw, 25vw"
+                    sizes="(max-width: 768px) 50vw, 33vw"
                     loading="lazy"
                   />
                   <div className="absolute top-2 right-2 bg-green-600 text-white px-2 py-1 rounded text-xs font-medium">
@@ -173,28 +107,27 @@ export default function ProjectsPage() {
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">Hillside Drainage System</h3>
+                <h3 className="text-xl font-bold mb-2">Pittsburg Wall & Deck</h3>
                 <p className="text-gray-600 text-sm mb-3">
-                  Complete drainage solution for hillside property experiencing severe water intrusion and flooding
-                  issues.
+                  Complete reconstruction of failing retaining wall, deck, and fence with concrete block construction.
                 </p>
                 <div className="flex items-center text-blue-600 text-sm font-medium">
-                  <span>Drainage Solution</span>
+                  <span>Retaining Walls & Decks</span>
                 </div>
               </div>
             </div>
 
-            {/* Retaining Wall Project */}
+            {/* Alamo Yard Refresh Project */}
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
               <div className="grid grid-cols-2">
                 <div className="relative h-48">
                   <Image
-                    src="/images/modern-residence-staircase-1.jpg"
-                    alt="Before retaining wall construction - unstable slope with erosion issues"
+                    src="/images/project12.png"
+                    alt="Before complete backyard makeover in Alamo with pool deck demolition"
                     fill
                     className="object-cover"
                     quality={75}
-                    sizes="(max-width: 768px) 50vw, 25vw"
+                    sizes="(max-width: 768px) 50vw, 33vw"
                     loading="lazy"
                   />
                   <div className="absolute top-2 left-2 bg-red-600 text-white px-2 py-1 rounded text-xs font-medium">
@@ -203,12 +136,12 @@ export default function ProjectsPage() {
                 </div>
                 <div className="relative h-48">
                   <Image
-                    src="/images/modern-residence-staircase-2.jpg"
-                    alt="After retaining wall construction - engineered stone retaining wall providing slope stability"
+                    src="/images/project13.png"
+                    alt="After complete backyard makeover in Alamo with new pool deck, patios, and landscaping"
                     fill
                     className="object-cover"
                     quality={75}
-                    sizes="(max-width: 768px) 50vw, 25vw"
+                    sizes="(max-width: 768px) 50vw, 33vw"
                     loading="lazy"
                   />
                   <div className="absolute top-2 right-2 bg-green-600 text-white px-2 py-1 rounded text-xs font-medium">
@@ -217,27 +150,27 @@ export default function ProjectsPage() {
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">Structural Retaining Wall</h3>
+                <h3 className="text-xl font-bold mb-2">Alamo Yard Refresh</h3>
                 <p className="text-gray-600 text-sm mb-3">
-                  Engineered retaining wall solution to prevent soil erosion and provide long-term stability.
+                  Complete backyard transformation with pool deck, paver patios, landscaping, and outdoor amenities.
                 </p>
                 <div className="flex items-center text-blue-600 text-sm font-medium">
-                  <span>Earth Retainment</span>
+                  <span>Complete Landscaping</span>
                 </div>
               </div>
             </div>
 
-            {/* Interior Remediation */}
+            {/* Morgan Territory Walls Project */}
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
               <div className="grid grid-cols-2">
                 <div className="relative h-48">
                   <Image
-                    src="/images/modern-residence-interior-1.jpg"
-                    alt="Before remediation - interior space with water damage and structural issues"
+                    src="/images/project16.png"
+                    alt="Before retaining wall construction on Morgan Territory Road with failing block wall"
                     fill
                     className="object-cover"
                     quality={75}
-                    sizes="(max-width: 768px) 50vw, 25vw"
+                    sizes="(max-width: 768px) 50vw, 33vw"
                     loading="lazy"
                   />
                   <div className="absolute top-2 left-2 bg-red-600 text-white px-2 py-1 rounded text-xs font-medium">
@@ -246,12 +179,12 @@ export default function ProjectsPage() {
                 </div>
                 <div className="relative h-48">
                   <Image
-                    src="/images/modern-residence-interior-2.jpg"
-                    alt="After remediation - fully restored interior space with professional finishes"
+                    src="/images/project17.png"
+                    alt="After retaining wall construction on Morgan Territory Road with stucco and stone veneer finish"
                     fill
                     className="object-cover"
                     quality={75}
-                    sizes="(max-width: 768px) 50vw, 25vw"
+                    sizes="(max-width: 768px) 50vw, 33vw"
                     loading="lazy"
                   />
                   <div className="absolute top-2 right-2 bg-green-600 text-white px-2 py-1 rounded text-xs font-medium">
@@ -260,55 +193,12 @@ export default function ProjectsPage() {
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">Water Damage Remediation</h3>
+                <h3 className="text-xl font-bold mb-2">Morgan Territory Walls</h3>
                 <p className="text-gray-600 text-sm mb-3">
-                  Complete remediation and restoration after water intrusion damage, including structural repairs.
+                  Professional masonry work including retaining wall construction and stucco stone veneer finish.
                 </p>
                 <div className="flex items-center text-blue-600 text-sm font-medium">
-                  <span>Remediation</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Entrance Improvement */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
-              <div className="grid grid-cols-2">
-                <div className="relative h-48">
-                  <Image
-                    src="/images/modern-residence-staircase-3.jpg"
-                    alt="Before entrance improvement - unstable entrance area needing structural work"
-                    fill
-                    className="object-cover"
-                    quality={75}
-                    sizes="(max-width: 768px) 50vw, 25vw"
-                    loading="lazy"
-                  />
-                  <div className="absolute top-2 left-2 bg-red-600 text-white px-2 py-1 rounded text-xs font-medium">
-                    Before
-                  </div>
-                </div>
-                <div className="relative h-48">
-                  <Image
-                    src="/images/modern-residence-entrance.jpg"
-                    alt="After entrance improvement - professionally stabilized entrance with proper drainage"
-                    fill
-                    className="object-cover"
-                    quality={75}
-                    sizes="(max-width: 768px) 50vw, 25vw"
-                    loading="lazy"
-                  />
-                  <div className="absolute top-2 right-2 bg-green-600 text-white px-2 py-1 rounded text-xs font-medium">
-                    After
-                  </div>
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">Entrance Stabilization</h3>
-                <p className="text-gray-600 text-sm mb-3">
-                  Structural improvements to entrance area including drainage and foundation stabilization.
-                </p>
-                <div className="flex items-center text-blue-600 text-sm font-medium">
-                  <span>Residential</span>
+                  <span>Masonry & Stone Work</span>
                 </div>
               </div>
             </div>
@@ -324,10 +214,10 @@ export default function ProjectsPage() {
               <div className="inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-3 md:mb-4">
                 Our Approach
               </div>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6">How We Solve Complex Problems</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6">Our Project Approach</h2>
               <p className="text-base md:text-lg text-gray-700 mb-6">
-                Every project we undertake follows a rigorous engineering process to ensure quality, timeliness, and
-                long-lasting solutions with warranty protection.
+                Every project we undertake follows a systematic approach to ensure quality craftsmanship, timeliness, and
+                lasting results that exceed homeowner expectations.
               </p>
               <div className="space-y-4 md:space-y-6">
                 <div className="flex items-start">
@@ -335,10 +225,9 @@ export default function ProjectsPage() {
                     <span className="text-blue-700 font-bold text-sm md:text-base">1</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-base md:text-lg">Problem Assessment</h3>
+                    <h3 className="font-semibold text-base md:text-lg">Site Assessment</h3>
                     <p className="text-gray-700 text-sm md:text-base">
-                      We begin with comprehensive site analysis to identify root causes of drainage, retainment, or
-                      remediation issues.
+                      We begin with comprehensive site evaluation to understand your project needs and existing conditions.
                     </p>
                   </div>
                 </div>
@@ -347,10 +236,9 @@ export default function ProjectsPage() {
                     <span className="text-blue-700 font-bold text-sm md:text-base">2</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-base md:text-lg">Engineered Solutions</h3>
+                    <h3 className="font-semibold text-base md:text-lg">Planning & Design</h3>
                     <p className="text-gray-700 text-sm md:text-base">
-                      We design custom solutions using proven engineering principles and quality materials for lasting
-                      results.
+                      We develop detailed plans and select quality materials to ensure your project meets your vision and budget.
                     </p>
                   </div>
                 </div>
@@ -359,10 +247,9 @@ export default function ProjectsPage() {
                     <span className="text-blue-700 font-bold text-sm md:text-base">3</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-base md:text-lg">Expert Implementation</h3>
+                    <h3 className="font-semibold text-base md:text-lg">Professional Construction</h3>
                     <p className="text-gray-700 text-sm md:text-base">
-                      Our skilled team executes each phase with precision, managing both stormwater and earthwork
-                      requirements.
+                      Our skilled craftsmen execute each phase with precision, using proper techniques and quality materials.
                     </p>
                   </div>
                 </div>
@@ -371,10 +258,9 @@ export default function ProjectsPage() {
                     <span className="text-blue-700 font-bold text-sm md:text-base">4</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-base md:text-lg">Warranty & Follow-up</h3>
+                    <h3 className="font-semibold text-base md:text-lg">Quality Completion</h3>
                     <p className="text-gray-700 text-sm md:text-base">
-                      All projects come with warranty protection and follow-up to ensure long-term performance and
-                      client satisfaction.
+                      We ensure every detail meets our high standards and provide ongoing support for your complete satisfaction.
                     </p>
                   </div>
                 </div>
@@ -400,8 +286,8 @@ export default function ProjectsPage() {
         <div className="container mx-auto px-4 text-center max-w-4xl">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6">Ready to Solve Your Problem?</h2>
           <p className="text-gray-300 text-sm sm:text-base md:text-lg max-w-xl md:max-w-2xl mx-auto mb-6 md:mb-10">
-            Contact us today to discuss your drainage, earth retainment, or remediation needs. We specialize in the
-            hard-to-fix problems other contractors turn down.
+            Contact us today to discuss your project needs. We provide comprehensive \"outside\" services for homeowners 
+            with quality craftsmanship and professional results.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <Link href="/contact">
@@ -469,77 +355,33 @@ function ProjectCard({ project }: { project: any }) {
   )
 }
 
-// Updated projects data focused on Solves All Engineering specialties
+// Recent projects data
 const projects = [
   {
-    id: "hillside-drainage-system",
-    title: "Hillside Drainage System",
-    category: "Drainage",
+    id: "pittsburg-retaining-wall-deck",
+    title: "Pittsburg Retaining Wall and Deck",
+    category: "Retaining Walls & Decks",
     description:
-      "Complete drainage solution for hillside property experiencing severe water intrusion and flooding issues. Custom engineered system with warranty.",
-    image: "/images/modern-residence-after.jpg",
-    alt: "Hillside drainage system project preventing flooding and water intrusion",
+      "Solves All Engineering was contacted to address a failing retaining wall, deck, and fence in the client's backyard. We procured an easement permit to allow us to work from the canal service road behind the residence then set to work. We demolished the client's old wall, deck, and fence and then built a concrete block retaining wall to last. Once the wall was backfilled and compacted, we built a new fence and deck for the client, then restored our work area on the canal road to finish the project.",
+    image: "/images/project8.png",
+    alt: "Pittsburg retaining wall, deck, and fence reconstruction project",
   },
   {
-    id: "structural-retaining-wall",
-    title: "Structural Retaining Wall",
-    category: "Earth Retainment",
+    id: "alamo-yard-refresh",
+    title: "Alamo Yard Refresh",
+    category: "Complete Landscaping",
     description:
-      "Engineered retaining wall solution to prevent soil erosion and provide long-term stability for residential property.",
-    image: "/images/modern-residence-staircase-2.jpg",
-    alt: "Structural retaining wall construction for slope stabilization",
+      "A homeowner in Alamo, CA contacted Solves All Engineering to give their backyard a makeover. The client provided us with designed plans for how the yard would look, and we went to work. The project started with the demolition of their existing concrete pool deck and grading of yard. We put down a layer of base rock and rebar then poured the pool deck and sidewalks. Once the concrete was cured, we built 3 paver patios, installed a hot tub, and then installed a new lawn and sprinkler system, outdoor pavilion, and outdoor kitchen. The project required 7 concrete trucks, 2000 square feet of pavers, and 3000 square feet of sod.",
+    image: "/images/project12.png",
+    alt: "Alamo complete backyard makeover with pool deck, patios, and landscaping",
   },
   {
-    id: "water-damage-remediation",
-    title: "Water Damage Remediation",
-    category: "Remediation",
+    id: "morgan-territory-walls",
+    title: "Morgan Territory Walls",
+    category: "Masonry & Stone Work",
     description:
-      "Complete remediation and restoration after water intrusion damage, including structural repairs and moisture control systems.",
-    image: "/images/modern-residence-interior-2.jpg",
-    alt: "Water damage remediation and structural restoration project",
-  },
-  {
-    id: "foundation-drainage-repair",
-    title: "Foundation Drainage Repair",
-    category: "Drainage",
-    description:
-      "Foundation waterproofing and drainage system installation to resolve chronic basement flooding and foundation issues.",
-    image: "/images/modern-residence-entrance.jpg",
-    alt: "Foundation drainage repair and waterproofing system installation",
-  },
-  {
-    id: "slope-stabilization",
-    title: "Slope Stabilization",
-    category: "Earth Retainment",
-    description:
-      "Comprehensive slope stabilization project using engineered retaining systems and drainage integration.",
-    image: "/images/modern-residence-staircase-4.jpg",
-    alt: "Slope stabilization project with engineered retaining systems",
-  },
-  {
-    id: "stormwater-management",
-    title: "Stormwater Management System",
-    category: "Drainage",
-    description:
-      "Large-scale stormwater management system designed to handle heavy rainfall and prevent property flooding.",
-    image: "/images/modern-residence-dining.jpg",
-    alt: "Stormwater management system for heavy rainfall protection",
-  },
-  {
-    id: "soil-remediation",
-    title: "Contaminated Soil Remediation",
-    category: "Remediation",
-    description: "Environmental remediation project addressing contaminated soil conditions with engineered solutions.",
-    image: "/images/modern-residence-before.jpg",
-    alt: "Contaminated soil remediation and environmental cleanup project",
-  },
-  {
-    id: "residential-flooding-solution",
-    title: "Residential Flooding Solution",
-    category: "Residential",
-    description:
-      "Comprehensive flooding solution for residential property including drainage, grading, and waterproofing systems.",
-    image: "/images/modern-residence-staircase-1.jpg",
-    alt: "Residential flooding solution with comprehensive drainage and waterproofing",
+      "A homeowner up on Morgan Territory Road contacted Solves All Engineering to address a section of block wall that was falling over. The project grew in scope when they asked us to build them a retaining wall below their block wall, and then put a stucco and stone veneer finish on the existing wall. All of the work was self-performed by Solves All Engineering's stone masons.",
+    image: "/images/project16.png",
+    alt: "Morgan Territory retaining wall construction with stucco and stone veneer finish",
   },
 ]
