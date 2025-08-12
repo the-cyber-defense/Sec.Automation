@@ -37,16 +37,16 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Overview */}
-      <section className="py-12 md:py-20 bg-white">
+      <section className="py-12 md:py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-10 md:mb-16 max-w-3xl mx-auto">
             <div className="inline-block px-4 py-2 bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300 rounded-full text-sm font-medium mb-3 md:mb-4">
               What We Offer
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-6 text-foreground">
               Complete Outside Services for Homeowners
             </h2>
-            <p className="text-base md:text-lg text-gray-700">
+            <p className="text-base md:text-lg text-muted-foreground">
               From drainage solutions to landscaping and deck builds, we provide all the "outside" services homeowners 
               need with professional quality and reliability.
             </p>
@@ -55,7 +55,7 @@ export default function ServicesPage() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-gray-50 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group"
+                className="bg-card text-card-foreground rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group border border-border"
               >
                 <div className="relative h-48 md:h-56 overflow-hidden">
                   <Image
@@ -70,7 +70,7 @@ export default function ServicesPage() {
                 </div>
                 <div className="p-6 md:p-8">
                   <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">{service.title}</h3>
-                  <p className="text-gray-700 mb-5 md:mb-6 text-sm sm:text-base">{service.description}</p>
+                  <p className="text-muted-foreground mb-5 md:mb-6 text-sm sm:text-base">{service.description}</p>
                   <Link href={service.link}>
                     <Button className="bg-blue-600 hover:bg-blue-700 text-white w-full">
                       Learn More
@@ -85,14 +85,14 @@ export default function ServicesPage() {
       </section>
 
       {/* Process Section */}
-      <section className="py-12 md:py-20 bg-gray-50">
+      <section className="py-12 md:py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-10 md:mb-16 max-w-3xl mx-auto">
             <div className="inline-block px-4 py-2 bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300 rounded-full text-sm font-medium mb-3 md:mb-4">
               Our Process
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-6">How We Work</h2>
-            <p className="text-base md:text-lg text-gray-700">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-6 text-foreground">How We Work</h2>
+            <p className="text-base md:text-lg text-muted-foreground">
               Our streamlined process ensures a smooth experience from initial consultation to project completion.
             </p>
           </div>

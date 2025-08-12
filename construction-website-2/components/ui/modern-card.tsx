@@ -8,10 +8,11 @@ interface ModernCardProps extends React.HTMLAttributes<HTMLDivElement> {
   variant?: "default" | "glass" | "gradient" | "minimal"
   hover?: boolean
   children: React.ReactNode
+  animated?: boolean
 }
 
 const ModernCard = React.forwardRef<HTMLDivElement, ModernCardProps>(
-  ({ className, variant = "default", hover = true, children, ...props }, ref) => {
+  ({ className, variant = "default", hover = true, children, animated = true, ...props }, ref) => {
     const baseClasses = "relative overflow-hidden transition-all duration-500"
 
     const variantClasses = {
@@ -26,22 +27,36 @@ const ModernCard = React.forwardRef<HTMLDivElement, ModernCardProps>(
       ? "hover:shadow-large hover:-translate-y-1 hover:border-neutral-300/50 dark:hover:border-neutral-700/50"
       : ""
 
-    return (
-      <motion.div
-        ref={ref}
-        className={cn(baseClasses, variantClasses[variant], hoverClasses, className)}
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        {...props}
-      >
+    const content = (
+      <>
         {/* Noise texture overlay */}
         <div className="absolute inset-0 opacity-[0.015] bg-noise pointer-events-none" />
 
         {/* Content */}
         <div className="relative z-10">{children}</div>
-      </motion.div>
+      </>
+    )
+
+    if (animated) {
+      return (
+        <motion.div
+          ref={ref}
+          className={cn(baseClasses, variantClasses[variant], hoverClasses, className)}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          {...props}
+        >
+          {content}
+        </motion.div>
+      )
+    }
+
+    return (
+      <div ref={ref} className={cn(baseClasses, variantClasses[variant], hoverClasses, className)} {...props}>
+        {content}
+      </div>
     )
   },
 )

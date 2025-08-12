@@ -148,7 +148,7 @@ export default function AboutPageClient() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <StaggerIn>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
@@ -156,25 +156,25 @@ export default function AboutPageClient() {
                 <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
                   <CountUp end={150} duration={2} />
                 </div>
-                <div className="text-gray-600">Projects Completed</div>
+                <div className="text-muted-foreground">Projects Completed</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
                   <CountUp end={10} duration={2} />+
                 </div>
-                <div className="text-gray-600">Years Experience</div>
+                <div className="text-muted-foreground">Years Experience</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
                   <CountUp end={1} duration={2} />
                 </div>
-                <div className="text-gray-600">Expert Team</div>
+                <div className="text-muted-foreground">Expert Team</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
                   <CountUp end={98} duration={2} />%
                 </div>
-                <div className="text-gray-600">Client Satisfaction</div>
+                <div className="text-muted-foreground">Client Satisfaction</div>
               </div>
             </div>
           </StaggerIn>
@@ -182,13 +182,13 @@ export default function AboutPageClient() {
       </section>
 
       {/* Our Story Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <FadeIn>
               <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Story</h2>
-                <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">Our Story</h2>
+                <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
                   Solves All Engineering was started in 2023 by Matt Mahoney. Matt had 10 years of experience working for environmental restoration contractors, managing stormwater and groundwater projects on large construction projects throughout Northern California.
                 </p>
               </div>
@@ -198,20 +198,20 @@ export default function AboutPageClient() {
               <div className="max-w-4xl mx-auto">
                 <div className="space-y-6">
                   <div>
-                    <h3 className="text-xl font-semibold mb-3">Our Mission</h3>
-                    <p className="text-gray-700">
+                    <h3 className="text-xl font-semibold mb-3 text-foreground">Our Mission</h3>
+                    <p className="text-muted-foreground">
                       We realized that many homeowners in the Bay Area face issues from living on steep hillsides, and the associated problems of poor drainage and earth movement that come with steep terrain. We bring a heavy civil approach to dealing with residential issues to build robust solutions.
                     </p>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-3">Our Expanded Services</h3>
-                    <p className="text-gray-700">
+                    <h3 className="text-xl font-semibold mb-3 text-foreground">Our Expanded Services</h3>
+                    <p className="text-muted-foreground">
                       As our staff has grown, we've expanded our expertise to include all "outside" services for homeowners, including fencing, concrete and masonry, deck builds, landscaping etc.
                     </p>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-3">Our Values</h3>
-                    <ul className="space-y-2 text-gray-700">
+                    <h3 className="text-xl font-semibold mb-3 text-foreground">Our Values</h3>
+                    <ul className="space-y-2 text-muted-foreground">
                       <li className="flex items-center">
                         <CheckCircle className="h-5 w-5 text-blue-600 mr-2" />
                         Quality and craftsmanship in every project
@@ -238,13 +238,13 @@ export default function AboutPageClient() {
       </section>
 
       {/* Achievements Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <FadeIn>
               <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Choose Us</h2>
-                <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">Why Choose Us</h2>
+                <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
                   Our commitment to excellence, combined with our expertise and experience, makes us the trusted choice
                   for engineering solutions.
                 </p>
@@ -262,8 +262,8 @@ export default function AboutPageClient() {
                       <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-6">
                         <achievement.icon className="h-8 w-8 text-blue-600" />
                       </div>
-                      <h3 className="font-semibold text-lg mb-3">{achievement.title}</h3>
-                      <p className="text-gray-600 text-sm leading-relaxed">{achievement.description}</p>
+                      <h3 className="font-semibold text-lg mb-3 text-foreground">{achievement.title}</h3>
+                      <p className="text-muted-foreground text-sm leading-relaxed">{achievement.description}</p>
                     </CardContent>
                   </Card>
                 ))}
@@ -274,13 +274,13 @@ export default function AboutPageClient() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <FadeIn>
               <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">What Our Clients Say</h2>
-                <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">What Our Clients Say</h2>
+                <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
                   Don't just take our word for it. Here's what our satisfied clients have to say about working with
                   Solves All Engineering.
                 </p>
@@ -298,7 +298,7 @@ export default function AboutPageClient() {
                         ))}
                       </div>
                       <Quote className="h-8 w-8 text-blue-200 mb-4" />
-                      <p className="text-gray-700 mb-6 leading-relaxed">"{testimonial.content}"</p>
+                      <p className="text-muted-foreground mb-6 leading-relaxed">"{testimonial.content}"</p>
                       <div className="flex items-center">
                         <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
                           <Image
@@ -310,8 +310,8 @@ export default function AboutPageClient() {
                           />
                         </div>
                         <div>
-                          <div className="font-semibold">{testimonial.name}</div>
-                          <div className="text-sm text-gray-600">{testimonial.role}</div>
+                          <div className="font-semibold text-foreground">{testimonial.name}</div>
+                          <div className="text-sm text-muted-foreground">{testimonial.role}</div>
                         </div>
                       </div>
                     </CardContent>

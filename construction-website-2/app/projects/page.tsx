@@ -38,98 +38,89 @@ export default function ProjectsPage() {
       </section>
 
       {/* Projects Gallery */}
-      <section className="py-12 md:py-20 bg-white">
+      <section className="py-12 md:py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-10 md:mb-16 max-w-3xl mx-auto">
-            <div className="inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-3 md:mb-4">
+            <div className="inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-4">
               Our Portfolio
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-6">Recent Projects</h2>
-            <p className="text-base md:text-lg text-gray-700">
-              View our recent completed projects showcasing the quality and craftsmanship we bring to every homeowner project.
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">Featured Projects</h1>
+            <p className="text-lg text-muted-foreground">
+              Explore our diverse portfolio of engineering solutions, from residential drainage systems to commercial earth retainment projects.
             </p>
           </div>
 
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-3 gap-8">
-              {projects.map((project, index) => (
-                <ProjectCard key={index} project={project} />
-              ))}
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projects.map((project, index) => (
+              <div key={index} className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="relative h-64 overflow-hidden">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
+                    <p className="text-blue-300 mb-4">{project.category}</p>
+                    <Link href={`/projects/${project.id}`}>
+                      <Button variant="outline" className="text-white border-white hover:bg-white/20 bg-transparent">
+                        View Details
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Process Section */}
-      <section className="py-12 md:py-20 bg-white">
+      <section className="py-12 md:py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center max-w-6xl mx-auto">
             <div>
-              <div className="inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-3 md:mb-4">
-                Our Approach
+              <div className="inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-4">
+                Our Process
               </div>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6">Our Project Approach</h2>
-              <p className="text-base md:text-lg text-gray-700 mb-6">
-                Every project we undertake follows a systematic approach to ensure quality craftsmanship, timeliness, and
-                lasting results that exceed homeowner expectations.
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">How We Deliver Excellence</h2>
+              <p className="text-lg text-muted-foreground mb-8">
+                Our proven project management approach ensures every project is completed on time, within budget, and to the highest standards of quality.
               </p>
-              <div className="space-y-4 md:space-y-6">
-                <div className="flex items-start">
-                  <div className="bg-blue-100 w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center mr-3 md:mr-4 flex-shrink-0">
-                    <span className="text-blue-700 font-bold text-sm md:text-base">1</span>
+              <div className="space-y-6">
+                {processSteps.map((step, index) => (
+                  <div key={index} className="flex items-start space-x-4">
+                    <div className="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                      <span className="text-blue-600 font-semibold text-sm">{index + 1}</span>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-lg mb-2 text-foreground">{step.title}</h3>
+                      <p className="text-muted-foreground">{step.description}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-base md:text-lg">Site Assessment</h3>
-                    <p className="text-gray-700 text-sm md:text-base">
-                      We begin with comprehensive site evaluation to understand your project needs and existing conditions.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <div className="bg-blue-100 w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center mr-3 md:mr-4 flex-shrink-0">
-                    <span className="text-blue-700 font-bold text-sm md:text-base">2</span>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-base md:text-lg">Planning & Design</h3>
-                    <p className="text-gray-700 text-sm md:text-base">
-                      We develop detailed plans and select quality materials to ensure your project meets your vision and budget.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <div className="bg-blue-100 w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center mr-3 md:mr-4 flex-shrink-0">
-                    <span className="text-blue-700 font-bold text-sm md:text-base">3</span>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-base md:text-lg">Professional Construction</h3>
-                    <p className="text-gray-700 text-sm md:text-base">
-                      Our skilled craftsmen execute each phase with precision, using proper techniques and quality materials.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <div className="bg-blue-100 w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center mr-3 md:mr-4 flex-shrink-0">
-                    <span className="text-blue-700 font-bold text-sm md:text-base">4</span>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-base md:text-lg">Quality Completion</h3>
-                    <p className="text-gray-700 text-sm md:text-base">
-                      We ensure every detail meets our high standards and provide ongoing support for your complete satisfaction.
-                    </p>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
-            <div className="relative h-[300px] sm:h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-xl mt-8 md:mt-0">
-              <Image
-                src="/images/modern-residence-after.jpg"
-                alt="Engineering process showing professional construction and project management"
-                fill
-                className="object-cover"
-                quality={75}
-                sizes="(max-width: 768px) 100vw, 50vw"
-                loading="lazy"
-              />
+            <div className="relative">
+              <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl">
+                <Image
+                  src="/images/process.png"
+                  alt="Engineering process and workflow"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
+              <div className="absolute -bottom-6 -left-6 bg-white dark:bg-neutral-900 p-6 rounded-2xl shadow-lg border border-neutral-200 dark:border-neutral-700">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-blue-600 mb-1">150+</div>
+                  <div className="text-sm text-muted-foreground">Projects Completed</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -237,5 +228,29 @@ const projects = [
       "Professional masonry work addressing failing block wall with retaining wall construction and stucco stone veneer finish. All work self-performed by certified stone masons.",
     image: "/images/afterMorgan.png",
     alt: "Morgan Territory retaining wall construction with stucco and stone veneer finish",
+  },
+]
+
+// Process steps for the new section
+const processSteps = [
+  {
+    title: "Project Planning & Design",
+    description:
+      "We begin with a thorough site assessment to understand your project requirements, existing conditions, and budget. Our team of experts then develops detailed, feasible plans that align with your vision and budget.",
+  },
+  {
+    title: "Quality Materials & Expertise",
+    description:
+      "We pride ourselves on using only the highest quality materials and employing skilled craftsmen who are certified and trained in their respective fields. This ensures durability, longevity, and the best possible results.",
+  },
+  {
+    title: "Precision Construction",
+    description:
+      "Our skilled craftsmen execute each phase of the project with precision and attention to detail. We adhere to strict quality control measures and follow proven construction techniques to deliver flawless results.",
+  },
+  {
+    title: "Ongoing Support & Maintenance",
+    description:
+      "Our commitment to your complete satisfaction extends beyond project completion. We provide ongoing support and maintenance to ensure your project continues to perform optimally and looks its best.",
   },
 ]
