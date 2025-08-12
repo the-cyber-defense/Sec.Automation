@@ -21,11 +21,11 @@ export function FadeIn({
   children,
   className,
   delay = 0,
-  duration = 0.5,
+  duration = 0.6,
   direction = "up",
-  distance = 20,
+  distance = 15,
   once = true,
-  threshold = 0.1,
+  threshold = 0.2,
 }: FadeInProps) {
   const prefersReducedMotion = useReducedMotion()
 
@@ -58,7 +58,8 @@ export function FadeIn({
       transition: {
         duration,
         delay,
-        ease: [0.25, 0.1, 0.25, 1.0], // Smooth easing
+        ease: [0.25, 0.46, 0.45, 0.94], // More natural easing
+        type: "tween",
       },
     },
   }

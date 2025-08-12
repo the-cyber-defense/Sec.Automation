@@ -2,6 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Smooth transitions for better UX */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  * {
+    @apply transition-colors duration-200 ease-out;
+  }
+  
+  /* Prevent layout shift during font loading */
+  body {
+    font-variation-settings: normal;
+    text-rendering: optimizeSpeed;
+  }
+  
+  /* Smooth theme transitions */
+  body, 
+  html {
+    @apply transition-colors duration-300 ease-out;
+  }
+  
+  /* Prevent content flashing and improve performance */
+  img {
+    content-visibility: auto;
+  }
+  
+  /* Smooth scrolling and better transforms */
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeSpeed;
+  }
+  
+  /* GPU acceleration for animations */
+  [data-animate] {
+    will-change: transform, opacity;
+    transform: translateZ(0);
+  }
+  
+  /* Reduce layout shifts */
+  img, video {
+    height: auto;
+    max-width: 100%;
+  }
+}
+
 :root {
   --font-inter: "Inter", system-ui, sans-serif;
   --font-space-grotesk: "Space Grotesk", system-ui, sans-serif;

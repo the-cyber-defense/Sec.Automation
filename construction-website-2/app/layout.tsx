@@ -149,8 +149,14 @@ export default function RootLayout({
         <meta name="theme-color" content="#3b82f6" />
         <meta name="color-scheme" content="light dark" />
       </head>
-      <body className="bg-white dark:bg-neutral-900 antialiased">
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem={true} storageKey="solves-all-theme" disableTransitionOnChange={false}>
+      <body className="bg-white text-neutral-900 antialiased min-h-screen">
+        <ThemeProvider 
+          attribute="class" 
+          defaultTheme="light" 
+          enableSystem={false} 
+          storageKey="solves-all-theme" 
+          disableTransitionOnChange={true}
+        >
           <ModernNavbar />
           <main className="min-h-screen">{children}</main>
           <Footer />

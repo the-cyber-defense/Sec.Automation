@@ -35,15 +35,22 @@ export function OptimizedImage({
 
   return (
     <div className={cn("relative overflow-hidden", className)}>
-      {isLoading && !hasError && (
-        <div className="absolute inset-0 bg-gray-100 animate-pulse" />
-      )}
+      {/* Always show background to prevent layout shift */}
+      <div className={cn(
+        "absolute inset-0 bg-gradient-to-br from-gray-50 to-gray-100 transition-opacity duration-500",
+        !isLoading && !hasError ? "opacity-0" : "opacity-100"
+      )}>
+        {isLoading && (
+          <div className="absolute inset-0 animate-pulse bg-gradient-to-br from-gray-100 via-gray-50 to-gray-100" />
+        )}
+        {hasError && (
+          <div className="absolute inset-0 flex items-center justify-center">
+            <span className="text-gray-400 text-sm">Failed to load image</span>
+          </div>
+        )}
+      </div>
       
-      {hasError ? (
-        <div className="absolute inset-0 bg-gray-100 flex items-center justify-center">
-          <span className="text-gray-400 text-sm">Failed to load image</span>
-        </div>
-      ) : (
+      {!hasError && (
         <Image
           src={src}
           alt={alt}
@@ -55,9 +62,10 @@ export function OptimizedImage({
           quality={quality}
           loading={priority ? "eager" : loading}
           className={cn(
-            "transition-opacity duration-300",
-            isLoading ? "opacity-0" : "opacity-100"
+            "transition-all duration-500 ease-out",
+            isLoading ? "opacity-0 scale-105" : "opacity-100 scale-100"
           )}
+          style={{ willChange: 'opacity, transform' }}
           onLoad={() => setIsLoading(false)}
           onError={() => {
             setIsLoading(false)
