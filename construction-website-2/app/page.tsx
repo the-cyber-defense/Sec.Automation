@@ -17,16 +17,16 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-grid opacity-30" />
         <div className="absolute inset-0 bg-gradient-to-t from-white/50 via-transparent to-transparent dark:from-neutral-900/50" />
 
-        {/* Floating Elements */}
+        {/* Floating Elements - Optimized for performance */}
         <motion.div
-          className="absolute top-20 left-10 w-20 h-20 bg-brand-500/10 rounded-full blur-xl"
-          animate={{ y: [0, -20, 0], x: [0, 10, 0] }}
-          transition={{ duration: 8, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+          className="absolute top-20 left-10 w-16 h-16 bg-brand-500/5 rounded-full"
+          animate={{ y: [0, -10, 0] }}
+          transition={{ duration: 6, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
         />
         <motion.div
-          className="absolute bottom-20 right-10 w-32 h-32 bg-brand-400/10 rounded-full blur-xl"
-          animate={{ y: [0, 20, 0], x: [0, -15, 0] }}
-          transition={{ duration: 10, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+          className="absolute bottom-20 right-10 w-24 h-24 bg-brand-400/5 rounded-full"
+          animate={{ y: [0, 15, 0] }}
+          transition={{ duration: 8, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
         />
 
         <div className="container-modern relative z-10">

@@ -1,7 +1,7 @@
 "use client"
 
 import { ReactNode, useState, useEffect } from "react"
-import { motion } from "framer-motion"
+import { motion, useReducedMotion } from "framer-motion"
 import { ModernCard } from "@/components/ui/modern-card"
 import { cn } from "@/lib/utils"
 
@@ -14,12 +14,13 @@ interface SmoothTileProps {
 
 export function SmoothTile({ children, index, className, delay = 0 }: SmoothTileProps) {
   const [isMounted, setIsMounted] = useState(false)
+  const shouldReduceMotion = useReducedMotion()
 
   useEffect(() => {
     // Prevent SSR/client mismatch by mounting after hydration
     const timer = setTimeout(() => {
       setIsMounted(true)
-    }, 50 + (index * 10)) // Stagger mounting to prevent simultaneous animations
+    }, 20 + (index * 5)) // Reduced delay for better performance
     
     return () => clearTimeout(timer)
   }, [index])
@@ -43,27 +44,39 @@ export function SmoothTile({ children, index, className, delay = 0 }: SmoothTile
     )
   }
 
+  // Skip animations if user prefers reduced motion
+  if (shouldReduceMotion) {
+    return (
+      <div className={cn("p-8 h-full", className)}>
+        <ModernCard 
+          animated={false}
+          className="p-8 h-full"
+        >
+          {children}
+        </ModernCard>
+      </div>
+    )
+  }
+
   return (
     <motion.div
-      initial={{ opacity: 0, y: 15, scale: 0.98 }}
-      whileInView={{ opacity: 1, y: 0, scale: 1 }}
-      viewport={{ once: true, amount: 0.4 }}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3, margin: "-50px" }}
       transition={{ 
-        duration: 0.7,
-        delay: index * 0.08 + delay,
-        ease: [0.25, 0.46, 0.45, 0.94],
-        type: "tween"
+        duration: 0.5,
+        delay: index * 0.05 + delay,
+        ease: "easeOut"
       }}
       style={{ 
         willChange: 'transform, opacity',
-        backfaceVisibility: 'hidden',
-        perspective: '1000px'
+        transform: 'translateZ(0)'
       }}
     >
       <ModernCard 
         animated={false}
         className={cn(
-          "p-8 h-full transition-all duration-500 ease-out hover:shadow-xl hover:scale-[1.02] hover:-translate-y-1",
+          "p-8 h-full transition-all duration-300 ease-out hover:shadow-lg hover:scale-[1.01] hover:-translate-y-0.5",
           className
         )}
       >
