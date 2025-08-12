@@ -235,8 +235,7 @@ h6 {
   @apply text-white;
 }
 
-.bg-muted,
-.bg-muted/80 {
+.bg-muted {
   @apply text-foreground;
 }
 
@@ -352,11 +351,11 @@ button[size="icon"] {
 
 /* Ensure high contrast for all text */
 .text-muted {
-  @apply dark:text-muted-foreground;
+  @apply text-neutral-600 dark:text-neutral-400;
 }
 
 .text-muted-foreground {
-  @apply dark:text-muted-foreground;
+  color: hsl(var(--muted-foreground));
 }
 
 /* Ensure form elements have proper contrast */
