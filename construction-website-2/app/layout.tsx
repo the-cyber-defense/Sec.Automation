@@ -148,14 +148,35 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <meta name="theme-color" content="#3b82f6" />
         <meta name="color-scheme" content="light dark" />
+        
+        {/* Prevent FOIT (Flash of Incorrect Theme) */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                const theme = localStorage.getItem('solves-all-theme') || 'system';
+                const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+                const effectiveTheme = theme === 'system' ? systemTheme : theme;
+                
+                if (effectiveTheme === 'dark') {
+                  document.documentElement.classList.add('dark');
+                  document.documentElement.style.colorScheme = 'dark';
+                } else {
+                  document.documentElement.classList.remove('dark');
+                  document.documentElement.style.colorScheme = 'light';
+                }
+              } catch (e) {}
+            `,
+          }}
+        />
       </head>
-      <body className="bg-white text-neutral-900 antialiased min-h-screen">
+      <body className="bg-white dark:bg-neutral-900 text-neutral-900 dark:text-neutral-100 antialiased min-h-screen transition-colors duration-300">
         <ThemeProvider 
           attribute="class" 
-          defaultTheme="light" 
-          enableSystem={false} 
+          defaultTheme="system" 
+          enableSystem={true} 
           storageKey="solves-all-theme" 
-          disableTransitionOnChange={true}
+          disableTransitionOnChange={false}
         >
           <ModernNavbar />
           <main className="min-h-screen">{children}</main>

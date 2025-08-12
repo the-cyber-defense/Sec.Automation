@@ -1,5 +1,0 @@
-{
-  "name": "Security Automation Co-Pilot",
-  "description": "An AI-powered application to assist security professionals in generating KQL queries, playbook outlines, Sentinel workbook structures, M365 Defender dashboard ideas, and automation template logic. It leverages Google Gemini API for content generation.",
-  "requestFramePermissions": []
-}
