@@ -75,7 +75,7 @@ export default function AboutPageClient() {
               <div className="text-center mb-16">
                 <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-200 mb-6">About Solves All Engineering</Badge>
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">Meet Our Founder</h1>
-                <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
+                <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
                   Learn about the expertise and vision behind Solves All Engineering's commitment to excellence.
                 </p>
               </div>
@@ -93,18 +93,24 @@ export default function AboutPageClient() {
                       sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   </div>
+                  <div className="absolute -bottom-6 -right-6 bg-card text-card-foreground p-6 rounded-xl shadow-lg border border-border">
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-blue-600 mb-1">150+</div>
+                      <div className="text-sm text-muted-foreground">Projects Completed</div>
+                    </div>
+                  </div>
                 </div>
               </ScaleIn>
 
               <FadeIn>
                 <div className="space-y-6">
                   <div>
-                    <h3 className="text-2xl font-bold mb-2">Matt Mahoney</h3>
+                    <h3 className="text-2xl font-bold mb-2 text-foreground">Matt Mahoney</h3>
                     <p className="text-lg text-blue-600 font-medium mb-4">Founder & Lead Engineer</p>
                     <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-200 mb-6">Environmental Science Degree</Badge>
                   </div>
                   
-                  <div className="space-y-4 text-gray-700 leading-relaxed">
+                  <div className="space-y-4 text-muted-foreground leading-relaxed">
                     <p>
                       Matt has 10 years of experience working for environmental restoration contractors, managing stormwater 
                       and groundwater projects on large construction projects throughout Northern California.
@@ -125,19 +131,19 @@ export default function AboutPageClient() {
                   <div className="space-y-3 pt-4">
                     <div className="flex items-center">
                       <CheckCircle className="h-5 w-5 text-blue-600 mr-3" />
-                      <span className="text-gray-700">Environmental Science expertise</span>
+                      <span className="text-muted-foreground">Environmental Science expertise</span>
                     </div>
                     <div className="flex items-center">
                       <CheckCircle className="h-5 w-5 text-blue-600 mr-3" />
-                      <span className="text-gray-700">10+ years in construction & stormwater</span>
+                      <span className="text-muted-foreground">10+ years in construction & stormwater</span>
                     </div>
                     <div className="flex items-center">
                       <CheckCircle className="h-5 w-5 text-blue-600 mr-3" />
-                      <span className="text-gray-700">Northern California project experience</span>
+                      <span className="text-muted-foreground">Northern California project experience</span>
                     </div>
                     <div className="flex items-center">
                       <CheckCircle className="h-5 w-5 text-blue-600 mr-3" />
-                      <span className="text-gray-700">Specialized in drainage & water management</span>
+                      <span className="text-muted-foreground">Specialized in drainage & water management</span>
                     </div>
                   </div>
                 </div>
@@ -334,7 +340,7 @@ export default function AboutPageClient() {
                 drainage solutions, and all "outside" services for homeowners.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
+                <Button size="lg" className="bg-background text-blue-600 hover:bg-muted">
                   Contact Us Today
                 </Button>
                 <Button
