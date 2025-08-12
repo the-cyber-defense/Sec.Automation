@@ -3,17 +3,28 @@ import type { Metadata } from "next"
 import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/next"
+import dynamic from "next/dynamic"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Footer } from "@/components/footer"
 import { ModernNavbar } from "@/components/modern-navbar"
-import { PerformanceMonitor } from "@/components/performance-monitor"
+
 import "@/app/globals.css"
+
+// Lazy load performance monitor since it's not critical for initial render
+const PerformanceMonitor = dynamic(
+  () => import("@/components/performance-monitor").then(mod => ({ default: mod.PerformanceMonitor })),
+  { 
+    ssr: false,
+    loading: () => null
+  }
+)
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
   preload: true,
+  weight: ["400", "500", "600", "700"],
 })
 
 const spaceGrotesk = Space_Grotesk({
@@ -21,6 +32,7 @@ const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
   display: "swap",
   preload: false,
+  weight: ["400", "600", "700"],
 })
 
 const jetBrainsMono = JetBrains_Mono({
@@ -28,6 +40,7 @@ const jetBrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
   display: "swap",
   preload: false,
+  weight: ["400", "500"],
 })
 
 export const metadata: Metadata = {
@@ -123,11 +136,18 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        {/* Resource hints for performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://vitals.vercel-insights.com" />
+        <link rel="dns-prefetch" href="https://va.vercel-scripts.com" />
+        
+        {/* Preload critical assets */}
+        <link rel="preload" href="/images/modern-residence-after.jpg" as="image" type="image/jpeg" />
+        
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <meta name="theme-color" content="#3b82f6" />
+        <meta name="color-scheme" content="light dark" />
       </head>
       <body className="bg-white dark:bg-neutral-900 antialiased">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem={true} storageKey="solves-all-theme" disableTransitionOnChange={false}>
