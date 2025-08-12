@@ -37,6 +37,40 @@ const ModernCard = React.forwardRef<HTMLDivElement, ModernCardProps>(
       </>
     )
 
+    // Filter out props that are incompatible with motion.div
+    const {
+      onDrag,
+      onDragStart,
+      onDragEnd,
+      onAnimationStart,
+      onAnimationEnd,
+      onTransitionEnd,
+      onLoad,
+      onError,
+      onAbort,
+      onCanPlay,
+      onCanPlayThrough,
+      onDurationChange,
+      onEmptied,
+      onEncrypted,
+      onEnded,
+      onLoadedData,
+      onLoadedMetadata,
+      onPause,
+      onPlay,
+      onPlaying,
+      onProgress,
+      onRateChange,
+      onSeeked,
+      onSeeking,
+      onStalled,
+      onSuspend,
+      onTimeUpdate,
+      onVolumeChange,
+      onWaiting,
+      ...motionProps
+    } = props
+
     if (animated) {
       return (
         <motion.div
@@ -46,7 +80,7 @@ const ModernCard = React.forwardRef<HTMLDivElement, ModernCardProps>(
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          {...props}
+          {...motionProps}
         >
           {content}
         </motion.div>

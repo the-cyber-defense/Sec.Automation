@@ -58,8 +58,7 @@ export function FadeIn({
       transition: {
         duration,
         delay,
-        ease: [0.25, 0.46, 0.45, 0.94], // More natural easing
-        type: "tween",
+        ease: [0.25, 0.46, 0.45, 0.94],
       },
     },
   }
@@ -70,7 +69,7 @@ export function FadeIn({
       initial="hidden"
       whileInView="visible"
       viewport={{ once, amount: threshold }}
-      variants={prefersReducedMotion ? {} : variants}
+      variants={prefersReducedMotion ? {} : (variants as any)}
     >
       {children}
     </motion.div>

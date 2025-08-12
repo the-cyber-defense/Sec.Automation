@@ -70,7 +70,7 @@ export function StaggerIn({
       y: 0,
       transition: {
         duration,
-        ease: [0.25, 0.1, 0.25, 1.0], // Smooth easing
+        ease: "easeOutCubic",
       },
     },
   }
@@ -84,7 +84,7 @@ export function StaggerIn({
       variants={prefersReducedMotion ? {} : containerVariants}
     >
       {React.Children.map(children, (child, index) => (
-        <motion.div key={index} variants={prefersReducedMotion ? {} : itemVariants}>
+        <motion.div key={index} variants={prefersReducedMotion ? {} : (itemVariants as any)}>
           {child}
         </motion.div>
       ))}

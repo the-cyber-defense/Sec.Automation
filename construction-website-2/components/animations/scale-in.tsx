@@ -38,7 +38,7 @@ export function ScaleIn({
       transition: {
         duration,
         delay,
-        ease: [0.25, 0.1, 0.25, 1.0], // Smooth easing
+        ease: "easeOutCubic",
       },
     },
   }
@@ -48,8 +48,8 @@ export function ScaleIn({
       className={cn(className)}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once, threshold }}
-      variants={prefersReducedMotion ? {} : variants}
+      viewport={{ once, amount: threshold }}
+      variants={prefersReducedMotion ? {} : (variants as any)}
     >
       {children}
     </motion.div>
