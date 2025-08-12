@@ -53,7 +53,7 @@ export function throttle<T extends (...args: any[]) => any>(func: T, limit: numb
 // Check if device is low-end based on memory and cores
 export function isLowEndDevice(): boolean {
   // Check for memory
-  if (navigator.deviceMemory && navigator.deviceMemory < 4) {
+  if ('deviceMemory' in navigator && (navigator as any).deviceMemory && (navigator as any).deviceMemory < 4) {
     return true
   }
 

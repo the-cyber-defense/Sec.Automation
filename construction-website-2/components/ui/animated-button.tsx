@@ -48,19 +48,19 @@ export function AnimatedButton({
       case "pulse":
         return {
           scale: [1, 1.05, 1],
-          transition: { duration: 0.8, repeat: Number.POSITIVE_INFINITY, repeatType: "loop" },
+          transition: { duration: 0.8, repeat: Number.POSITIVE_INFINITY, repeatType: "loop" as const },
         }
       case "bounce":
         return {
           y: [0, -6, 0],
-          transition: { duration: 0.6, repeat: Number.POSITIVE_INFINITY, repeatType: "loop" },
+          transition: { duration: 0.6, repeat: Number.POSITIVE_INFINITY, repeatType: "loop" as const },
         }
       case "shine":
         return {
           backgroundPosition: ["200% 0", "0% 0", "200% 0"],
           backgroundImage: "linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent)",
           backgroundSize: "200% 100%",
-          transition: { duration: 1.5, repeat: Number.POSITIVE_INFINITY, repeatType: "loop" },
+          transition: { duration: 1.5, repeat: Number.POSITIVE_INFINITY, repeatType: "loop" as const },
         }
       case "none":
       default:
@@ -81,7 +81,7 @@ export function AnimatedButton({
             animate={iconRotate ? { rotate: 360 } : { x: [0, 4, 0] }}
             transition={{
               repeat: iconRotate ? 1 : 3,
-              repeatType: "loop",
+              repeatType: "loop" as const,
               duration: 0.6,
               ease: "easeInOut",
               repeatDelay: 0.2,

@@ -19,6 +19,7 @@ const buttonVariants = cva(
         default: "h-11 px-6 py-2",
         sm: "h-9 rounded-lg px-4",
         lg: "h-12 rounded-xl px-8",
+        xl: "h-16 rounded-2xl px-10 text-lg",
         icon: "h-10 w-10",
       },
     },
@@ -33,12 +34,18 @@ export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   asChild?: boolean
+  icon?: React.ReactNode
 }
 
 const ModernButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
+  ({ className, variant, size, asChild = false, icon, children, ...props }, ref) => {
     const Comp = asChild ? Slot : "button"
-    return <Comp className={cn(buttonVariants({ variant, size, className }))} ref={ref} {...props} />
+    return (
+      <Comp className={cn(buttonVariants({ variant, size, className }))} ref={ref} {...props}>
+        {icon && <span className="mr-2">{icon}</span>}
+        {children}
+      </Comp>
+    )
   },
 )
 ModernButton.displayName = "ModernButton"

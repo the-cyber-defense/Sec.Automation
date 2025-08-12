@@ -80,7 +80,7 @@ export function StaggerIn({
       className={cn(className)}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once, threshold }}
+      viewport={{ once, amount: threshold }}
       variants={prefersReducedMotion ? {} : containerVariants}
     >
       {React.Children.map(children, (child, index) => (

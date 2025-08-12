@@ -69,7 +69,7 @@ export function FadeIn({
       className={cn(className)}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once, threshold }}
+      viewport={{ once, amount: threshold }}
       variants={prefersReducedMotion ? {} : variants}
     >
       {children}
