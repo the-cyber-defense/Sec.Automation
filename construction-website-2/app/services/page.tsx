@@ -201,7 +201,7 @@ const services = [
     title: "Drainage",
     description:
       "Comprehensive drainage systems including French drains, foundation drains, sump pumps, and grading for surface water management and hillside drainage solutions.",
-    image: "/images/residential-1.png",
+    image: "/images/project1.png",
     alt: "Professional drainage system installation preventing flooding and water damage",
     link: "/services/drainage-solutions",
   },
@@ -209,7 +209,7 @@ const services = [
     title: "Retaining Walls",
     description:
       "Professional retaining wall construction and slope stabilization for challenging terrain, erosion control, and hillside property management.",
-    image: "/images/commercial-1.png",
+    image: "/images/afterRetainingwall.png",
     alt: "Engineered retaining wall construction for slope stabilization and erosion control",
     link: "/services/retainment",
   },
