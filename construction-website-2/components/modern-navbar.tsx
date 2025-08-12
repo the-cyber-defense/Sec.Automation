@@ -50,7 +50,7 @@ export function ModernNavbar() {
             <Link href="/" className="flex items-center space-x-2 group">
               <div className="w-8 h-8 md:w-10 md:h-10 transition-transform group-hover:scale-105">
                 <Image
-                  src="/images/traced.svg"
+                  src="/images/trace.svg"
                   alt="Solves All Engineering Logo"
                   width={40}
                   height={40}
