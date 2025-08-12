@@ -48,12 +48,12 @@ export function ModernNavbar() {
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-2 group">
-              <div className="w-10 h-10 md:w-12 md:h-12 transition-transform group-hover:scale-105">
+              <div className="w-12 h-12 md:w-16 md:h-16 transition-transform group-hover:scale-105">
                 <Image
                   src="/images/trace.svg"
                   alt="Solves All Engineering Logo"
-                  width={48}
-                  height={48}
+                  width={64}
+                  height={64}
                   className="w-full h-full object-contain"
                 />
               </div>
