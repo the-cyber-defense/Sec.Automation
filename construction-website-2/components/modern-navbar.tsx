@@ -85,13 +85,13 @@ export function ModernNavbar() {
               <ThemeToggle />
               <div className="flex items-center space-x-4 text-sm text-gray-600 dark:text-gray-400">
                 <div className="flex items-center space-x-1">
-                  <Phone className="h-4 w-4" />
-                  <a href="tel:+19258998123" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                  <Phone className="h-4 w-4 flex-shrink-0" />
+                  <a href="tel:+19258998123" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors whitespace-nowrap">
                     (925) 899-8123
                   </a>
                 </div>
                 <div className="flex items-center space-x-1">
-                  <Mail className="h-4 w-4" />
+                  <Mail className="h-4 w-4 flex-shrink-0" />
                   <a href="mailto:Matt@solvesall.org" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                     Matt@solvesall.org
                   </a>
