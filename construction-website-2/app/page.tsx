@@ -6,6 +6,7 @@ import { motion } from "framer-motion"
 import { ArrowRight, CheckCircle, Sparkles, Zap, Shield, Award, Users, Clock } from "lucide-react"
 import { ModernButton } from "@/components/ui/modern-button"
 import { ModernCard } from "@/components/ui/modern-card"
+import { SmoothTile } from "@/components/smooth-tile"
 
 export default function HomePage() {
   return (
@@ -203,31 +204,23 @@ export default function HomePage() {
                 color: "from-indigo-500 to-blue-500",
               },
             ].map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
-                <ModernCard className="p-8 h-full">
-                  <div className="flex flex-col h-full">
-                    <div className="mb-6">
-                      <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${feature.color} shadow-lg`}>
-                        <feature.icon className="h-6 w-6 text-white" />
-                      </div>
+              <SmoothTile key={index} index={index} delay={0.2}>
+                <div className="flex flex-col h-full">
+                  <div className="mb-6">
+                    <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${feature.color} shadow-lg transition-transform duration-300 hover:scale-110`}>
+                      <feature.icon className="h-6 w-6 text-white" />
                     </div>
-
-                    <h3 className="text-xl font-display font-bold mb-4 text-neutral-900 dark:text-white">
-                      {feature.title}
-                    </h3>
-
-                    <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed flex-grow">
-                      {feature.description}
-                    </p>
                   </div>
-                </ModernCard>
-              </motion.div>
+
+                  <h3 className="text-xl font-display font-bold mb-4 text-neutral-900 dark:text-white">
+                    {feature.title}
+                  </h3>
+
+                  <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed flex-grow">
+                    {feature.description}
+                  </p>
+                </div>
+              </SmoothTile>
             ))}
           </div>
         </div>

@@ -47,6 +47,37 @@
     height: auto;
     max-width: 100%;
   }
+  
+  /* Smooth grid animations */
+  .grid-cards {
+    container-type: inline-size;
+  }
+  
+  .grid-cards > * {
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    /* Ensure consistent tile heights */
+    min-height: 280px;
+  }
+  
+  /* Prevent flash of content during animations */
+  @media (prefers-reduced-motion: no-preference) {
+    .animate-in {
+      animation: smooth-fade-in 0.8s ease-out forwards;
+    }
+  }
+  
+  @keyframes smooth-fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(15px) scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
 }
 
 :root {
