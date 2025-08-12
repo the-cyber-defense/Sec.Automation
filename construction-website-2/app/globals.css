@@ -225,7 +225,7 @@ h6 {
 }
 
 .btn-light {
-  @apply bg-gray-100 text-gray-800 hover:bg-gray-200 font-medium transition-all duration-300;
+  @apply bg-muted text-foreground hover:bg-muted/80 font-medium transition-all duration-300;
 }
 
 /* Ensure proper contrast for all button variants */
@@ -235,11 +235,9 @@ h6 {
   @apply text-white;
 }
 
-.bg-white,
-.bg-gray-50,
-.bg-gray-100,
-.bg-gray-200 {
-  @apply text-gray-900;
+.bg-muted,
+.bg-muted/80 {
+  @apply text-foreground;
 }
 
 .bg-gray-700,
@@ -263,7 +261,7 @@ h6 {
 }
 
 .border-white.bg-transparent:hover {
-  @apply text-gray-900;
+  @apply text-foreground;
 }
 
 /* Mobile-first responsive typography */
@@ -353,27 +351,19 @@ button[size="icon"] {
 }
 
 /* Ensure high contrast for all text */
-.text-gray-600 {
-  @apply dark:text-gray-300;
+.text-muted {
+  @apply dark:text-muted-foreground;
 }
 
-.text-gray-700 {
-  @apply dark:text-gray-200;
-}
-
-.text-gray-800 {
-  @apply dark:text-gray-100;
-}
-
-.text-gray-900 {
-  @apply dark:text-white;
+.text-muted-foreground {
+  @apply dark:text-muted-foreground;
 }
 
 /* Ensure form elements have proper contrast */
 input,
 select,
 textarea {
-  @apply text-gray-900 dark:text-white bg-white dark:bg-gray-800;
+  @apply text-foreground bg-background border-border;
   font-size: 1rem;
   min-height: 44px;
 }

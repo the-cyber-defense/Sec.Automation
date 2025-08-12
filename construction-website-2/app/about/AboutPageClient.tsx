@@ -68,13 +68,13 @@ export default function AboutPageClient() {
   return (
     <div className="flex min-h-screen flex-col">
       {/* Founder Section - Now First */}
-      <section className="py-20 md:py-32 bg-gradient-to-br from-blue-50 to-white">
+      <section className="py-20 md:py-32 bg-gradient-to-br from-blue-50 to-background dark:from-blue-950 dark:to-background">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <FadeIn>
               <div className="text-center mb-16">
                 <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-200 mb-6">About Solves All Engineering</Badge>
-                <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">Meet Our Founder</h1>
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-foreground">Meet Our Founder</h1>
                 <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
                   Learn about the expertise and vision behind Solves All Engineering's commitment to excellence.
                 </p>
