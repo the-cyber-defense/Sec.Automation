@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { Menu, X, Phone, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -48,23 +49,13 @@ export function ModernNavbar() {
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-2 group">
               <div className="w-8 h-8 md:w-10 md:h-10 transition-transform group-hover:scale-105">
-                <svg viewBox="0 0 32 32" className="w-full h-full">
-                  <defs>
-                    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#3b82f6" />
-                      <stop offset="100%" stopColor="#1d4ed8" />
-                    </linearGradient>
-                  </defs>
-                  <path d="M16 2L4 8v10c0 8 12 12 12 12s12-4 12-12V8L16 2z" fill="url(#logoGradient)" stroke="none" />
-                  <path
-                    d="M12 16l3 3 6-6"
-                    stroke="white"
-                    strokeWidth="2"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
+                <Image
+                  src="/images/newlogo2.png"
+                  alt="Solves All Engineering Logo"
+                  width={40}
+                  height={40}
+                  className="w-full h-full object-contain"
+                />
               </div>
               <span className="text-lg md:text-xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                 Solves All Engineering
