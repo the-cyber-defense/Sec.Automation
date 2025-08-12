@@ -213,7 +213,7 @@ export default function RetainmentPage() {
               <div className="relative">
                 <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                   <Image
-                    src="/images/commercial-1.png"
+                    src="/images/afterRetainingwall.png"
                     alt="Professional retaining wall construction by Solves All Engineering"
                     fill
                     className="object-cover"
