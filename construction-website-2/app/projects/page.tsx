@@ -3,8 +3,6 @@ import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 export const metadata = {
   title: "Recent Projects | Pittsburg, Alamo & Morgan Territory | Solves All Engineering",
@@ -50,28 +48,37 @@ export default function ProjectsPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 max-w-6xl mx-auto">
             {projects.map((project, index) => (
-              <div key={index} className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
-                <div className="relative h-64 overflow-hidden">
+              <div
+                key={index}
+                className="bg-card text-card-foreground rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group border border-border"
+              >
+                <div className="relative h-48 md:h-56 overflow-hidden">
                   <Image
                     src={project.image}
                     alt={project.title}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    quality={75}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
-                    <p className="text-blue-300 mb-4">{project.category}</p>
-                    <Link href={`/projects/${project.id}`}>
-                      <Button variant="outline" className="text-white border-white hover:bg-white/20 bg-transparent">
-                        View Details
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
-                    </Link>
+                </div>
+                <div className="p-6 md:p-8">
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="inline-block px-3 py-1 bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300 rounded-full text-sm font-medium">
+                      {project.category}
+                    </span>
                   </div>
+                  <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-foreground">{project.title}</h3>
+                  <p className="text-muted-foreground mb-5 md:mb-6 text-sm sm:text-base">{project.description}</p>
+                  <Link href={`/projects/${project.id}`}>
+                    <Button className="bg-blue-600 hover:bg-blue-700 text-white w-full">
+                      View Project Details
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
                 </div>
               </div>
             ))}
@@ -151,54 +158,6 @@ export default function ProjectsPage() {
   )
 }
 
-// Project Card Component
-function ProjectCard({ project }: { project: any }) {
-  return (
-    <Card className="overflow-hidden group h-full hover:shadow-xl transition-all duration-300">
-      <div className="relative h-48 sm:h-56 md:h-64 w-full">
-        <Image
-          src={project.image || "/placeholder.svg"}
-          alt={project.alt || `${project.title} - ${project.category} project by Solves All Engineering`}
-          fill
-          className="object-cover transition-transform duration-500 group-hover:scale-110"
-          quality={75}
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          loading="lazy"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-          <div className="p-4 md:p-6 w-full">
-            <h3 className="text-lg md:text-xl font-bold text-white">{project.title}</h3>
-            <p className="text-blue-300 mb-4">{project.category}</p>
-            <Link href={`/projects/${project.id}`}>
-              <Button variant="outline" className="text-white border-white hover:bg-white/20 bg-transparent">
-                View Details
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </div>
-      <CardHeader className="p-4 md:p-6">
-        <CardTitle className="text-lg md:text-xl">{project.title}</CardTitle>
-        <CardDescription className="text-blue-600">{project.category}</CardDescription>
-      </CardHeader>
-      <CardContent className="p-4 pt-0 md:p-6 md:pt-0">
-        <p className="text-gray-700 text-sm sm:text-base">{project.description}</p>
-      </CardContent>
-      <CardFooter className="p-4 md:p-6 pt-0">
-        <Link href={`/projects/${project.id}`} className="w-full">
-          <Button
-            variant="outline"
-            className="border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white text-sm sm:text-base w-full bg-transparent"
-          >
-            View Project Details
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
-        </Link>
-      </CardFooter>
-    </Card>
-  )
-}
 
 // Recent projects data
 const projects = [
