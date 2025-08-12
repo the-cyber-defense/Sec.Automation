@@ -47,7 +47,7 @@ export function SmoothTile({ children, index, className, delay = 0 }: SmoothTile
     <motion.div
       initial={{ opacity: 0, y: 15, scale: 0.98 }}
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
-      viewport={{ once: true, threshold: 0.4 }}
+      viewport={{ once: true, amount: 0.4 }}
       transition={{ 
         duration: 0.7,
         delay: index * 0.08 + delay,
