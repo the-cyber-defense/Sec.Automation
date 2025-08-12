@@ -67,68 +67,15 @@ export default function AboutPageClient() {
 
   return (
     <div className="flex min-h-screen flex-col">
-      {/* Hero Section */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-br from-blue-50 to-white overflow-hidden">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-            <FadeIn>
-              <div>
-                <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-200 mb-6">About Solves All Engineering</Badge>
-                <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
-                  Engineering Excellence Since <span className="text-blue-600">2023</span>
-                </h1>
-                <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
-                  Solves All Engineering was started in 2023 by Matt Mahoney. We bring a heavy civil approach to dealing with residential issues to build robust solutions to the problems homeowners often face.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-                    View Our Projects
-                  </Button>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-blue-600 text-blue-600 hover:bg-blue-50 bg-transparent"
-                  >
-                    Contact Our Team
-                  </Button>
-                </div>
-              </div>
-            </FadeIn>
-
-            <ScaleIn>
-              <div className="relative">
-                <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
-                  <Image
-                    src="/placeholder.svg?height=500&width=600&text=Solves+All+Engineering+Team"
-                    alt="Solves All Engineering team at work"
-                    fill
-                    className="object-cover"
-                    priority
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                  />
-                </div>
-                <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-lg">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-blue-600">
-                      <CountUp end={150} duration={2} />
-                    </div>
-                    <div className="text-sm text-gray-600">Projects Completed</div>
-                  </div>
-                </div>
-              </div>
-            </ScaleIn>
-          </div>
-        </div>
-      </section>
-
-      {/* Founder Section - Moved to Top */}
-      <section className="py-20 bg-white">
+      {/* Founder Section - Now First */}
+      <section className="py-20 md:py-32 bg-gradient-to-br from-blue-50 to-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <FadeIn>
               <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">Meet Our Founder</h2>
-                <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+                <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-200 mb-6">About Solves All Engineering</Badge>
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">Meet Our Founder</h1>
+                <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
                   Learn about the expertise and vision behind Solves All Engineering's commitment to excellence.
                 </p>
               </div>
@@ -159,7 +106,7 @@ export default function AboutPageClient() {
                   
                   <div className="space-y-4 text-gray-700 leading-relaxed">
                     <p>
-                      Matt had 10 years of experience working for environmental restoration contractors, managing stormwater 
+                      Matt has 10 years of experience working for environmental restoration contractors, managing stormwater 
                       and groundwater projects on large construction projects throughout Northern California.
                     </p>
                     <p>
@@ -247,20 +194,8 @@ export default function AboutPageClient() {
               </div>
             </FadeIn>
 
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <FadeIn>
-                <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl">
-                  <Image
-                    src="/placeholder.svg?height=400&width=600&text=Company+History+and+Growth"
-                    alt="Company history and growth"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                  />
-                </div>
-              </FadeIn>
-
-              <FadeIn>
+            <FadeIn>
+              <div className="max-w-4xl mx-auto">
                 <div className="space-y-6">
                   <div>
                     <h3 className="text-xl font-semibold mb-3">Our Mission</h3>
@@ -296,8 +231,8 @@ export default function AboutPageClient() {
                     </ul>
                   </div>
                 </div>
-              </FadeIn>
-            </div>
+              </div>
+            </FadeIn>
           </div>
         </div>
       </section>
