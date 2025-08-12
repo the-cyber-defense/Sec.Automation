@@ -238,7 +238,7 @@ const services = [
   {
     title: "Fencing",
     description: "Custom fence installation including wood, vinyl, chain link, and decorative fencing for privacy, security, and property definition.",
-    image: "/images/project14.png",
+    image: "/images/fence.png",
     alt: "Professional fence installation and custom fencing services",
     link: "/services/fencing",
   },
