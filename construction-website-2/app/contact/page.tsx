@@ -1,7 +1,7 @@
 import Image from "next/image"
-import { Mail, MapPin, Phone, Clock, ArrowRight } from "lucide-react"
+import { Mail, MapPin, Phone, Clock } from "lucide-react"
 
-import { Button } from "@/components/ui/button"
+import { ContactForm } from "@/components/contact-form"
 
 export const metadata = {
   title: "Contact Solves All Engineering | Free Consultation & Quotes | Northern California",
@@ -94,70 +94,7 @@ export default function ContactPage() {
                   Fill out this form to get a detailed, no-obligation quote for your construction project. Our team will
                   analyze your requirements and provide a comprehensive estimate.
                 </p>
-                <form className="bg-card text-card-foreground p-10 rounded-2xl shadow-sm border border-border">
-                  <h3 className="text-2xl font-bold mb-6">Send Us a Message</h3>
-                  <div className="grid md:grid-cols-2 gap-6 mb-6">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                        Your Name
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        className="w-full px-4 py-3 border border-input bg-background text-foreground rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        placeholder="John Doe"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                        Email Address
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        className="w-full px-4 py-3 border border-input bg-background text-foreground rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        placeholder="your.email@example.com"
-                      />
-                    </div>
-                  </div>
-                  <div className="mb-6">
-                    <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
-                      Phone Number
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      className="w-full px-4 py-3 border border-input bg-background text-foreground rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                      placeholder="(123) 456-7890"
-                    />
-                  </div>
-                  <div className="mb-6">
-                    <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
-                      Subject
-                    </label>
-                    <input
-                      type="text"
-                      id="subject"
-                      className="w-full px-4 py-3 border border-input bg-background text-foreground rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                      placeholder="Project Inquiry"
-                    />
-                  </div>
-                  <div className="mb-6">
-                    <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                      Your Message
-                    </label>
-                    <textarea
-                      id="message"
-                      rows={4}
-                      className="w-full px-4 py-3 border border-input bg-background text-foreground rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                      placeholder="Tell us about your project..."
-                    ></textarea>
-                  </div>
-                  <Button className="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-3">
-                    Send Message
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </form>
+                <ContactForm />
               </div>
             </div>
           </div>
