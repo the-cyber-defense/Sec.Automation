@@ -153,6 +153,12 @@ export function generateContactEmailTemplate(data: {
   phone: string
   subject: string
   message: string
+  projectType?: string
+  timeline?: string
+  budget?: string
+  propertyType?: string
+  address?: string
+  urgency?: string
 }): { html: string; text: string } {
   const timestamp = new Date().toLocaleString('en-US', {
     timeZone: 'America/Los_Angeles',
@@ -205,6 +211,42 @@ export function generateContactEmailTemplate(data: {
           </div>
         </div>
         
+        ${data.projectType ? `
+        <div style="background: white; padding: 25px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #e2e8f0;">
+          <h2 style="margin: 0 0 20px 0; color: #1e293b; font-size: 20px; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px;">Project Details</h2>
+          
+          ${data.projectType ? `<div style="margin-bottom: 15px;">
+            <strong style="color: #475569; display: inline-block; width: 120px;">Project Type:</strong>
+            <span style="color: #1e293b;">${data.projectType}</span>
+          </div>` : ''}
+          
+          ${data.timeline ? `<div style="margin-bottom: 15px;">
+            <strong style="color: #475569; display: inline-block; width: 120px;">Timeline:</strong>
+            <span style="color: #1e293b;">${data.timeline}</span>
+          </div>` : ''}
+          
+          ${data.budget ? `<div style="margin-bottom: 15px;">
+            <strong style="color: #475569; display: inline-block; width: 120px;">Budget Range:</strong>
+            <span style="color: #1e293b;">${data.budget}</span>
+          </div>` : ''}
+          
+          ${data.propertyType ? `<div style="margin-bottom: 15px;">
+            <strong style="color: #475569; display: inline-block; width: 120px;">Property Type:</strong>
+            <span style="color: #1e293b;">${data.propertyType}</span>
+          </div>` : ''}
+          
+          ${data.address ? `<div style="margin-bottom: 15px;">
+            <strong style="color: #475569; display: inline-block; width: 120px;">Address:</strong>
+            <span style="color: #1e293b;">${data.address}</span>
+          </div>` : ''}
+          
+          ${data.urgency ? `<div>
+            <strong style="color: #475569; display: inline-block; width: 120px;">Urgency:</strong>
+            <span style="color: #1e293b;">${data.urgency}</span>
+          </div>` : ''}
+        </div>
+        ` : ''}
+        
         <div style="background: white; padding: 25px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #e2e8f0;">
           <h2 style="margin: 0 0 15px 0; color: #1e293b; font-size: 18px; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px;">Message</h2>
           <div style="background: #f1f5f9; padding: 20px; border-radius: 6px; border-left: 4px solid #2563eb;">
@@ -241,7 +283,15 @@ Email: ${data.email}
 Phone: ${data.phone}
 Subject: ${data.subject}
 
-MESSAGE
+${data.projectType ? `PROJECT DETAILS
+Project Type: ${data.projectType}
+${data.timeline ? `Timeline: ${data.timeline}` : ''}
+${data.budget ? `Budget Range: ${data.budget}` : ''}
+${data.propertyType ? `Property Type: ${data.propertyType}` : ''}
+${data.address ? `Address: ${data.address}` : ''}
+${data.urgency ? `Urgency: ${data.urgency}` : ''}
+
+` : ''}MESSAGE
 ${data.message}
 
 ---

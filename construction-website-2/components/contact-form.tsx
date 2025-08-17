@@ -121,7 +121,7 @@ export function ContactForm() {
   }
 
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
     const { name, value } = e.target
     setFormData(prev => ({ ...prev, [name]: value }))
@@ -149,8 +149,7 @@ export function ContactForm() {
         timeline: formData.timeline,
         budget: formData.budget,
         propertyType: formData.propertyType,
-        urgency: formData.urgency,
-        address: formData.address
+        urgency: formData.urgency
       })
 
       // Calculate lead score
