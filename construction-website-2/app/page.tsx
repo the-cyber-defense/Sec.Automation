@@ -7,6 +7,7 @@ import { ArrowRight, CheckCircle, Sparkles, Zap, Shield, Award, Users, Clock } f
 import { ModernButton } from "@/components/ui/modern-button"
 import { ModernCard } from "@/components/ui/modern-card"
 import { SmoothTile } from "@/components/smooth-tile"
+import { LocalSEO } from "@/components/local-seo"
 
 export default function HomePage() {
   return (
@@ -310,6 +311,13 @@ export default function HomePage() {
               </motion.div>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Local SEO Section */}
+      <section className="section-padding bg-white dark:bg-neutral-900">
+        <div className="container-modern">
+          <LocalSEO location="Livermore" showFullDetails={true} />
         </div>
       </section>
 

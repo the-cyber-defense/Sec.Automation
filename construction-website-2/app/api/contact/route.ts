@@ -10,6 +10,12 @@ const contactFormSchema = z.object({
   phone: z.string().min(10, 'Phone number is required').max(20, 'Phone number is too long'),
   subject: z.string().min(1, 'Subject is required').max(200, 'Subject is too long'),
   message: z.string().min(10, 'Message must be at least 10 characters').max(1000, 'Message is too long'),
+  projectType: z.string().min(1, 'Project type is required'),
+  timeline: z.string().min(1, 'Timeline is required'),
+  budget: z.string().min(1, 'Budget range is required'),
+  propertyType: z.string().min(1, 'Property type is required'),
+  address: z.string().optional(),
+  urgency: z.string().optional(),
 })
 
 export async function POST(request: NextRequest) {
@@ -50,11 +56,19 @@ export async function POST(request: NextRequest) {
       throw new Error('Failed to send email')
     }
     
-    // Log successful submission
+    // Log successful submission with lead scoring
+    const leadScore = body.leadScore || 0
     console.log('Contact form submitted successfully:', {
       name: validatedData.name,
       email: validatedData.email,
       subject: validatedData.subject,
+      projectType: validatedData.projectType,
+      timeline: validatedData.timeline,
+      budget: validatedData.budget,
+      propertyType: validatedData.propertyType,
+      urgency: validatedData.urgency,
+      address: validatedData.address,
+      leadScore,
       timestamp: new Date().toISOString(),
     })
     

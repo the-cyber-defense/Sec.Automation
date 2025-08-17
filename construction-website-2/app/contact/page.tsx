@@ -2,6 +2,8 @@ import Image from "next/image"
 import { Mail, MapPin, Phone, Clock } from "lucide-react"
 
 import { ContactForm } from "@/components/contact-form"
+import { trackPhoneCall, trackEmailClick, trackMapClick } from "@/lib/analytics"
+import { LocalSEO } from "@/components/local-seo"
 
 export const metadata = {
   title: "Contact Solves All Engineering | Free Consultation & Quotes | Northern California",
@@ -63,7 +65,13 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg text-foreground">Phone Number</h3>
-                    <p className="text-muted-foreground">(925) 899-8123</p>
+                    <a 
+                      href="tel:(925) 899-8123"
+                      onClick={() => trackPhoneCall('(925) 899-8123')}
+                      className="text-muted-foreground hover:text-blue-600 transition-colors cursor-pointer"
+                    >
+                      (925) 899-8123
+                    </a>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -72,7 +80,13 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg text-foreground">Email Address</h3>
-                    <p className="text-muted-foreground">Matt@solvesall.org</p>
+                    <a 
+                      href="mailto:Matt@solvesall.org"
+                      onClick={() => trackEmailClick('Matt@solvesall.org')}
+                      className="text-muted-foreground hover:text-blue-600 transition-colors cursor-pointer"
+                    >
+                      Matt@solvesall.org
+                    </a>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -121,6 +135,13 @@ export default function ContactPage() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+            {/* Local SEO Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <LocalSEO location="Livermore" showFullDetails={true} />
         </div>
       </section>
     </div>

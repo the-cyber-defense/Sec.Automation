@@ -3,6 +3,7 @@ import Link from "next/link"
 import { ArrowRight, CheckCircle } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
+import { LocalSEO } from "@/components/local-seo"
 
 export const metadata = {
   title: "Services | Drainage, Retaining Walls, Concrete & Landscaping | Solves All Engineering",
@@ -189,6 +190,13 @@ export default function ServicesPage() {
               </Button>
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* Local SEO Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <LocalSEO location="Northern California" showFullDetails={false} />
         </div>
       </section>
     </div>
